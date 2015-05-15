@@ -14,6 +14,13 @@
 		DA4AB8C21B062A1A00D684CE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA4AB8C11B062A1A00D684CE /* Images.xcassets */; };
 		DA4AB8C51B062A1A00D684CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA4AB8C31B062A1A00D684CE /* Main.storyboard */; };
 		DA4AB8D11B062A1A00D684CE /* School_Crime_LondonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4AB8D01B062A1A00D684CE /* School_Crime_LondonTests.m */; };
+		DA9E22031B062E85001507A3 /* ExtractGiantBombDataAPIDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9E21EF1B062E85001507A3 /* ExtractGiantBombDataAPIDataManager.m */; };
+		DA9E22041B062E85001507A3 /* ExtractGiantBombDataLocalDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9E21F21B062E85001507A3 /* ExtractGiantBombDataLocalDataManager.m */; };
+		DA9E22051B062E85001507A3 /* ExtractGiantBombDataInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9E21F51B062E85001507A3 /* ExtractGiantBombDataInteractor.m */; };
+		DA9E22061B062E85001507A3 /* ExtractGiantBombDataItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9E21F71B062E85001507A3 /* ExtractGiantBombDataItem.m */; };
+		DA9E22071B062E85001507A3 /* ExtractGiantBombDataPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9E21FA1B062E85001507A3 /* ExtractGiantBombDataPresenter.m */; };
+		DA9E22081B062E85001507A3 /* ExtractGiantBombDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9E21FF1B062E85001507A3 /* ExtractGiantBombDataView.m */; };
+		DA9E22091B062E85001507A3 /* ExtractGiantBombDataWireFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9E22021B062E85001507A3 /* ExtractGiantBombDataWireFrame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +49,21 @@
 		DA4AB8CA1B062A1A00D684CE /* School Crime LondonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "School Crime LondonTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA4AB8CF1B062A1A00D684CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA4AB8D01B062A1A00D684CE /* School_Crime_LondonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = School_Crime_LondonTests.m; sourceTree = "<group>"; };
+		DA9E21EE1B062E85001507A3 /* ExtractGiantBombDataAPIDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtractGiantBombDataAPIDataManager.h; sourceTree = "<group>"; };
+		DA9E21EF1B062E85001507A3 /* ExtractGiantBombDataAPIDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtractGiantBombDataAPIDataManager.m; sourceTree = "<group>"; };
+		DA9E21F11B062E85001507A3 /* ExtractGiantBombDataLocalDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtractGiantBombDataLocalDataManager.h; sourceTree = "<group>"; };
+		DA9E21F21B062E85001507A3 /* ExtractGiantBombDataLocalDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtractGiantBombDataLocalDataManager.m; sourceTree = "<group>"; };
+		DA9E21F41B062E85001507A3 /* ExtractGiantBombDataInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtractGiantBombDataInteractor.h; sourceTree = "<group>"; };
+		DA9E21F51B062E85001507A3 /* ExtractGiantBombDataInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtractGiantBombDataInteractor.m; sourceTree = "<group>"; };
+		DA9E21F61B062E85001507A3 /* ExtractGiantBombDataItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtractGiantBombDataItem.h; sourceTree = "<group>"; };
+		DA9E21F71B062E85001507A3 /* ExtractGiantBombDataItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtractGiantBombDataItem.m; sourceTree = "<group>"; };
+		DA9E21F91B062E85001507A3 /* ExtractGiantBombDataPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtractGiantBombDataPresenter.h; sourceTree = "<group>"; };
+		DA9E21FA1B062E85001507A3 /* ExtractGiantBombDataPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtractGiantBombDataPresenter.m; sourceTree = "<group>"; };
+		DA9E21FC1B062E85001507A3 /* ExtractGiantBombDataProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtractGiantBombDataProtocols.h; sourceTree = "<group>"; };
+		DA9E21FE1B062E85001507A3 /* ExtractGiantBombDataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtractGiantBombDataView.h; sourceTree = "<group>"; };
+		DA9E21FF1B062E85001507A3 /* ExtractGiantBombDataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtractGiantBombDataView.m; sourceTree = "<group>"; };
+		DA9E22011B062E85001507A3 /* ExtractGiantBombDataWireFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtractGiantBombDataWireFrame.h; sourceTree = "<group>"; };
+		DA9E22021B062E85001507A3 /* ExtractGiantBombDataWireFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtractGiantBombDataWireFrame.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +125,7 @@
 		DA4AB8B61B062A1A00D684CE /* School Crime London */ = {
 			isa = PBXGroup;
 			children = (
+				DA9E21EA1B062C70001507A3 /* Modules */,
 				DA4AB8B91B062A1A00D684CE /* AppDelegate.h */,
 				DA4AB8BA1B062A1A00D684CE /* AppDelegate.m */,
 				DA4AB8BE1B062A1A00D684CE /* ViewController.h */,
@@ -138,6 +161,100 @@
 				DA4AB8CF1B062A1A00D684CE /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DA9E21EA1B062C70001507A3 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				DA9E21EB1B062E85001507A3 /* ExtractGiantBombData */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		DA9E21EB1B062E85001507A3 /* ExtractGiantBombData */ = {
+			isa = PBXGroup;
+			children = (
+				DA9E21EC1B062E85001507A3 /* DataManager */,
+				DA9E21F31B062E85001507A3 /* Interactor */,
+				DA9E21F81B062E85001507A3 /* Presenter */,
+				DA9E21FB1B062E85001507A3 /* Protocols */,
+				DA9E21FD1B062E85001507A3 /* View */,
+				DA9E22001B062E85001507A3 /* WireFrame */,
+			);
+			path = ExtractGiantBombData;
+			sourceTree = "<group>";
+		};
+		DA9E21EC1B062E85001507A3 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				DA9E21ED1B062E85001507A3 /* API */,
+				DA9E21F01B062E85001507A3 /* Local */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		DA9E21ED1B062E85001507A3 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				DA9E21EE1B062E85001507A3 /* ExtractGiantBombDataAPIDataManager.h */,
+				DA9E21EF1B062E85001507A3 /* ExtractGiantBombDataAPIDataManager.m */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		DA9E21F01B062E85001507A3 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				DA9E21F11B062E85001507A3 /* ExtractGiantBombDataLocalDataManager.h */,
+				DA9E21F21B062E85001507A3 /* ExtractGiantBombDataLocalDataManager.m */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		DA9E21F31B062E85001507A3 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				DA9E21F41B062E85001507A3 /* ExtractGiantBombDataInteractor.h */,
+				DA9E21F51B062E85001507A3 /* ExtractGiantBombDataInteractor.m */,
+				DA9E21F61B062E85001507A3 /* ExtractGiantBombDataItem.h */,
+				DA9E21F71B062E85001507A3 /* ExtractGiantBombDataItem.m */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		DA9E21F81B062E85001507A3 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				DA9E21F91B062E85001507A3 /* ExtractGiantBombDataPresenter.h */,
+				DA9E21FA1B062E85001507A3 /* ExtractGiantBombDataPresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		DA9E21FB1B062E85001507A3 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DA9E21FC1B062E85001507A3 /* ExtractGiantBombDataProtocols.h */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		DA9E21FD1B062E85001507A3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DA9E21FE1B062E85001507A3 /* ExtractGiantBombDataView.h */,
+				DA9E21FF1B062E85001507A3 /* ExtractGiantBombDataView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DA9E22001B062E85001507A3 /* WireFrame */ = {
+			isa = PBXGroup;
+			children = (
+				DA9E22011B062E85001507A3 /* ExtractGiantBombDataWireFrame.h */,
+				DA9E22021B062E85001507A3 /* ExtractGiantBombDataWireFrame.m */,
+			);
+			path = WireFrame;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,9 +391,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA9E22041B062E85001507A3 /* ExtractGiantBombDataLocalDataManager.m in Sources */,
 				DA4AB8C01B062A1A00D684CE /* ViewController.m in Sources */,
+				DA9E22071B062E85001507A3 /* ExtractGiantBombDataPresenter.m in Sources */,
+				DA9E22051B062E85001507A3 /* ExtractGiantBombDataInteractor.m in Sources */,
 				DA4AB8BD1B062A1A00D684CE /* main.m in Sources */,
+				DA9E22081B062E85001507A3 /* ExtractGiantBombDataView.m in Sources */,
+				DA9E22031B062E85001507A3 /* ExtractGiantBombDataAPIDataManager.m in Sources */,
 				DA4AB8BB1B062A1A00D684CE /* AppDelegate.m in Sources */,
+				DA9E22091B062E85001507A3 /* ExtractGiantBombDataWireFrame.m in Sources */,
+				DA9E22061B062E85001507A3 /* ExtractGiantBombDataItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
