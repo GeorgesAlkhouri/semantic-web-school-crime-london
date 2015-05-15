@@ -1,0 +1,485 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		830C837A2D2624C8060B469C /* libPods-School Crime London.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59AA2DBF5C463785F0512B22 /* libPods-School Crime London.a */; };
+		DA4AB8BB1B062A1A00D684CE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4AB8BA1B062A1A00D684CE /* AppDelegate.m */; };
+		DA4AB8BD1B062A1A00D684CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4AB8BC1B062A1A00D684CE /* main.m */; };
+		DA4AB8C01B062A1A00D684CE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4AB8BF1B062A1A00D684CE /* ViewController.m */; };
+		DA4AB8C21B062A1A00D684CE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA4AB8C11B062A1A00D684CE /* Images.xcassets */; };
+		DA4AB8C51B062A1A00D684CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA4AB8C31B062A1A00D684CE /* Main.storyboard */; };
+		DA4AB8D11B062A1A00D684CE /* School_Crime_LondonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4AB8D01B062A1A00D684CE /* School_Crime_LondonTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DA4AB8CB1B062A1A00D684CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA4AB8AC1B062A1A00D684CE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA4AB8B31B062A1A00D684CE;
+			remoteInfo = "School Crime London";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		59AA2DBF5C463785F0512B22 /* libPods-School Crime London.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-School Crime London.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E7D1F96A70815FA7E309B28 /* Pods-School Crime London.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-School Crime London.release.xcconfig"; path = "Pods/Target Support Files/Pods-School Crime London/Pods-School Crime London.release.xcconfig"; sourceTree = "<group>"; };
+		B28C36BB3475D30947F80F7D /* Pods-School Crime London.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-School Crime London.debug.xcconfig"; path = "Pods/Target Support Files/Pods-School Crime London/Pods-School Crime London.debug.xcconfig"; sourceTree = "<group>"; };
+		DA4AB8B41B062A1A00D684CE /* School Crime London.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "School Crime London.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA4AB8B81B062A1A00D684CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA4AB8B91B062A1A00D684CE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DA4AB8BA1B062A1A00D684CE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DA4AB8BC1B062A1A00D684CE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DA4AB8BE1B062A1A00D684CE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DA4AB8BF1B062A1A00D684CE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DA4AB8C11B062A1A00D684CE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DA4AB8C41B062A1A00D684CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DA4AB8CA1B062A1A00D684CE /* School Crime LondonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "School Crime LondonTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA4AB8CF1B062A1A00D684CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA4AB8D01B062A1A00D684CE /* School_Crime_LondonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = School_Crime_LondonTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DA4AB8B11B062A1A00D684CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				830C837A2D2624C8060B469C /* libPods-School Crime London.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA4AB8C71B062A1A00D684CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2B70E7E214CD7BDDE958365F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				59AA2DBF5C463785F0512B22 /* libPods-School Crime London.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		99186BF3EE414BED7BEB5850 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B28C36BB3475D30947F80F7D /* Pods-School Crime London.debug.xcconfig */,
+				9E7D1F96A70815FA7E309B28 /* Pods-School Crime London.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DA4AB8AB1B062A1A00D684CE = {
+			isa = PBXGroup;
+			children = (
+				DA4AB8B61B062A1A00D684CE /* School Crime London */,
+				DA4AB8CD1B062A1A00D684CE /* School Crime LondonTests */,
+				DA4AB8B51B062A1A00D684CE /* Products */,
+				99186BF3EE414BED7BEB5850 /* Pods */,
+				2B70E7E214CD7BDDE958365F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DA4AB8B51B062A1A00D684CE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DA4AB8B41B062A1A00D684CE /* School Crime London.app */,
+				DA4AB8CA1B062A1A00D684CE /* School Crime LondonTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DA4AB8B61B062A1A00D684CE /* School Crime London */ = {
+			isa = PBXGroup;
+			children = (
+				DA4AB8B91B062A1A00D684CE /* AppDelegate.h */,
+				DA4AB8BA1B062A1A00D684CE /* AppDelegate.m */,
+				DA4AB8BE1B062A1A00D684CE /* ViewController.h */,
+				DA4AB8BF1B062A1A00D684CE /* ViewController.m */,
+				DA4AB8C11B062A1A00D684CE /* Images.xcassets */,
+				DA4AB8C31B062A1A00D684CE /* Main.storyboard */,
+				DA4AB8B71B062A1A00D684CE /* Supporting Files */,
+			);
+			path = "School Crime London";
+			sourceTree = "<group>";
+		};
+		DA4AB8B71B062A1A00D684CE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DA4AB8B81B062A1A00D684CE /* Info.plist */,
+				DA4AB8BC1B062A1A00D684CE /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DA4AB8CD1B062A1A00D684CE /* School Crime LondonTests */ = {
+			isa = PBXGroup;
+			children = (
+				DA4AB8D01B062A1A00D684CE /* School_Crime_LondonTests.m */,
+				DA4AB8CE1B062A1A00D684CE /* Supporting Files */,
+			);
+			path = "School Crime LondonTests";
+			sourceTree = "<group>";
+		};
+		DA4AB8CE1B062A1A00D684CE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DA4AB8CF1B062A1A00D684CE /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DA4AB8B31B062A1A00D684CE /* School Crime London */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA4AB8D41B062A1A00D684CE /* Build configuration list for PBXNativeTarget "School Crime London" */;
+			buildPhases = (
+				2332A0162B5DA5564CF1960E /* Check Pods Manifest.lock */,
+				DA4AB8B01B062A1A00D684CE /* Sources */,
+				DA4AB8B11B062A1A00D684CE /* Frameworks */,
+				DA4AB8B21B062A1A00D684CE /* Resources */,
+				11602A22856BFCCB5F33E515 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "School Crime London";
+			productName = "School Crime London";
+			productReference = DA4AB8B41B062A1A00D684CE /* School Crime London.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DA4AB8C91B062A1A00D684CE /* School Crime LondonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA4AB8D71B062A1A00D684CE /* Build configuration list for PBXNativeTarget "School Crime LondonTests" */;
+			buildPhases = (
+				DA4AB8C61B062A1A00D684CE /* Sources */,
+				DA4AB8C71B062A1A00D684CE /* Frameworks */,
+				DA4AB8C81B062A1A00D684CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DA4AB8CC1B062A1A00D684CE /* PBXTargetDependency */,
+			);
+			name = "School Crime LondonTests";
+			productName = "School Crime LondonTests";
+			productReference = DA4AB8CA1B062A1A00D684CE /* School Crime LondonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DA4AB8AC1B062A1A00D684CE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Georges Alkhouri";
+				TargetAttributes = {
+					DA4AB8B31B062A1A00D684CE = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					DA4AB8C91B062A1A00D684CE = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = DA4AB8B31B062A1A00D684CE;
+					};
+				};
+			};
+			buildConfigurationList = DA4AB8AF1B062A1A00D684CE /* Build configuration list for PBXProject "School Crime London" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DA4AB8AB1B062A1A00D684CE;
+			productRefGroup = DA4AB8B51B062A1A00D684CE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DA4AB8B31B062A1A00D684CE /* School Crime London */,
+				DA4AB8C91B062A1A00D684CE /* School Crime LondonTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DA4AB8B21B062A1A00D684CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA4AB8C21B062A1A00D684CE /* Images.xcassets in Resources */,
+				DA4AB8C51B062A1A00D684CE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA4AB8C81B062A1A00D684CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		11602A22856BFCCB5F33E515 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-School Crime London/Pods-School Crime London-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2332A0162B5DA5564CF1960E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DA4AB8B01B062A1A00D684CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA4AB8C01B062A1A00D684CE /* ViewController.m in Sources */,
+				DA4AB8BD1B062A1A00D684CE /* main.m in Sources */,
+				DA4AB8BB1B062A1A00D684CE /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA4AB8C61B062A1A00D684CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA4AB8D11B062A1A00D684CE /* School_Crime_LondonTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DA4AB8CC1B062A1A00D684CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DA4AB8B31B062A1A00D684CE /* School Crime London */;
+			targetProxy = DA4AB8CB1B062A1A00D684CE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DA4AB8C31B062A1A00D684CE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA4AB8C41B062A1A00D684CE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DA4AB8D21B062A1A00D684CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		DA4AB8D31B062A1A00D684CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		DA4AB8D51B062A1A00D684CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B28C36BB3475D30947F80F7D /* Pods-School Crime London.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "School Crime London/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DA4AB8D61B062A1A00D684CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E7D1F96A70815FA7E309B28 /* Pods-School Crime London.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "School Crime London/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DA4AB8D81B062A1A00D684CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "School Crime LondonTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/School Crime London.app/Contents/MacOS/School Crime London";
+			};
+			name = Debug;
+		};
+		DA4AB8D91B062A1A00D684CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "School Crime LondonTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/School Crime London.app/Contents/MacOS/School Crime London";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DA4AB8AF1B062A1A00D684CE /* Build configuration list for PBXProject "School Crime London" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA4AB8D21B062A1A00D684CE /* Debug */,
+				DA4AB8D31B062A1A00D684CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA4AB8D41B062A1A00D684CE /* Build configuration list for PBXNativeTarget "School Crime London" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA4AB8D51B062A1A00D684CE /* Debug */,
+				DA4AB8D61B062A1A00D684CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA4AB8D71B062A1A00D684CE /* Build configuration list for PBXNativeTarget "School Crime LondonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA4AB8D81B062A1A00D684CE /* Debug */,
+				DA4AB8D91B062A1A00D684CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DA4AB8AC1B062A1A00D684CE /* Project object */;
+}
