@@ -8,14 +8,25 @@
 
 #import "AppDelegate.h"
 
+#import "ExtractGiantBombDataWireFrame.h"
+
 @interface AppDelegate ()
+
+@property(nonatomic) NSWindowController *windowController;
 
 @end
 
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    // Insert code here to initialize your application
+
+    NSStoryboard *storyboard =
+        [NSStoryboard storyboardWithName:@"Main" bundle:nil];
+    self.windowController = [storyboard
+        instantiateControllerWithIdentifier:@"MainWindowController"];
+
+    [ExtractGiantBombDataWireFrame
+        presentExtractGiantBombDataModuleFrom:self.windowController];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {

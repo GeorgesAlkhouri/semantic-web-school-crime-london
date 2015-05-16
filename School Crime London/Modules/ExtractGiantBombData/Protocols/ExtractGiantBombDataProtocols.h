@@ -13,15 +13,18 @@
 @protocol ExtractGiantBombDataLocalDataManagerInputProtocol;
 @protocol ExtractGiantBombDataAPIDataManagerInputProtocol;
 
-
 @class ExtractGiantBombDataWireFrame;
 
 @protocol ExtractGiantBombDataViewProtocol
 @required
-@property (nonatomic, strong) id <ExtractGiantBombDataPresenterProtocol> presenter;
+@property(nonatomic, strong)
+    id<ExtractGiantBombDataPresenterProtocol> presenter;
 /**
  * Add here your methods for communication PRESENTER -> VIEWCONTROLLER
  */
+
+- (void)setInfoLabelText:(NSString *)text;
+
 @end
 
 @protocol ExtractGiantBombDataWireFrameProtocol
@@ -34,30 +37,44 @@
 
 @protocol ExtractGiantBombDataPresenterProtocol
 @required
-@property (nonatomic, weak) id <ExtractGiantBombDataViewProtocol> view;
-@property (nonatomic, strong) id <ExtractGiantBombDataInteractorInputProtocol> interactor;
-@property (nonatomic, strong) id <ExtractGiantBombDataWireFrameProtocol> wireFrame;
+@property(nonatomic, weak) id<ExtractGiantBombDataViewProtocol> view;
+@property(nonatomic, strong)
+    id<ExtractGiantBombDataInteractorInputProtocol> interactor;
+@property(nonatomic, strong)
+    id<ExtractGiantBombDataWireFrameProtocol> wireFrame;
 /**
  * Add here your methods for communication VIEWCONTROLLER -> PRESENTER
  */
+
+- (void)actionButtonPressed;
+- (void)setGiantBombAPIKey:(NSString *)APIKey;
+
 @end
 
 @protocol ExtractGiantBombDataInteractorOutputProtocol
 /**
  * Add here your methods for communication INTERACTOR -> PRESENTER
  */
+
+- (void)errorOccurred:(NSError *)error;
+
 @end
 
 @protocol ExtractGiantBombDataInteractorInputProtocol
 @required
-@property (nonatomic, weak) id <ExtractGiantBombDataInteractorOutputProtocol> presenter;
-@property (nonatomic, strong) id <ExtractGiantBombDataAPIDataManagerInputProtocol> APIDataManager;
-@property (nonatomic, strong) id <ExtractGiantBombDataLocalDataManagerInputProtocol> localDataManager;
+@property(nonatomic, weak)
+    id<ExtractGiantBombDataInteractorOutputProtocol> presenter;
+@property(nonatomic, strong)
+    id<ExtractGiantBombDataAPIDataManagerInputProtocol> APIDataManager;
+@property(nonatomic, strong)
+    id<ExtractGiantBombDataLocalDataManagerInputProtocol> localDataManager;
 /**
  * Add here your methods for communication PRESENTER -> INTERACTOR
  */
-@end
 
+- (void)startDataExtractionWithGiantBombAPIKey:(NSString *)APIKey;
+
+@end
 
 @protocol ExtractGiantBombDataDataManagerInputProtocol
 /**
@@ -65,16 +82,21 @@
  */
 @end
 
-@protocol ExtractGiantBombDataAPIDataManagerInputProtocol <ExtractGiantBombDataDataManagerInputProtocol>
+@protocol ExtractGiantBombDataAPIDataManagerInputProtocol <
+    ExtractGiantBombDataDataManagerInputProtocol>
 /**
  * Add here your methods for communication INTERACTOR -> APIDATAMANAGER
  */
+
+- (void)getReleaseDatesForGames:(NSArray *)gameNames
+                         APIKey:(NSString *)APIKey
+                     completion:(void (^)(NSArray *results))completion;
+
 @end
 
-@protocol ExtractGiantBombDataLocalDataManagerInputProtocol <ExtractGiantBombDataDataManagerInputProtocol>
+@protocol ExtractGiantBombDataLocalDataManagerInputProtocol <
+    ExtractGiantBombDataDataManagerInputProtocol>
 /**
  * Add here your methods for communication INTERACTOR -> LOCLDATAMANAGER
  */
 @end
-
-

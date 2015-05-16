@@ -7,16 +7,25 @@
 
 @implementation ExtractGiantBombDataWireFrame
 
-+ (void)presentExtractGiantBombDataModuleFrom:(NSViewController*)fromViewController
-{
++ (void)presentExtractGiantBombDataModuleFrom:
+        (NSWindowController *)fromViewController {
+
     // Generating module components
-    id <ExtractGiantBombDataViewProtocol> view = [[ExtractGiantBombDataView alloc] init];
-    id <ExtractGiantBombDataPresenterProtocol, ExtractGiantBombDataInteractorOutputProtocol> presenter = [ExtractGiantBombDataPresenter new];
-    id <ExtractGiantBombDataInteractorInputProtocol> interactor = [ExtractGiantBombDataInteractor new];
-    id <ExtractGiantBombDataAPIDataManagerInputProtocol> APIDataManager = [ExtractGiantBombDataAPIDataManager new];
-    id <ExtractGiantBombDataLocalDataManagerInputProtocol> localDataManager = [ExtractGiantBombDataLocalDataManager new];
-    id <ExtractGiantBombDataWireFrameProtocol> wireFrame= [ExtractGiantBombDataWireFrame new];
-    
+    id<ExtractGiantBombDataViewProtocol> view =
+        (id<ExtractGiantBombDataViewProtocol>)
+            fromViewController.contentViewController;
+    id<ExtractGiantBombDataPresenterProtocol,
+       ExtractGiantBombDataInteractorOutputProtocol> presenter =
+        [ExtractGiantBombDataPresenter new];
+    id<ExtractGiantBombDataInteractorInputProtocol> interactor =
+        [ExtractGiantBombDataInteractor new];
+    id<ExtractGiantBombDataAPIDataManagerInputProtocol> APIDataManager =
+        [ExtractGiantBombDataAPIDataManager new];
+    id<ExtractGiantBombDataLocalDataManagerInputProtocol> localDataManager =
+        [ExtractGiantBombDataLocalDataManager new];
+    id<ExtractGiantBombDataWireFrameProtocol> wireFrame =
+        [ExtractGiantBombDataWireFrame new];
+
     // Connecting
     view.presenter = presenter;
     presenter.view = view;
@@ -25,8 +34,9 @@
     interactor.presenter = presenter;
     interactor.APIDataManager = APIDataManager;
     interactor.localDataManager = localDataManager;
-    
-    //TOODO - New view controller presentation (present, push, pop, .. )
+
+    [fromViewController showWindow:self];
+    // TOODO - New view controller presentation (present, push, pop, .. )
 }
 
 @end

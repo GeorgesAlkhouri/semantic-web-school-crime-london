@@ -7,4 +7,8 @@
 
 @interface ExtractGiantBombDataItem : NSObject
 
+@property(nonatomic) NSString *gameName;
+@property(nonatomic) NSDate *releaseDate;
+@property(nonatomic) NSString *rating;
+
 @end
