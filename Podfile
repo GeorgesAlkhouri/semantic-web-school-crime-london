@@ -4,6 +4,7 @@
 target 'School Crime London' do
 
 pod "AFNetworking"
+pod "CHCSVParser", :inhibit_warnings => true
 
 end
 

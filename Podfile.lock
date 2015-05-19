@@ -17,11 +17,14 @@ PODS:
   - AFNetworking/Reachability (2.5.3)
   - AFNetworking/Security (2.5.3)
   - AFNetworking/Serialization (2.5.3)
+  - CHCSVParser (2.1.0)
 
 DEPENDENCIES:
   - AFNetworking
+  - CHCSVParser
 
 SPEC CHECKSUMS:
   AFNetworking: e1d86c2a96bb5d2e7408da36149806706ee122fe
+  CHCSVParser: 3bcc7bdb72111a31222e95d57eacceefe4e537e8
 
 COCOAPODS: 0.37.1
