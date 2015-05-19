@@ -21,6 +21,14 @@
 		DA9E22081B062E85001507A3 /* ExtractGiantBombDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9E21FF1B062E85001507A3 /* ExtractGiantBombDataView.m */; };
 		DA9E22091B062E85001507A3 /* ExtractGiantBombDataWireFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9E22021B062E85001507A3 /* ExtractGiantBombDataWireFrame.m */; };
 		DA9E220E1B069592001507A3 /* NSDate+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9E220D1B069592001507A3 /* NSDate+Additions.m */; };
+		DAACE0171B0BDF3F0059B44A /* london-schools-atlas-processed-data.csv in Resources */ = {isa = PBXBuildFile; fileRef = DAACE0161B0BDF3F0059B44A /* london-schools-atlas-processed-data.csv */; };
+		DAACE0301B0BDFC10059B44A /* ParseLondonDataStoreDataAPIDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DAACE01C1B0BDFC10059B44A /* ParseLondonDataStoreDataAPIDataManager.m */; };
+		DAACE0311B0BDFC10059B44A /* ParseLondonDataStoreDataLocalDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DAACE01F1B0BDFC10059B44A /* ParseLondonDataStoreDataLocalDataManager.m */; };
+		DAACE0321B0BDFC10059B44A /* ParseLondonDataStoreDataInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = DAACE0221B0BDFC10059B44A /* ParseLondonDataStoreDataInteractor.m */; };
+		DAACE0331B0BDFC10059B44A /* ParseLondonDataStoreDataItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DAACE0241B0BDFC10059B44A /* ParseLondonDataStoreDataItem.m */; };
+		DAACE0341B0BDFC10059B44A /* ParseLondonDataStoreDataPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = DAACE0271B0BDFC10059B44A /* ParseLondonDataStoreDataPresenter.m */; };
+		DAACE0351B0BDFC10059B44A /* ParseLondonDataStoreDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAACE02C1B0BDFC10059B44A /* ParseLondonDataStoreDataView.m */; };
+		DAACE0361B0BDFC10059B44A /* ParseLondonDataStoreDataWireFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = DAACE02F1B0BDFC10059B44A /* ParseLondonDataStoreDataWireFrame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +72,22 @@
 		DA9E22021B062E85001507A3 /* ExtractGiantBombDataWireFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtractGiantBombDataWireFrame.m; sourceTree = "<group>"; };
 		DA9E220C1B069592001507A3 /* NSDate+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Additions.h"; sourceTree = "<group>"; };
 		DA9E220D1B069592001507A3 /* NSDate+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Additions.m"; sourceTree = "<group>"; };
+		DAACE0161B0BDF3F0059B44A /* london-schools-atlas-processed-data.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "london-schools-atlas-processed-data.csv"; sourceTree = "<group>"; };
+		DAACE01B1B0BDFC10059B44A /* ParseLondonDataStoreDataAPIDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseLondonDataStoreDataAPIDataManager.h; sourceTree = "<group>"; };
+		DAACE01C1B0BDFC10059B44A /* ParseLondonDataStoreDataAPIDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseLondonDataStoreDataAPIDataManager.m; sourceTree = "<group>"; };
+		DAACE01E1B0BDFC10059B44A /* ParseLondonDataStoreDataLocalDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseLondonDataStoreDataLocalDataManager.h; sourceTree = "<group>"; };
+		DAACE01F1B0BDFC10059B44A /* ParseLondonDataStoreDataLocalDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseLondonDataStoreDataLocalDataManager.m; sourceTree = "<group>"; };
+		DAACE0211B0BDFC10059B44A /* ParseLondonDataStoreDataInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseLondonDataStoreDataInteractor.h; sourceTree = "<group>"; };
+		DAACE0221B0BDFC10059B44A /* ParseLondonDataStoreDataInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseLondonDataStoreDataInteractor.m; sourceTree = "<group>"; };
+		DAACE0231B0BDFC10059B44A /* ParseLondonDataStoreDataItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseLondonDataStoreDataItem.h; sourceTree = "<group>"; };
+		DAACE0241B0BDFC10059B44A /* ParseLondonDataStoreDataItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseLondonDataStoreDataItem.m; sourceTree = "<group>"; };
+		DAACE0261B0BDFC10059B44A /* ParseLondonDataStoreDataPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseLondonDataStoreDataPresenter.h; sourceTree = "<group>"; };
+		DAACE0271B0BDFC10059B44A /* ParseLondonDataStoreDataPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseLondonDataStoreDataPresenter.m; sourceTree = "<group>"; };
+		DAACE0291B0BDFC10059B44A /* ParseLondonDataStoreDataProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseLondonDataStoreDataProtocols.h; sourceTree = "<group>"; };
+		DAACE02B1B0BDFC10059B44A /* ParseLondonDataStoreDataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseLondonDataStoreDataView.h; sourceTree = "<group>"; };
+		DAACE02C1B0BDFC10059B44A /* ParseLondonDataStoreDataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseLondonDataStoreDataView.m; sourceTree = "<group>"; };
+		DAACE02E1B0BDFC10059B44A /* ParseLondonDataStoreDataWireFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseLondonDataStoreDataWireFrame.h; sourceTree = "<group>"; };
+		DAACE02F1B0BDFC10059B44A /* ParseLondonDataStoreDataWireFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseLondonDataStoreDataWireFrame.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +163,7 @@
 		DA4AB8B71B062A1A00D684CE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DAACE0161B0BDF3F0059B44A /* london-schools-atlas-processed-data.csv */,
 				DA4AB8B81B062A1A00D684CE /* Info.plist */,
 				DA4AB8BC1B062A1A00D684CE /* main.m */,
 			);
@@ -165,6 +190,7 @@
 		DA9E21EA1B062C70001507A3 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				DAACE0181B0BDFC10059B44A /* ParseLondonDataStoreData */,
 				DA9E21EB1B062E85001507A3 /* ExtractGiantBombData */,
 			);
 			path = Modules;
@@ -273,6 +299,92 @@
 			path = Categories;
 			sourceTree = "<group>";
 		};
+		DAACE0181B0BDFC10059B44A /* ParseLondonDataStoreData */ = {
+			isa = PBXGroup;
+			children = (
+				DAACE0191B0BDFC10059B44A /* DataManager */,
+				DAACE0201B0BDFC10059B44A /* Interactor */,
+				DAACE0251B0BDFC10059B44A /* Presenter */,
+				DAACE0281B0BDFC10059B44A /* Protocols */,
+				DAACE02A1B0BDFC10059B44A /* View */,
+				DAACE02D1B0BDFC10059B44A /* WireFrame */,
+			);
+			path = ParseLondonDataStoreData;
+			sourceTree = "<group>";
+		};
+		DAACE0191B0BDFC10059B44A /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				DAACE01A1B0BDFC10059B44A /* API */,
+				DAACE01D1B0BDFC10059B44A /* Local */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		DAACE01A1B0BDFC10059B44A /* API */ = {
+			isa = PBXGroup;
+			children = (
+				DAACE01B1B0BDFC10059B44A /* ParseLondonDataStoreDataAPIDataManager.h */,
+				DAACE01C1B0BDFC10059B44A /* ParseLondonDataStoreDataAPIDataManager.m */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		DAACE01D1B0BDFC10059B44A /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				DAACE01E1B0BDFC10059B44A /* ParseLondonDataStoreDataLocalDataManager.h */,
+				DAACE01F1B0BDFC10059B44A /* ParseLondonDataStoreDataLocalDataManager.m */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		DAACE0201B0BDFC10059B44A /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				DAACE0211B0BDFC10059B44A /* ParseLondonDataStoreDataInteractor.h */,
+				DAACE0221B0BDFC10059B44A /* ParseLondonDataStoreDataInteractor.m */,
+				DAACE0231B0BDFC10059B44A /* ParseLondonDataStoreDataItem.h */,
+				DAACE0241B0BDFC10059B44A /* ParseLondonDataStoreDataItem.m */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		DAACE0251B0BDFC10059B44A /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				DAACE0261B0BDFC10059B44A /* ParseLondonDataStoreDataPresenter.h */,
+				DAACE0271B0BDFC10059B44A /* ParseLondonDataStoreDataPresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		DAACE0281B0BDFC10059B44A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DAACE0291B0BDFC10059B44A /* ParseLondonDataStoreDataProtocols.h */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		DAACE02A1B0BDFC10059B44A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DAACE02B1B0BDFC10059B44A /* ParseLondonDataStoreDataView.h */,
+				DAACE02C1B0BDFC10059B44A /* ParseLondonDataStoreDataView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DAACE02D1B0BDFC10059B44A /* WireFrame */ = {
+			isa = PBXGroup;
+			children = (
+				DAACE02E1B0BDFC10059B44A /* ParseLondonDataStoreDataWireFrame.h */,
+				DAACE02F1B0BDFC10059B44A /* ParseLondonDataStoreDataWireFrame.m */,
+			);
+			path = WireFrame;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -357,6 +469,7 @@
 			files = (
 				DA4AB8C21B062A1A00D684CE /* Images.xcassets in Resources */,
 				DA4AB8C51B062A1A00D684CE /* Main.storyboard in Resources */,
+				DAACE0171B0BDF3F0059B44A /* london-schools-atlas-processed-data.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,16 +520,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAACE0331B0BDFC10059B44A /* ParseLondonDataStoreDataItem.m in Sources */,
 				DA9E220E1B069592001507A3 /* NSDate+Additions.m in Sources */,
 				DA9E22041B062E85001507A3 /* ExtractGiantBombDataLocalDataManager.m in Sources */,
+				DAACE0341B0BDFC10059B44A /* ParseLondonDataStoreDataPresenter.m in Sources */,
+				DAACE0321B0BDFC10059B44A /* ParseLondonDataStoreDataInteractor.m in Sources */,
 				DA9E22071B062E85001507A3 /* ExtractGiantBombDataPresenter.m in Sources */,
+				DAACE0301B0BDFC10059B44A /* ParseLondonDataStoreDataAPIDataManager.m in Sources */,
 				DA9E22051B062E85001507A3 /* ExtractGiantBombDataInteractor.m in Sources */,
 				DA4AB8BD1B062A1A00D684CE /* main.m in Sources */,
 				DA9E22081B062E85001507A3 /* ExtractGiantBombDataView.m in Sources */,
+				DAACE0351B0BDFC10059B44A /* ParseLondonDataStoreDataView.m in Sources */,
+				DAACE0361B0BDFC10059B44A /* ParseLondonDataStoreDataWireFrame.m in Sources */,
 				DA9E22031B062E85001507A3 /* ExtractGiantBombDataAPIDataManager.m in Sources */,
 				DA4AB8BB1B062A1A00D684CE /* AppDelegate.m in Sources */,
 				DA9E22091B062E85001507A3 /* ExtractGiantBombDataWireFrame.m in Sources */,
 				DA9E22061B062E85001507A3 /* ExtractGiantBombDataItem.m in Sources */,
+				DAACE0311B0BDFC10059B44A /* ParseLondonDataStoreDataLocalDataManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

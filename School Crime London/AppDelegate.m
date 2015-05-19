@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 
 #import "ExtractGiantBombDataWireFrame.h"
+#import "ParseLondonDataStoreDataWireFrame.h"
 
 @interface AppDelegate ()
 
@@ -27,6 +28,8 @@
 
     [ExtractGiantBombDataWireFrame
         presentExtractGiantBombDataModuleFrom:self.windowController];
+    [ParseLondonDataStoreDataWireFrame
+        presentParseLondonDataStoreDataModuleFrom:self.windowController];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
