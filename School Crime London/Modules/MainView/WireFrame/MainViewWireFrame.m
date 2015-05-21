@@ -58,7 +58,8 @@
     [(MainViewWireFrame *)wireFrame
         setParseLondonDataStoreDataWireFrame:
             [ParseLondonDataStoreDataWireFrame
-                presentParseLondonDataStoreDataModuleFrom:nil]];
+                presentParseLondonDataStoreDataModuleFrom:nil
+                                             withDelegate:presenter]];
 
     [(MainViewWireFrame *)wireFrame
         setTranslateSchoolNamesToCoordsWireFrame:

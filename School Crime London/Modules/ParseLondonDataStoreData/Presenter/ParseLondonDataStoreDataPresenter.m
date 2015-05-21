@@ -8,4 +8,11 @@
 
 @implementation ParseLondonDataStoreDataPresenter
 
+- (NSArray *)parseLondonDataStoreData:(NSError *__autoreleasing *)error {
+
+    [self.interactor parseData];
+
+    return nil;
+}
+
 @end

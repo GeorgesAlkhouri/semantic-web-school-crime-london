@@ -43,6 +43,9 @@
 
 - (void)extractionDidFinishWithResults:(NSArray *)results {
 
+    NSArray *schoolNames = [self.parseLondonDataStoreDataConnectionProtocol
+        parseLondonDataStoreData:nil];
+
     [self.translateSchoolNamesToCoordsConnection
         startTranslatingWithAPIKey:self.geofencingAPIKey
                        schoolNames:@[ @"Tower Hamlets+Bethnal Green North" ]];

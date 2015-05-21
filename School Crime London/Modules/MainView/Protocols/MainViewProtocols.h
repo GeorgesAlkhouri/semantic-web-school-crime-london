@@ -16,6 +16,7 @@
 
 @protocol ExtractGiantBombDataConnectionProtocol;
 @protocol TranslateSchoolNamesToCoordsConnectionProtocol;
+@protocol ParseLondonDataStoreDataConnectionProtocol;
 
 @class MainViewWireFrame;
 
@@ -44,6 +45,13 @@
 
 @end
 
+@protocol
+    MainViewParseLondonDataStoreDataDelegateProtocol <MainViewDelegateProtocol>
+@property(nonatomic, strong) id<ParseLondonDataStoreDataConnectionProtocol>
+    parseLondonDataStoreDataConnectionProtocol;
+
+@end
+
 @protocol MainViewViewProtocol
 @required
 @property(nonatomic, strong) id<MainViewPresenterProtocol> presenter;
@@ -65,7 +73,8 @@
 
 @protocol MainViewPresenterProtocol <
     MainViewExtractGiantBombDataDelegateProtocol,
-    MainViewTranslateSchoolNamesToCoordsDelegateProtocol>
+    MainViewTranslateSchoolNamesToCoordsDelegateProtocol,
+    MainViewParseLondonDataStoreDataDelegateProtocol>
 @required
 @property(nonatomic, weak) id<MainViewViewProtocol> view;
 @property(nonatomic, strong) id<MainViewInteractorInputProtocol> interactor;

@@ -13,6 +13,8 @@
 #import "ParseLondonDataStoreDataWireframe.h"
 #import <Cocoa/Cocoa.h>
 
+#import "MainViewProtocols.h"
+
 @interface ParseLondonDataStoreDataWireFrame : NSObject <ParseLondonDataStoreDataWireFrameProtocol>
 
 @end

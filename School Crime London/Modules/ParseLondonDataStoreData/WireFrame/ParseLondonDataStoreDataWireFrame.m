@@ -15,7 +15,9 @@
 @implementation ParseLondonDataStoreDataWireFrame
 
 + (instancetype)presentParseLondonDataStoreDataModuleFrom:
-    (NSWindowController *)fromViewController {
+                    (id)fromView withDelegate:
+                        (id<MainViewParseLondonDataStoreDataDelegateProtocol>)
+                            delegate {
 
     // Generating module components
     id<ParseLondonDataStoreDataViewProtocol> view =
@@ -37,11 +39,13 @@
     presenter.view = view;
     presenter.wireFrame = wireFrame;
     presenter.interactor = interactor;
+
+    delegate.parseLondonDataStoreDataConnectionProtocol = presenter;
+    presenter.mainViewDelegate = delegate;
+
     interactor.presenter = presenter;
     interactor.APIDataManager = APIDataManager;
     interactor.localDataManager = localDataManager;
-
-    [interactor parseData];
 
     [(ParseLondonDataStoreDataWireFrame *)wireFrame setPresenter:presenter];
 
