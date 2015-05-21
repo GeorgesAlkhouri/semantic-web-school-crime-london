@@ -8,10 +8,16 @@
 
 @class ExtractGiantBombDataWireFrame;
 
-@interface ExtractGiantBombDataPresenter : NSObject <ExtractGiantBombDataPresenterProtocol, ExtractGiantBombDataInteractorOutputProtocol>
+@interface ExtractGiantBombDataPresenter
+    : NSObject <ExtractGiantBombDataPresenterProtocol,
+                ExtractGiantBombDataInteractorOutputProtocol>
 
-@property (nonatomic, weak) id <ExtractGiantBombDataViewProtocol> view;
-@property (nonatomic, strong) id <ExtractGiantBombDataInteractorInputProtocol> interactor;
-@property (nonatomic, strong) id <ExtractGiantBombDataWireFrameProtocol> wireFrame;
+@property(nonatomic, weak) id<ExtractGiantBombDataViewProtocol> view;
+@property(nonatomic, strong)
+    id<ExtractGiantBombDataInteractorInputProtocol> interactor;
+@property(nonatomic, strong)
+    id<ExtractGiantBombDataWireFrameProtocol> wireFrame;
+
+@property(nonatomic, weak) id<MainViewDelegateProtocol> mainViewDelegate;
 
 @end

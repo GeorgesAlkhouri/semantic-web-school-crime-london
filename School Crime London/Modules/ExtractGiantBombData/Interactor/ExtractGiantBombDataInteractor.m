@@ -53,8 +53,7 @@
                 @"original_game_rating"][0][@"name"];
 
             [games addObject:game];
-        }
-        @catch (NSException *exception) {
+        } @catch (NSException *exception) {
 
             [self.presenter
                 errorOccurred:[NSError errorWithDomain:NSStringFromClass(
@@ -63,6 +62,8 @@
                                               userInfo:nil]];
         }
     }
+
+    [self.presenter extractionFinishedWithResults:[games copy]];
 }
 
 @end

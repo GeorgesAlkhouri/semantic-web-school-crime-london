@@ -12,8 +12,16 @@
 @protocol ExtractGiantBombDataPresenterProtocol;
 @protocol ExtractGiantBombDataLocalDataManagerInputProtocol;
 @protocol ExtractGiantBombDataAPIDataManagerInputProtocol;
+@protocol ExtractGiantBombDataConnectionProtocol;
+
+@protocol MainViewDelegateProtocol;
 
 @class ExtractGiantBombDataWireFrame;
+
+@protocol ExtractGiantBombDataConnectionProtocol <NSObject>
+@property(nonatomic, weak) id<MainViewDelegateProtocol> mainViewDelegate;
+- (void)extractDataWithAPIKey:(NSString *)APIKey;
+@end
 
 @protocol ExtractGiantBombDataViewProtocol
 @required
@@ -26,13 +34,18 @@
 
 @protocol ExtractGiantBombDataWireFrameProtocol
 @required
-+ (instancetype)presentExtractGiantBombDataModuleFrom:(id)fromView;
+@property(nonatomic, weak) id<ExtractGiantBombDataPresenterProtocol> presenter;
+
++ (instancetype)
+presentExtractGiantBombDataModuleFrom:(id)fromView
+                         withDelegate:(id<MainViewDelegateProtocol>)delegate;
 /**
  * Add here your methods for communication PRESENTER -> WIREFRAME
  */
 @end
 
-@protocol ExtractGiantBombDataPresenterProtocol
+@protocol ExtractGiantBombDataPresenterProtocol <
+    ExtractGiantBombDataConnectionProtocol>
 @required
 @property(nonatomic, weak) id<ExtractGiantBombDataViewProtocol> view;
 @property(nonatomic, strong)
@@ -49,6 +62,7 @@
  * Add here your methods for communication INTERACTOR -> PRESENTER
  */
 
+- (void)extractionFinishedWithResults:(NSArray *)results;
 - (void)errorOccurred:(NSError *)error;
 
 @end

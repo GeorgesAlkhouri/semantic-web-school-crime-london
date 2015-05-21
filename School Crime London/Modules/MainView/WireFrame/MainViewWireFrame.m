@@ -50,7 +50,8 @@
     [(MainViewWireFrame *)wireFrame
         setExtractGiantBombDataWireFrame:
             [ExtractGiantBombDataWireFrame
-                presentExtractGiantBombDataModuleFrom:nil]];
+                presentExtractGiantBombDataModuleFrom:nil
+                                         withDelegate:presenter]];
     [(MainViewWireFrame *)wireFrame
         setParseLondonDataStoreDataWireFrame:
             [ParseLondonDataStoreDataWireFrame

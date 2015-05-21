@@ -8,36 +8,30 @@
 
 @interface ExtractGiantBombDataPresenter ()
 
-@property(nonatomic) NSString *giantBombAPIKey;
-
 @end
 
 @implementation ExtractGiantBombDataPresenter
 
-- (void)setGiantBombAPIKey:(NSString *)APIKey {
+- (void)extractDataWithAPIKey:(NSString *)APIKey {
 
-    _giantBombAPIKey = APIKey;
+    [self.interactor startDataExtractionWithGiantBombAPIKey:APIKey];
+}
+
+- (void)extractionFinishedWithResults:(NSArray *)results {
 }
 
 - (void)errorOccurred:(NSError *)error {
 
     if (error.code == -1) {
 
-//        [self.view setInfoLabelText:@"Invalid API-Key"];
+        [self.mainViewDelegate showError:@"Invalid API-Key"];
     } else if (error.code == -2) {
 
-//        [self.view setInfoLabelText:@"Data parsign error"];
+        [self.mainViewDelegate showError:@"Data parsign error"];
     } else {
 
-//        [self.view setInfoLabelText:@"Unknown error occurred"];
+        [self.mainViewDelegate showError:@"Unknown error occurred"];
     }
-}
-
-- (void)actionButtonPressed {
-
-//    [self.view setInfoLabelText:@"Loading game data..."];
-    [self.interactor
-        startDataExtractionWithGiantBombAPIKey:self.giantBombAPIKey];
 }
 
 @end

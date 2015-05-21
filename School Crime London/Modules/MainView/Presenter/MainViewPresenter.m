@@ -15,18 +15,30 @@
 
 @implementation MainViewPresenter
 
+- (void)showInformationText:(NSString *)text {
+
+    [self.view setInfoLabelText:text];
+}
+
+- (void)showError:(NSString *)errorText {
+
+    [self.view setInfoLabelText:errorText];
+}
+
 - (void)setGiantBombAPIKey:(NSString *)APIKey {
-    
+
     _giantBombAPIKey = APIKey;
 }
 
 - (void)setGeofencingAPIKey:(NSString *)APIKey {
-    
+
     _geofencingAPIKey = APIKey;
 }
 
 - (void)actionButtonPressed {
-    
+
+    [self.extractGiantBombDataConnection
+        extractDataWithAPIKey:self.giantBombAPIKey];
 }
 
 @end

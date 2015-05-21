@@ -4,6 +4,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MainViewProtocols.h"
 #import "ExtractGiantBombDataProtocols.h"
 #import "ExtractGiantBombDataView.h"
 #import "ExtractGiantBombDataLocalDataManager.h"
@@ -13,6 +14,9 @@
 #import "ExtractGiantBombDataWireframe.h"
 #import <Cocoa/Cocoa.h>
 
-@interface ExtractGiantBombDataWireFrame : NSObject <ExtractGiantBombDataWireFrameProtocol>
+@interface ExtractGiantBombDataWireFrame
+    : NSObject <ExtractGiantBombDataWireFrameProtocol>
+
+@property(nonatomic, weak) id<ExtractGiantBombDataPresenterProtocol> presenter;
 
 @end

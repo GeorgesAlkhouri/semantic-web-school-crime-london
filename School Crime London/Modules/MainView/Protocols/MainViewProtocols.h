@@ -12,13 +12,25 @@
 @protocol MainViewPresenterProtocol;
 @protocol MainViewLocalDataManagerInputProtocol;
 @protocol MainViewAPIDataManagerInputProtocol;
+@protocol MainViewDelegateProtocol;
 
+@protocol ExtractGiantBombDataConnectionProtocol;
 
 @class MainViewWireFrame;
 
+@protocol MainViewDelegateProtocol <NSObject>
+
+@property(nonatomic, strong)
+    id<ExtractGiantBombDataConnectionProtocol> extractGiantBombDataConnection;
+
+- (void)showInformationText:(NSString *)text;
+- (void)showError:(NSString *)errorText;
+
+@end
+
 @protocol MainViewViewProtocol
 @required
-@property (nonatomic, strong) id <MainViewPresenterProtocol> presenter;
+@property(nonatomic, strong) id<MainViewPresenterProtocol> presenter;
 /**
  * Add here your methods for communication PRESENTER -> VIEWCONTROLLER
  */
@@ -35,11 +47,11 @@
  */
 @end
 
-@protocol MainViewPresenterProtocol
+@protocol MainViewPresenterProtocol <MainViewDelegateProtocol>
 @required
-@property (nonatomic, weak) id <MainViewViewProtocol> view;
-@property (nonatomic, strong) id <MainViewInteractorInputProtocol> interactor;
-@property (nonatomic, strong) id <MainViewWireFrameProtocol> wireFrame;
+@property(nonatomic, weak) id<MainViewViewProtocol> view;
+@property(nonatomic, strong) id<MainViewInteractorInputProtocol> interactor;
+@property(nonatomic, strong) id<MainViewWireFrameProtocol> wireFrame;
 /**
  * Add here your methods for communication VIEWCONTROLLER -> PRESENTER
  */
@@ -58,14 +70,15 @@
 
 @protocol MainViewInteractorInputProtocol
 @required
-@property (nonatomic, weak) id <MainViewInteractorOutputProtocol> presenter;
-@property (nonatomic, strong) id <MainViewAPIDataManagerInputProtocol> APIDataManager;
-@property (nonatomic, strong) id <MainViewLocalDataManagerInputProtocol> localDataManager;
+@property(nonatomic, weak) id<MainViewInteractorOutputProtocol> presenter;
+@property(nonatomic, strong)
+    id<MainViewAPIDataManagerInputProtocol> APIDataManager;
+@property(nonatomic, strong)
+    id<MainViewLocalDataManagerInputProtocol> localDataManager;
 /**
  * Add here your methods for communication PRESENTER -> INTERACTOR
  */
 @end
-
 
 @protocol MainViewDataManagerInputProtocol
 /**
@@ -79,10 +92,9 @@
  */
 @end
 
-@protocol MainViewLocalDataManagerInputProtocol <MainViewDataManagerInputProtocol>
+@protocol
+    MainViewLocalDataManagerInputProtocol <MainViewDataManagerInputProtocol>
 /**
  * Add here your methods for communication INTERACTOR -> LOCLDATAMANAGER
  */
 @end
-
-

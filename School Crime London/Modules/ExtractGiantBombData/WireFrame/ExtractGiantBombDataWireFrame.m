@@ -5,16 +5,11 @@
 
 #import "ExtractGiantBombDataWireFrame.h"
 
-@interface ExtractGiantBombDataWireFrame ()
-
-@property(nonatomic, weak) id<ExtractGiantBombDataPresenterProtocol> presenter;
-
-@end
-
 @implementation ExtractGiantBombDataWireFrame
 
-+ (instancetype)presentExtractGiantBombDataModuleFrom:
-    (NSWindowController *)fromViewController {
++ (instancetype)
+presentExtractGiantBombDataModuleFrom:(id)fromView
+                         withDelegate:(id<MainViewDelegateProtocol>)delegate {
 
     // Generating module components
     id<ExtractGiantBombDataViewProtocol> view =
@@ -36,6 +31,10 @@
     presenter.view = view;
     presenter.wireFrame = wireFrame;
     presenter.interactor = interactor;
+
+    delegate.extractGiantBombDataConnection = presenter;
+    presenter.mainViewDelegate = delegate;
+
     interactor.presenter = presenter;
     interactor.APIDataManager = APIDataManager;
     interactor.localDataManager = localDataManager;
