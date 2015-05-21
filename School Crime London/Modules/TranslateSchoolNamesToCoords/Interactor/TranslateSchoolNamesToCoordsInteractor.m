@@ -7,4 +7,15 @@
 
 @implementation TranslateSchoolNamesToCoordsInteractor
 
+- (void)startTranslatingWithAPIKey:(NSString *)APIKey
+                       schoolNames:(NSArray *)schoolNames {
+
+    [self.APIDataManager
+        requestCoordsWithLocationNames:schoolNames
+                                APIKey:APIKey
+                            completion:^(NSError *error, NSArray *results){
+
+                            }];
+}
+
 @end

@@ -14,12 +14,12 @@
 @protocol ExtractGiantBombDataAPIDataManagerInputProtocol;
 @protocol ExtractGiantBombDataConnectionProtocol;
 
-@protocol MainViewDelegateProtocol;
+@protocol MainViewExtractGiantBombDataDelegateProtocol;
 
 @class ExtractGiantBombDataWireFrame;
 
 @protocol ExtractGiantBombDataConnectionProtocol <NSObject>
-@property(nonatomic, weak) id<MainViewDelegateProtocol> mainViewDelegate;
+@property(nonatomic, weak) id<MainViewExtractGiantBombDataDelegateProtocol> mainViewDelegate;
 - (void)extractDataWithAPIKey:(NSString *)APIKey;
 @end
 
@@ -38,7 +38,7 @@
 
 + (instancetype)
 presentExtractGiantBombDataModuleFrom:(id)fromView
-                         withDelegate:(id<MainViewDelegateProtocol>)delegate;
+                         withDelegate:(id<MainViewExtractGiantBombDataDelegateProtocol>)delegate;
 /**
  * Add here your methods for communication PRESENTER -> WIREFRAME
  */

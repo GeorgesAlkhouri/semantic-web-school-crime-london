@@ -12,19 +12,35 @@
 @protocol MainViewPresenterProtocol;
 @protocol MainViewLocalDataManagerInputProtocol;
 @protocol MainViewAPIDataManagerInputProtocol;
-@protocol MainViewDelegateProtocol;
+@protocol MainViewExtractGiantBombDataDelegateProtocol;
 
 @protocol ExtractGiantBombDataConnectionProtocol;
+@protocol TranslateSchoolNamesToCoordsConnectionProtocol;
 
 @class MainViewWireFrame;
 
 @protocol MainViewDelegateProtocol <NSObject>
 
+- (void)showInformationText:(NSString *)text;
+- (void)showError:(NSString *)errorText;
+
+@end
+
+@protocol
+    MainViewExtractGiantBombDataDelegateProtocol <MainViewDelegateProtocol>
+
 @property(nonatomic, strong)
     id<ExtractGiantBombDataConnectionProtocol> extractGiantBombDataConnection;
 
-- (void)showInformationText:(NSString *)text;
-- (void)showError:(NSString *)errorText;
+- (void)extractionDidFinishWithResults:(NSArray *)results;
+
+@end
+
+@protocol MainViewTranslateSchoolNamesToCoordsDelegateProtocol <
+    MainViewDelegateProtocol>
+
+@property(nonatomic, strong) id<TranslateSchoolNamesToCoordsConnectionProtocol>
+    translateSchoolNamesToCoordsConnection;
 
 @end
 
@@ -47,7 +63,9 @@
  */
 @end
 
-@protocol MainViewPresenterProtocol <MainViewDelegateProtocol>
+@protocol MainViewPresenterProtocol <
+    MainViewExtractGiantBombDataDelegateProtocol,
+    MainViewTranslateSchoolNamesToCoordsDelegateProtocol>
 @required
 @property(nonatomic, weak) id<MainViewViewProtocol> view;
 @property(nonatomic, strong) id<MainViewInteractorInputProtocol> interactor;

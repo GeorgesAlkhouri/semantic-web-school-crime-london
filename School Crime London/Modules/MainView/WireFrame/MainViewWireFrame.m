@@ -7,6 +7,7 @@
 
 #import "ExtractGiantBombDataWireFrame.h"
 #import "ParseLondonDataStoreDataWireFrame.h"
+#import "TranslateSchoolNamesToCoordsWireFrame.h"
 
 @interface MainViewWireFrame ()
 
@@ -14,6 +15,8 @@
     ExtractGiantBombDataWireFrame *extractGiantBombDataWireFrame;
 @property(nonatomic)
     ParseLondonDataStoreDataWireFrame *parseLondonDataStoreDataWireFrame;
+@property(nonatomic) TranslateSchoolNamesToCoordsWireFrame
+    *translateSchoolNamesToCoordsWireFrame;
 
 @property(nonatomic, weak) id<MainViewPresenterProtocol> presenter;
 
@@ -56,6 +59,12 @@
         setParseLondonDataStoreDataWireFrame:
             [ParseLondonDataStoreDataWireFrame
                 presentParseLondonDataStoreDataModuleFrom:nil]];
+
+    [(MainViewWireFrame *)wireFrame
+        setTranslateSchoolNamesToCoordsWireFrame:
+            [TranslateSchoolNamesToCoordsWireFrame
+                presentExtractGiantBombDataModuleFrom:nil
+                                         withDelegate:presenter]];
 
     [(MainViewWireFrame *)wireFrame setPresenter:presenter];
 

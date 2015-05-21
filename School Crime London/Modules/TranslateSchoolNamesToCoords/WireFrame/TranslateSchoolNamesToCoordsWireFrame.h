@@ -13,6 +13,9 @@
 #import "TranslateSchoolNamesToCoordsWireframe.h"
 #import <Cocoa/Cocoa.h>
 
-@interface TranslateSchoolNamesToCoordsWireFrame : NSObject <TranslateSchoolNamesToCoordsWireFrameProtocol>
+#import "MainViewProtocols.h"
+
+@interface TranslateSchoolNamesToCoordsWireFrame
+    : NSObject <TranslateSchoolNamesToCoordsWireFrameProtocol>
 
 @end

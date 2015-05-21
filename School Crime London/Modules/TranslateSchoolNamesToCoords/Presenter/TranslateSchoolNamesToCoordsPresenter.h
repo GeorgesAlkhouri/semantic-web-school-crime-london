@@ -14,4 +14,6 @@
 @property (nonatomic, strong) id <TranslateSchoolNamesToCoordsInteractorInputProtocol> interactor;
 @property (nonatomic, strong) id <TranslateSchoolNamesToCoordsWireFrameProtocol> wireFrame;
 
+@property(nonatomic, weak) id<MainViewTranslateSchoolNamesToCoordsDelegateProtocol> mainViewDelegate;
+
 @end

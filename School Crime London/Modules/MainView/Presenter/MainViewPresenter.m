@@ -41,4 +41,11 @@
         extractDataWithAPIKey:self.giantBombAPIKey];
 }
 
+- (void)extractionDidFinishWithResults:(NSArray *)results {
+
+    [self.translateSchoolNamesToCoordsConnection
+        startTranslatingWithAPIKey:self.geofencingAPIKey
+                       schoolNames:@[ @"Tower Hamlets+Bethnal Green North" ]];
+}
+
 @end

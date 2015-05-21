@@ -6,6 +6,7 @@
 #import <Foundation/Foundation.h>
 #import "MainViewProtocols.h"
 #import "ExtractGiantBombDataProtocols.h"
+#import "TranslateSchoolNamesToCoordsProtocols.h"
 
 @class MainViewWireFrame;
 
@@ -18,5 +19,7 @@
 
 @property(nonatomic, strong)
     id<ExtractGiantBombDataConnectionProtocol> extractGiantBombDataConnection;
+@property(nonatomic, strong) id<TranslateSchoolNamesToCoordsConnectionProtocol>
+    translateSchoolNamesToCoordsConnection;
 
 @end

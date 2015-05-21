@@ -13,13 +13,14 @@
 @protocol TranslateSchoolNamesToCoordsLocalDataManagerInputProtocol;
 @protocol TranslateSchoolNamesToCoordsAPIDataManagerInputProtocol;
 
-@class TranslateSchoolNamesToCoordsWireFrame;
+@protocol MainViewTranslateSchoolNamesToCoordsDelegateProtocol;
 
-@protocol MainViewDelegateProtocol;
+@class TranslateSchoolNamesToCoordsWireFrame;
 
 @protocol TranslateSchoolNamesToCoordsConnectionProtocol <NSObject>
 
-@property(nonatomic, weak) id<MainViewDelegateProtocol> mainViewDelegate;
+@property(nonatomic, weak)
+    id<MainViewTranslateSchoolNamesToCoordsDelegateProtocol> mainViewDelegate;
 
 - (void)startTranslatingWithAPIKey:(NSString *)APIKey
                        schoolNames:(NSArray *)schoolNames;
@@ -36,8 +37,10 @@
 
 @protocol TranslateSchoolNamesToCoordsWireFrameProtocol
 @required
-+ (instancetype)presentExtractGiantBombDataModuleFrom:(id)fromView
-                                         withDelegate:(id)delegate;
++ (instancetype)
+presentExtractGiantBombDataModuleFrom:
+    (id)fromView withDelegate:
+        (id<MainViewTranslateSchoolNamesToCoordsDelegateProtocol>)delegate;
 /**
  * Add here your methods for communication PRESENTER -> WIREFRAME
  */

@@ -18,6 +18,6 @@
 @property(nonatomic, strong)
     id<ExtractGiantBombDataWireFrameProtocol> wireFrame;
 
-@property(nonatomic, weak) id<MainViewDelegateProtocol> mainViewDelegate;
+@property(nonatomic, weak) id<MainViewExtractGiantBombDataDelegateProtocol> mainViewDelegate;
 
 @end

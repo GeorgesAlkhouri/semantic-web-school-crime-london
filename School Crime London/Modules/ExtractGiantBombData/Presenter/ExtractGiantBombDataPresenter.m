@@ -18,6 +18,8 @@
 }
 
 - (void)extractionFinishedWithResults:(NSArray *)results {
+
+    [self.mainViewDelegate extractionDidFinishWithResults:results];
 }
 
 - (void)errorOccurred:(NSError *)error {

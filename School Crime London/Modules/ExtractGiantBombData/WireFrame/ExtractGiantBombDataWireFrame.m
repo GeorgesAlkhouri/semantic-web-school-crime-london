@@ -9,7 +9,7 @@
 
 + (instancetype)
 presentExtractGiantBombDataModuleFrom:(id)fromView
-                         withDelegate:(id<MainViewDelegateProtocol>)delegate {
+                         withDelegate:(id<MainViewExtractGiantBombDataDelegateProtocol>)delegate {
 
     // Generating module components
     id<ExtractGiantBombDataViewProtocol> view =

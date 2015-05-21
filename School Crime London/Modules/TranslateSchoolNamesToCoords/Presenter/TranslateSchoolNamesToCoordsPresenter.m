@@ -8,4 +8,18 @@
 
 @implementation TranslateSchoolNamesToCoordsPresenter
 
+- (void)startTranslatingWithAPIKey:(NSString *)APIKey
+                       schoolNames:(NSArray *)schoolNames {
+
+    [self.mainViewDelegate
+        showInformationText:@"Translating school names to geo coordinates."];
+    [self.interactor startTranslatingWithAPIKey:APIKey schoolNames:schoolNames];
+}
+
+- (void)translationDidFinishedWithError:(NSError *)error {
+}
+
+- (void)translationDidFinishedWithResults:(NSArray *)results {
+}
+
 @end
