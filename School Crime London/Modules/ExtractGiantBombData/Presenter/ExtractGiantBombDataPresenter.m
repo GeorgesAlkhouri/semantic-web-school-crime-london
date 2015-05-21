@@ -23,19 +23,19 @@
 
     if (error.code == -1) {
 
-        [self.view setInfoLabelText:@"Invalid API-Key"];
+//        [self.view setInfoLabelText:@"Invalid API-Key"];
     } else if (error.code == -2) {
 
-        [self.view setInfoLabelText:@"Data parsign error"];
+//        [self.view setInfoLabelText:@"Data parsign error"];
     } else {
 
-        [self.view setInfoLabelText:@"Unknown error occurred"];
+//        [self.view setInfoLabelText:@"Unknown error occurred"];
     }
 }
 
 - (void)actionButtonPressed {
 
-    [self.view setInfoLabelText:@"Loading game data..."];
+//    [self.view setInfoLabelText:@"Loading game data..."];
     [self.interactor
         startDataExtractionWithGiantBombAPIKey:self.giantBombAPIKey];
 }

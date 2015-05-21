@@ -22,14 +22,11 @@
 /**
  * Add here your methods for communication PRESENTER -> VIEWCONTROLLER
  */
-
-- (void)setInfoLabelText:(NSString *)text;
-
 @end
 
 @protocol ExtractGiantBombDataWireFrameProtocol
 @required
-+ (void)presentExtractGiantBombDataModuleFrom:(id)fromView;
++ (instancetype)presentExtractGiantBombDataModuleFrom:(id)fromView;
 /**
  * Add here your methods for communication PRESENTER -> WIREFRAME
  */
@@ -45,10 +42,6 @@
 /**
  * Add here your methods for communication VIEWCONTROLLER -> PRESENTER
  */
-
-- (void)actionButtonPressed;
-- (void)setGiantBombAPIKey:(NSString *)APIKey;
-
 @end
 
 @protocol ExtractGiantBombDataInteractorOutputProtocol

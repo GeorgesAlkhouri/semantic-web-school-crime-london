@@ -8,12 +8,12 @@
 
 #import "AppDelegate.h"
 
-#import "ExtractGiantBombDataWireFrame.h"
-#import "ParseLondonDataStoreDataWireFrame.h"
+#import "MainViewWireFrame.h"
 
 @interface AppDelegate ()
 
 @property(nonatomic) NSWindowController *windowController;
+@property(nonatomic) MainViewWireFrame *mainViewWireFrame;
 
 @end
 
@@ -26,10 +26,8 @@
     self.windowController = [storyboard
         instantiateControllerWithIdentifier:@"MainWindowController"];
 
-    [ExtractGiantBombDataWireFrame
-        presentExtractGiantBombDataModuleFrom:self.windowController];
-    [ParseLondonDataStoreDataWireFrame
-        presentParseLondonDataStoreDataModuleFrom:self.windowController];
+    self.mainViewWireFrame =
+        [MainViewWireFrame presentMainViewModuleFrom:self.windowController];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {

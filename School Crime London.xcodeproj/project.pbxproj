@@ -13,6 +13,13 @@
 		DA4AB8C21B062A1A00D684CE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA4AB8C11B062A1A00D684CE /* Images.xcassets */; };
 		DA4AB8C51B062A1A00D684CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA4AB8C31B062A1A00D684CE /* Main.storyboard */; };
 		DA4AB8D11B062A1A00D684CE /* School_Crime_LondonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4AB8D01B062A1A00D684CE /* School_Crime_LondonTests.m */; };
+		DA93FDAA1B0DD68D00D7375A /* MainViewAPIDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA93FD961B0DD68D00D7375A /* MainViewAPIDataManager.m */; };
+		DA93FDAB1B0DD68D00D7375A /* MainViewLocalDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA93FD991B0DD68D00D7375A /* MainViewLocalDataManager.m */; };
+		DA93FDAC1B0DD68D00D7375A /* MainViewInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = DA93FD9C1B0DD68D00D7375A /* MainViewInteractor.m */; };
+		DA93FDAD1B0DD68D00D7375A /* MainViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DA93FD9E1B0DD68D00D7375A /* MainViewItem.m */; };
+		DA93FDAE1B0DD68D00D7375A /* MainViewPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = DA93FDA11B0DD68D00D7375A /* MainViewPresenter.m */; };
+		DA93FDAF1B0DD68D00D7375A /* MainViewView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA93FDA61B0DD68D00D7375A /* MainViewView.m */; };
+		DA93FDB01B0DD68D00D7375A /* MainViewWireFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = DA93FDA91B0DD68D00D7375A /* MainViewWireFrame.m */; };
 		DA9E22031B062E85001507A3 /* ExtractGiantBombDataAPIDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9E21EF1B062E85001507A3 /* ExtractGiantBombDataAPIDataManager.m */; };
 		DA9E22041B062E85001507A3 /* ExtractGiantBombDataLocalDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9E21F21B062E85001507A3 /* ExtractGiantBombDataLocalDataManager.m */; };
 		DA9E22051B062E85001507A3 /* ExtractGiantBombDataInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9E21F51B062E85001507A3 /* ExtractGiantBombDataInteractor.m */; };
@@ -55,6 +62,21 @@
 		DA4AB8CA1B062A1A00D684CE /* School Crime LondonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "School Crime LondonTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA4AB8CF1B062A1A00D684CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA4AB8D01B062A1A00D684CE /* School_Crime_LondonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = School_Crime_LondonTests.m; sourceTree = "<group>"; };
+		DA93FD951B0DD68D00D7375A /* MainViewAPIDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewAPIDataManager.h; sourceTree = "<group>"; };
+		DA93FD961B0DD68D00D7375A /* MainViewAPIDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewAPIDataManager.m; sourceTree = "<group>"; };
+		DA93FD981B0DD68D00D7375A /* MainViewLocalDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewLocalDataManager.h; sourceTree = "<group>"; };
+		DA93FD991B0DD68D00D7375A /* MainViewLocalDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewLocalDataManager.m; sourceTree = "<group>"; };
+		DA93FD9B1B0DD68D00D7375A /* MainViewInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewInteractor.h; sourceTree = "<group>"; };
+		DA93FD9C1B0DD68D00D7375A /* MainViewInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewInteractor.m; sourceTree = "<group>"; };
+		DA93FD9D1B0DD68D00D7375A /* MainViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewItem.h; sourceTree = "<group>"; };
+		DA93FD9E1B0DD68D00D7375A /* MainViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewItem.m; sourceTree = "<group>"; };
+		DA93FDA01B0DD68D00D7375A /* MainViewPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewPresenter.h; sourceTree = "<group>"; };
+		DA93FDA11B0DD68D00D7375A /* MainViewPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewPresenter.m; sourceTree = "<group>"; };
+		DA93FDA31B0DD68D00D7375A /* MainViewProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewProtocols.h; sourceTree = "<group>"; };
+		DA93FDA51B0DD68D00D7375A /* MainViewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewView.h; sourceTree = "<group>"; };
+		DA93FDA61B0DD68D00D7375A /* MainViewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewView.m; sourceTree = "<group>"; };
+		DA93FDA81B0DD68D00D7375A /* MainViewWireFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewWireFrame.h; sourceTree = "<group>"; };
+		DA93FDA91B0DD68D00D7375A /* MainViewWireFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewWireFrame.m; sourceTree = "<group>"; };
 		DA9E21EE1B062E85001507A3 /* ExtractGiantBombDataAPIDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtractGiantBombDataAPIDataManager.h; sourceTree = "<group>"; };
 		DA9E21EF1B062E85001507A3 /* ExtractGiantBombDataAPIDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtractGiantBombDataAPIDataManager.m; sourceTree = "<group>"; };
 		DA9E21F11B062E85001507A3 /* ExtractGiantBombDataLocalDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtractGiantBombDataLocalDataManager.h; sourceTree = "<group>"; };
@@ -187,9 +209,96 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		DA93FD921B0DD68D00D7375A /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				DA93FD931B0DD68D00D7375A /* DataManager */,
+				DA93FD9A1B0DD68D00D7375A /* Interactor */,
+				DA93FD9F1B0DD68D00D7375A /* Presenter */,
+				DA93FDA21B0DD68D00D7375A /* Protocols */,
+				DA93FDA41B0DD68D00D7375A /* View */,
+				DA93FDA71B0DD68D00D7375A /* WireFrame */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		DA93FD931B0DD68D00D7375A /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				DA93FD941B0DD68D00D7375A /* API */,
+				DA93FD971B0DD68D00D7375A /* Local */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		DA93FD941B0DD68D00D7375A /* API */ = {
+			isa = PBXGroup;
+			children = (
+				DA93FD951B0DD68D00D7375A /* MainViewAPIDataManager.h */,
+				DA93FD961B0DD68D00D7375A /* MainViewAPIDataManager.m */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		DA93FD971B0DD68D00D7375A /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				DA93FD981B0DD68D00D7375A /* MainViewLocalDataManager.h */,
+				DA93FD991B0DD68D00D7375A /* MainViewLocalDataManager.m */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		DA93FD9A1B0DD68D00D7375A /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				DA93FD9B1B0DD68D00D7375A /* MainViewInteractor.h */,
+				DA93FD9C1B0DD68D00D7375A /* MainViewInteractor.m */,
+				DA93FD9D1B0DD68D00D7375A /* MainViewItem.h */,
+				DA93FD9E1B0DD68D00D7375A /* MainViewItem.m */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		DA93FD9F1B0DD68D00D7375A /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				DA93FDA01B0DD68D00D7375A /* MainViewPresenter.h */,
+				DA93FDA11B0DD68D00D7375A /* MainViewPresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		DA93FDA21B0DD68D00D7375A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DA93FDA31B0DD68D00D7375A /* MainViewProtocols.h */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		DA93FDA41B0DD68D00D7375A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DA93FDA51B0DD68D00D7375A /* MainViewView.h */,
+				DA93FDA61B0DD68D00D7375A /* MainViewView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DA93FDA71B0DD68D00D7375A /* WireFrame */ = {
+			isa = PBXGroup;
+			children = (
+				DA93FDA81B0DD68D00D7375A /* MainViewWireFrame.h */,
+				DA93FDA91B0DD68D00D7375A /* MainViewWireFrame.m */,
+			);
+			path = WireFrame;
+			sourceTree = "<group>";
+		};
 		DA9E21EA1B062C70001507A3 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				DA93FD921B0DD68D00D7375A /* MainView */,
 				DAACE0181B0BDFC10059B44A /* ParseLondonDataStoreData */,
 				DA9E21EB1B062E85001507A3 /* ExtractGiantBombData */,
 			);
@@ -522,20 +631,27 @@
 			files = (
 				DAACE0331B0BDFC10059B44A /* ParseLondonDataStoreDataItem.m in Sources */,
 				DA9E220E1B069592001507A3 /* NSDate+Additions.m in Sources */,
+				DA93FDAE1B0DD68D00D7375A /* MainViewPresenter.m in Sources */,
+				DA93FDAA1B0DD68D00D7375A /* MainViewAPIDataManager.m in Sources */,
 				DA9E22041B062E85001507A3 /* ExtractGiantBombDataLocalDataManager.m in Sources */,
 				DAACE0341B0BDFC10059B44A /* ParseLondonDataStoreDataPresenter.m in Sources */,
 				DAACE0321B0BDFC10059B44A /* ParseLondonDataStoreDataInteractor.m in Sources */,
+				DA93FDAC1B0DD68D00D7375A /* MainViewInteractor.m in Sources */,
 				DA9E22071B062E85001507A3 /* ExtractGiantBombDataPresenter.m in Sources */,
+				DA93FDAF1B0DD68D00D7375A /* MainViewView.m in Sources */,
 				DAACE0301B0BDFC10059B44A /* ParseLondonDataStoreDataAPIDataManager.m in Sources */,
 				DA9E22051B062E85001507A3 /* ExtractGiantBombDataInteractor.m in Sources */,
 				DA4AB8BD1B062A1A00D684CE /* main.m in Sources */,
 				DA9E22081B062E85001507A3 /* ExtractGiantBombDataView.m in Sources */,
 				DAACE0351B0BDFC10059B44A /* ParseLondonDataStoreDataView.m in Sources */,
 				DAACE0361B0BDFC10059B44A /* ParseLondonDataStoreDataWireFrame.m in Sources */,
+				DA93FDB01B0DD68D00D7375A /* MainViewWireFrame.m in Sources */,
+				DA93FDAB1B0DD68D00D7375A /* MainViewLocalDataManager.m in Sources */,
 				DA9E22031B062E85001507A3 /* ExtractGiantBombDataAPIDataManager.m in Sources */,
 				DA4AB8BB1B062A1A00D684CE /* AppDelegate.m in Sources */,
 				DA9E22091B062E85001507A3 /* ExtractGiantBombDataWireFrame.m in Sources */,
 				DA9E22061B062E85001507A3 /* ExtractGiantBombDataItem.m in Sources */,
+				DA93FDAD1B0DD68D00D7375A /* MainViewItem.m in Sources */,
 				DAACE0311B0BDFC10059B44A /* ParseLondonDataStoreDataLocalDataManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

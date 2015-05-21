@@ -5,15 +5,20 @@
 
 #import "ExtractGiantBombDataWireFrame.h"
 
+@interface ExtractGiantBombDataWireFrame ()
+
+@property(nonatomic, weak) id<ExtractGiantBombDataPresenterProtocol> presenter;
+
+@end
+
 @implementation ExtractGiantBombDataWireFrame
 
-+ (void)presentExtractGiantBombDataModuleFrom:
-        (NSWindowController *)fromViewController {
++ (instancetype)presentExtractGiantBombDataModuleFrom:
+    (NSWindowController *)fromViewController {
 
     // Generating module components
     id<ExtractGiantBombDataViewProtocol> view =
-        (id<ExtractGiantBombDataViewProtocol>)
-            fromViewController.contentViewController;
+        [[ExtractGiantBombDataView alloc] init];
     id<ExtractGiantBombDataPresenterProtocol,
        ExtractGiantBombDataInteractorOutputProtocol> presenter =
         [ExtractGiantBombDataPresenter new];
@@ -35,8 +40,9 @@
     interactor.APIDataManager = APIDataManager;
     interactor.localDataManager = localDataManager;
 
-    [fromViewController showWindow:self];
-    // TOODO - New view controller presentation (present, push, pop, .. )
+    [(ExtractGiantBombDataWireFrame *)wireFrame setPresenter:presenter];
+
+    return (ExtractGiantBombDataWireFrame *)wireFrame;
 }
 
 @end

@@ -26,7 +26,7 @@
 
 @protocol ParseLondonDataStoreDataWireFrameProtocol
 @required
-+ (void)presentParseLondonDataStoreDataModuleFrom:(id)fromView;
++ (instancetype)presentParseLondonDataStoreDataModuleFrom:(id)fromView;
 /**
  * Add here your methods for communication PRESENTER -> WIREFRAME
  */
