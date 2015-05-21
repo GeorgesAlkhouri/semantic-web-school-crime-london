@@ -13,6 +13,13 @@
 		DA4AB8C21B062A1A00D684CE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA4AB8C11B062A1A00D684CE /* Images.xcassets */; };
 		DA4AB8C51B062A1A00D684CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA4AB8C31B062A1A00D684CE /* Main.storyboard */; };
 		DA4AB8D11B062A1A00D684CE /* School_Crime_LondonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4AB8D01B062A1A00D684CE /* School_Crime_LondonTests.m */; };
+		DA739AEE1B0E3AF600392983 /* TranslateSchoolNamesToCoordsAPIDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA739ADA1B0E3AF600392983 /* TranslateSchoolNamesToCoordsAPIDataManager.m */; };
+		DA739AEF1B0E3AF600392983 /* TranslateSchoolNamesToCoordsLocalDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA739ADD1B0E3AF600392983 /* TranslateSchoolNamesToCoordsLocalDataManager.m */; };
+		DA739AF01B0E3AF600392983 /* TranslateSchoolNamesToCoordsInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = DA739AE01B0E3AF600392983 /* TranslateSchoolNamesToCoordsInteractor.m */; };
+		DA739AF11B0E3AF600392983 /* TranslateSchoolNamesToCoordsItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DA739AE21B0E3AF600392983 /* TranslateSchoolNamesToCoordsItem.m */; };
+		DA739AF21B0E3AF600392983 /* TranslateSchoolNamesToCoordsPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = DA739AE51B0E3AF600392983 /* TranslateSchoolNamesToCoordsPresenter.m */; };
+		DA739AF31B0E3AF600392983 /* TranslateSchoolNamesToCoordsView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA739AEA1B0E3AF600392983 /* TranslateSchoolNamesToCoordsView.m */; };
+		DA739AF41B0E3AF600392983 /* TranslateSchoolNamesToCoordsWireFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = DA739AED1B0E3AF600392983 /* TranslateSchoolNamesToCoordsWireFrame.m */; };
 		DA93FDAA1B0DD68D00D7375A /* MainViewAPIDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA93FD961B0DD68D00D7375A /* MainViewAPIDataManager.m */; };
 		DA93FDAB1B0DD68D00D7375A /* MainViewLocalDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA93FD991B0DD68D00D7375A /* MainViewLocalDataManager.m */; };
 		DA93FDAC1B0DD68D00D7375A /* MainViewInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = DA93FD9C1B0DD68D00D7375A /* MainViewInteractor.m */; };
@@ -62,6 +69,21 @@
 		DA4AB8CA1B062A1A00D684CE /* School Crime LondonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "School Crime LondonTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA4AB8CF1B062A1A00D684CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA4AB8D01B062A1A00D684CE /* School_Crime_LondonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = School_Crime_LondonTests.m; sourceTree = "<group>"; };
+		DA739AD91B0E3AF600392983 /* TranslateSchoolNamesToCoordsAPIDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TranslateSchoolNamesToCoordsAPIDataManager.h; sourceTree = "<group>"; };
+		DA739ADA1B0E3AF600392983 /* TranslateSchoolNamesToCoordsAPIDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TranslateSchoolNamesToCoordsAPIDataManager.m; sourceTree = "<group>"; };
+		DA739ADC1B0E3AF600392983 /* TranslateSchoolNamesToCoordsLocalDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TranslateSchoolNamesToCoordsLocalDataManager.h; sourceTree = "<group>"; };
+		DA739ADD1B0E3AF600392983 /* TranslateSchoolNamesToCoordsLocalDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TranslateSchoolNamesToCoordsLocalDataManager.m; sourceTree = "<group>"; };
+		DA739ADF1B0E3AF600392983 /* TranslateSchoolNamesToCoordsInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TranslateSchoolNamesToCoordsInteractor.h; sourceTree = "<group>"; };
+		DA739AE01B0E3AF600392983 /* TranslateSchoolNamesToCoordsInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TranslateSchoolNamesToCoordsInteractor.m; sourceTree = "<group>"; };
+		DA739AE11B0E3AF600392983 /* TranslateSchoolNamesToCoordsItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TranslateSchoolNamesToCoordsItem.h; sourceTree = "<group>"; };
+		DA739AE21B0E3AF600392983 /* TranslateSchoolNamesToCoordsItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TranslateSchoolNamesToCoordsItem.m; sourceTree = "<group>"; };
+		DA739AE41B0E3AF600392983 /* TranslateSchoolNamesToCoordsPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TranslateSchoolNamesToCoordsPresenter.h; sourceTree = "<group>"; };
+		DA739AE51B0E3AF600392983 /* TranslateSchoolNamesToCoordsPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TranslateSchoolNamesToCoordsPresenter.m; sourceTree = "<group>"; };
+		DA739AE71B0E3AF600392983 /* TranslateSchoolNamesToCoordsProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TranslateSchoolNamesToCoordsProtocols.h; sourceTree = "<group>"; };
+		DA739AE91B0E3AF600392983 /* TranslateSchoolNamesToCoordsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TranslateSchoolNamesToCoordsView.h; sourceTree = "<group>"; };
+		DA739AEA1B0E3AF600392983 /* TranslateSchoolNamesToCoordsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TranslateSchoolNamesToCoordsView.m; sourceTree = "<group>"; };
+		DA739AEC1B0E3AF600392983 /* TranslateSchoolNamesToCoordsWireFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TranslateSchoolNamesToCoordsWireFrame.h; sourceTree = "<group>"; };
+		DA739AED1B0E3AF600392983 /* TranslateSchoolNamesToCoordsWireFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TranslateSchoolNamesToCoordsWireFrame.m; sourceTree = "<group>"; };
 		DA93FD951B0DD68D00D7375A /* MainViewAPIDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewAPIDataManager.h; sourceTree = "<group>"; };
 		DA93FD961B0DD68D00D7375A /* MainViewAPIDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewAPIDataManager.m; sourceTree = "<group>"; };
 		DA93FD981B0DD68D00D7375A /* MainViewLocalDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewLocalDataManager.h; sourceTree = "<group>"; };
@@ -209,6 +231,92 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		DA739AD61B0E3AF600392983 /* TranslateSchoolNamesToCoords */ = {
+			isa = PBXGroup;
+			children = (
+				DA739AD71B0E3AF600392983 /* DataManager */,
+				DA739ADE1B0E3AF600392983 /* Interactor */,
+				DA739AE31B0E3AF600392983 /* Presenter */,
+				DA739AE61B0E3AF600392983 /* Protocols */,
+				DA739AE81B0E3AF600392983 /* View */,
+				DA739AEB1B0E3AF600392983 /* WireFrame */,
+			);
+			path = TranslateSchoolNamesToCoords;
+			sourceTree = "<group>";
+		};
+		DA739AD71B0E3AF600392983 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				DA739AD81B0E3AF600392983 /* API */,
+				DA739ADB1B0E3AF600392983 /* Local */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		DA739AD81B0E3AF600392983 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				DA739AD91B0E3AF600392983 /* TranslateSchoolNamesToCoordsAPIDataManager.h */,
+				DA739ADA1B0E3AF600392983 /* TranslateSchoolNamesToCoordsAPIDataManager.m */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		DA739ADB1B0E3AF600392983 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				DA739ADC1B0E3AF600392983 /* TranslateSchoolNamesToCoordsLocalDataManager.h */,
+				DA739ADD1B0E3AF600392983 /* TranslateSchoolNamesToCoordsLocalDataManager.m */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		DA739ADE1B0E3AF600392983 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				DA739ADF1B0E3AF600392983 /* TranslateSchoolNamesToCoordsInteractor.h */,
+				DA739AE01B0E3AF600392983 /* TranslateSchoolNamesToCoordsInteractor.m */,
+				DA739AE11B0E3AF600392983 /* TranslateSchoolNamesToCoordsItem.h */,
+				DA739AE21B0E3AF600392983 /* TranslateSchoolNamesToCoordsItem.m */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		DA739AE31B0E3AF600392983 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				DA739AE41B0E3AF600392983 /* TranslateSchoolNamesToCoordsPresenter.h */,
+				DA739AE51B0E3AF600392983 /* TranslateSchoolNamesToCoordsPresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		DA739AE61B0E3AF600392983 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DA739AE71B0E3AF600392983 /* TranslateSchoolNamesToCoordsProtocols.h */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		DA739AE81B0E3AF600392983 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DA739AE91B0E3AF600392983 /* TranslateSchoolNamesToCoordsView.h */,
+				DA739AEA1B0E3AF600392983 /* TranslateSchoolNamesToCoordsView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DA739AEB1B0E3AF600392983 /* WireFrame */ = {
+			isa = PBXGroup;
+			children = (
+				DA739AEC1B0E3AF600392983 /* TranslateSchoolNamesToCoordsWireFrame.h */,
+				DA739AED1B0E3AF600392983 /* TranslateSchoolNamesToCoordsWireFrame.m */,
+			);
+			path = WireFrame;
+			sourceTree = "<group>";
+		};
 		DA93FD921B0DD68D00D7375A /* MainView */ = {
 			isa = PBXGroup;
 			children = (
@@ -301,6 +409,7 @@
 				DA93FD921B0DD68D00D7375A /* MainView */,
 				DAACE0181B0BDFC10059B44A /* ParseLondonDataStoreData */,
 				DA9E21EB1B062E85001507A3 /* ExtractGiantBombData */,
+				DA739AD61B0E3AF600392983 /* TranslateSchoolNamesToCoords */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -635,20 +744,27 @@
 				DA93FDAA1B0DD68D00D7375A /* MainViewAPIDataManager.m in Sources */,
 				DA9E22041B062E85001507A3 /* ExtractGiantBombDataLocalDataManager.m in Sources */,
 				DAACE0341B0BDFC10059B44A /* ParseLondonDataStoreDataPresenter.m in Sources */,
+				DA739AEF1B0E3AF600392983 /* TranslateSchoolNamesToCoordsLocalDataManager.m in Sources */,
+				DA739AF01B0E3AF600392983 /* TranslateSchoolNamesToCoordsInteractor.m in Sources */,
 				DAACE0321B0BDFC10059B44A /* ParseLondonDataStoreDataInteractor.m in Sources */,
+				DA739AF21B0E3AF600392983 /* TranslateSchoolNamesToCoordsPresenter.m in Sources */,
 				DA93FDAC1B0DD68D00D7375A /* MainViewInteractor.m in Sources */,
 				DA9E22071B062E85001507A3 /* ExtractGiantBombDataPresenter.m in Sources */,
+				DA739AF11B0E3AF600392983 /* TranslateSchoolNamesToCoordsItem.m in Sources */,
 				DA93FDAF1B0DD68D00D7375A /* MainViewView.m in Sources */,
 				DAACE0301B0BDFC10059B44A /* ParseLondonDataStoreDataAPIDataManager.m in Sources */,
 				DA9E22051B062E85001507A3 /* ExtractGiantBombDataInteractor.m in Sources */,
 				DA4AB8BD1B062A1A00D684CE /* main.m in Sources */,
 				DA9E22081B062E85001507A3 /* ExtractGiantBombDataView.m in Sources */,
+				DA739AEE1B0E3AF600392983 /* TranslateSchoolNamesToCoordsAPIDataManager.m in Sources */,
 				DAACE0351B0BDFC10059B44A /* ParseLondonDataStoreDataView.m in Sources */,
 				DAACE0361B0BDFC10059B44A /* ParseLondonDataStoreDataWireFrame.m in Sources */,
 				DA93FDB01B0DD68D00D7375A /* MainViewWireFrame.m in Sources */,
 				DA93FDAB1B0DD68D00D7375A /* MainViewLocalDataManager.m in Sources */,
 				DA9E22031B062E85001507A3 /* ExtractGiantBombDataAPIDataManager.m in Sources */,
 				DA4AB8BB1B062A1A00D684CE /* AppDelegate.m in Sources */,
+				DA739AF41B0E3AF600392983 /* TranslateSchoolNamesToCoordsWireFrame.m in Sources */,
+				DA739AF31B0E3AF600392983 /* TranslateSchoolNamesToCoordsView.m in Sources */,
 				DA9E22091B062E85001507A3 /* ExtractGiantBombDataWireFrame.m in Sources */,
 				DA9E22061B062E85001507A3 /* ExtractGiantBombDataItem.m in Sources */,
 				DA93FDAD1B0DD68D00D7375A /* MainViewItem.m in Sources */,
