@@ -9,11 +9,11 @@
 @implementation TranslateSchoolNamesToCoordsPresenter
 
 - (void)startTranslatingWithAPIKey:(NSString *)APIKey
-                       schoolNames:(NSArray *)schoolNames {
+                        schoolData:(NSArray *)schoolData {
 
     [self.mainViewDelegate
         showInformationText:@"Translating school names to geo coordinates."];
-    [self.interactor startTranslatingWithAPIKey:APIKey schoolNames:schoolNames];
+    [self.interactor startTranslatingWithAPIKey:APIKey schoolData:schoolData];
 }
 
 - (void)translationDidFinishedWithError:(NSError *)error {

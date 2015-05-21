@@ -7,11 +7,37 @@
 
 @implementation TranslateSchoolNamesToCoordsInteractor
 
+// Keys
+// "Type"
+// "Name"
+// "BuildingName"
+// "BuildingNumber"
+// "Street"
+// "Postcode"
 - (void)startTranslatingWithAPIKey:(NSString *)APIKey
-                       schoolNames:(NSArray *)schoolNames {
+                        schoolData:(NSArray *)schoolData {
+
+    NSMutableArray *schoolAdresses = [NSMutableArray new];
+
+    for (NSDictionary *schoolSet in schoolData) {
+
+        NSString *schoolAdress = [NSString
+            stringWithFormat:
+                @"%@%@%@%@%@", schoolSet[@"Name"],
+                [@"+" stringByAppendingString:schoolSet[@"Street"]],
+                ([schoolSet[@"BuildingNumber"] length] > 0)
+                    ? [@"+"
+                          stringByAppendingString:schoolSet[@"BuildingNumber"]]
+                    : @"",
+                ([schoolSet[@"Postcode"] length] > 0)
+                    ? [@"+" stringByAppendingString:schoolSet[@"Postcode"]]
+                    : @"",
+                @"+London"];
+        [schoolAdresses addObject:schoolAdress];
+    }
 
     [self.APIDataManager
-        requestCoordsWithLocationNames:schoolNames
+        requestCoordsWithLocationNames:[schoolAdresses copy]
                                 APIKey:APIKey
                             completion:^(NSError *error, NSArray *results){
 

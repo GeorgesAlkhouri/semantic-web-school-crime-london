@@ -37,18 +37,27 @@
 
 - (void)actionButtonPressed {
 
-    [self.extractGiantBombDataConnection
-        extractDataWithAPIKey:self.giantBombAPIKey];
-}
-
-- (void)extractionDidFinishWithResults:(NSArray *)results {
-
-    NSArray *schoolNames = [self.parseLondonDataStoreDataConnectionProtocol
+    NSArray *schoolData = [self.parseLondonDataStoreDataConnectionProtocol
         parseLondonDataStoreData:nil];
 
     [self.translateSchoolNamesToCoordsConnection
         startTranslatingWithAPIKey:self.geofencingAPIKey
-                       schoolNames:@[ @"Tower Hamlets+Bethnal Green North" ]];
+                       schoolData:schoolData];
+
+    //    [self.extractGiantBombDataConnection
+    //        extractDataWithAPIKey:self.giantBombAPIKey];
+}
+
+- (void)extractionDidFinishWithResults:(NSArray *)results {
+
+    //    NSArray *schoolNames =
+    //    [self.parseLondonDataStoreDataConnectionProtocol
+    //        parseLondonDataStoreData:nil];
+
+    //    [self.translateSchoolNamesToCoordsConnection
+    //        startTranslatingWithAPIKey:self.geofencingAPIKey
+    //                       schoolNames:@[ @"Tower Hamlets+Bethnal Green North"
+    //                       ]];
 }
 
 @end

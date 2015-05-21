@@ -16,8 +16,12 @@
     
     for (NSArray * set in temp) {
         
-        NSString * csvString = set[0];
-        NSArray * csvSet = [csvString componentsSeparatedByString:@";"];
+        NSDictionary * csvSet = @{@"Type" : set[1],
+                               @"Name" : set[3],
+                               @"BuildingName" : set[5],
+                               @"BuildingNumber" : set[6],
+                               @"Street":set[7],
+                               @"Postcode":set[8]};
         
         [csv addObject:csvSet];
     }

@@ -10,9 +10,7 @@
 
 - (NSArray *)parseLondonDataStoreData:(NSError *__autoreleasing *)error {
 
-    [self.interactor parseData];
-
-    return nil;
+    return [self.interactor parseData];
 }
 
 @end

@@ -23,7 +23,7 @@
     id<MainViewTranslateSchoolNamesToCoordsDelegateProtocol> mainViewDelegate;
 
 - (void)startTranslatingWithAPIKey:(NSString *)APIKey
-                       schoolNames:(NSArray *)schoolNames;
+                        schoolData:(NSArray *)schoolData;
 @end
 
 @protocol TranslateSchoolNamesToCoordsViewProtocol
@@ -83,7 +83,7 @@ presentExtractGiantBombDataModuleFrom:
  */
 
 - (void)startTranslatingWithAPIKey:(NSString *)APIKey
-                       schoolNames:(NSArray *)schoolNames;
+                        schoolData:(NSArray *)schoolNames;
 
 @end
 

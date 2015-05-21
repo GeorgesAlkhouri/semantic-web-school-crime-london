@@ -76,7 +76,7 @@
  * Add here your methods for communication PRESENTER -> INTERACTOR
  */
 
-- (void)parseData;
+- (NSArray *)parseData;
 
 @end
 
