@@ -40,7 +40,7 @@
     presenter.wireFrame = wireFrame;
     presenter.interactor = interactor;
 
-    delegate.parseLondonDataStoreDataConnectionProtocol = presenter;
+    delegate.parseLondonDataStoreDataConnection = presenter;
     presenter.mainViewDelegate = delegate;
 
     interactor.presenter = presenter;

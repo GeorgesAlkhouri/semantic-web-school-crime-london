@@ -43,12 +43,14 @@
 @property(nonatomic, strong) id<TranslateSchoolNamesToCoordsConnectionProtocol>
     translateSchoolNamesToCoordsConnection;
 
+- (void)translationDidFinishWithResults:(NSArray *)results;
+
 @end
 
 @protocol
     MainViewParseLondonDataStoreDataDelegateProtocol <MainViewDelegateProtocol>
 @property(nonatomic, strong) id<ParseLondonDataStoreDataConnectionProtocol>
-    parseLondonDataStoreDataConnectionProtocol;
+    parseLondonDataStoreDataConnection;
 
 @end
 

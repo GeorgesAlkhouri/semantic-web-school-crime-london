@@ -17,9 +17,19 @@
 }
 
 - (void)translationDidFinishedWithError:(NSError *)error {
+
+    if (error.code == -2) {
+
+        [self.mainViewDelegate showError:@"GeoCoding parsing error."];
+    } else {
+
+        [self.mainViewDelegate showError:error.localizedDescription];
+    }
 }
 
 - (void)translationDidFinishedWithResults:(NSArray *)results {
+
+    [self.mainViewDelegate translationDidFinishWithResults:results];
 }
 
 @end

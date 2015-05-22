@@ -17,6 +17,20 @@
 - (void)startTranslatingWithAPIKey:(NSString *)APIKey
                         schoolData:(NSArray *)schoolData {
 
+    NSMutableArray *schoolAdresses;
+    schoolAdresses = [self buildLocationNamesWithSchoolData:schoolData];
+
+    [self.APIDataManager
+        requestCoordsWithLocationNames:[schoolAdresses copy]
+                                APIKey:APIKey
+                            completion:^(NSError *error, NSArray *results) {
+
+                                [self processResultsWithError:error
+                                                      results:results];
+                            }];
+}
+
+- (NSMutableArray *)buildLocationNamesWithSchoolData:(NSArray *)schoolData {
     NSMutableArray *schoolAdresses = [NSMutableArray new];
 
     for (NSDictionary *schoolSet in schoolData) {
@@ -35,13 +49,23 @@
                 @"+London"];
         [schoolAdresses addObject:schoolAdress];
     }
+    return schoolAdresses;
+}
 
-    [self.APIDataManager
-        requestCoordsWithLocationNames:[schoolAdresses copy]
-                                APIKey:APIKey
-                            completion:^(NSError *error, NSArray *results){
+// Keys
+// @"Name"
+// @"Adress"
+// @"lat"
+// @"lng"
+- (void)processResultsWithError:(NSError *)error results:(NSArray *)results {
 
-                            }];
+    if (error) {
+
+        [self.presenter translationDidFinishedWithError:error];
+        return;
+    }
+
+    [self.presenter translationDidFinishedWithResults:results];
 }
 
 @end

@@ -23,6 +23,6 @@
 @property(nonatomic, strong) id<TranslateSchoolNamesToCoordsConnectionProtocol>
     translateSchoolNamesToCoordsConnection;
 @property(nonatomic, strong) id<ParseLondonDataStoreDataConnectionProtocol>
-    parseLondonDataStoreDataConnectionProtocol;
+    parseLondonDataStoreDataConnection;
 
 @end

@@ -26,10 +26,10 @@
 
     if (error.code == -1) {
 
-        [self.mainViewDelegate showError:@"Invalid API-Key"];
+        [self.mainViewDelegate showError:@"Invalid Giant Bomb API-Key"];
     } else if (error.code == -2) {
 
-        [self.mainViewDelegate showError:@"Data parsign error"];
+        [self.mainViewDelegate showError:@"Giant Bomb data parsing error"];
     } else {
 
         [self.mainViewDelegate showError:@"Unknown error occurred"];
