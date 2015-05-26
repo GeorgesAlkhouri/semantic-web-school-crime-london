@@ -14,6 +14,8 @@
 
 - (void)extractDataWithAPIKey:(NSString *)APIKey {
 
+    [self.mainViewDelegate
+        showInformationText:@"Request Game Information from Giant Bomb."];
     [self.interactor startDataExtractionWithGiantBombAPIKey:APIKey];
 }
 

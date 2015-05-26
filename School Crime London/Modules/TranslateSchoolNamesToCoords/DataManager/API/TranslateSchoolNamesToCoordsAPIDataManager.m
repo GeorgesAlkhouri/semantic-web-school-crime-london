@@ -96,9 +96,9 @@
                        nil);
             return;
         }
-
-        completion(nil, [results copy]);
     }
+
+    completion(nil, [results copy]);
 }
 
 @end
