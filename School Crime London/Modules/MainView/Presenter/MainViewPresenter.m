@@ -11,6 +11,9 @@
 @property(nonatomic) NSString *giantBombAPIKey;
 @property(nonatomic) NSString *geofencingAPIKey;
 
+@property(nonatomic) NSArray *schoolData;
+@property(nonatomic) NSArray *gameData;
+
 @end
 
 @implementation MainViewPresenter
@@ -46,9 +49,16 @@
 }
 
 - (void)extractionDidFinishWithResults:(NSArray *)results {
+
+    self.gameData = results;
+
+    [self.searchCrimeSceneConnection requestPoliceDataForGames:self.gameData
+                                                    schoolData:self.schoolData];
 }
 
 - (void)translationDidFinishWithResults:(NSArray *)results {
+
+    self.schoolData = results;
 
     [self.extractGiantBombDataConnection
         extractDataWithAPIKey:self.giantBombAPIKey];

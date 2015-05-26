@@ -43,6 +43,13 @@
 		DAACE0341B0BDFC10059B44A /* ParseLondonDataStoreDataPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = DAACE0271B0BDFC10059B44A /* ParseLondonDataStoreDataPresenter.m */; };
 		DAACE0351B0BDFC10059B44A /* ParseLondonDataStoreDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAACE02C1B0BDFC10059B44A /* ParseLondonDataStoreDataView.m */; };
 		DAACE0361B0BDFC10059B44A /* ParseLondonDataStoreDataWireFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = DAACE02F1B0BDFC10059B44A /* ParseLondonDataStoreDataWireFrame.m */; };
+		DAE387821B14815D009229C8 /* SearchCrimeSceneAPIDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE3876E1B14815D009229C8 /* SearchCrimeSceneAPIDataManager.m */; };
+		DAE387831B14815D009229C8 /* SearchCrimeSceneLocalDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE387711B14815D009229C8 /* SearchCrimeSceneLocalDataManager.m */; };
+		DAE387841B14815D009229C8 /* SearchCrimeSceneInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE387741B14815D009229C8 /* SearchCrimeSceneInteractor.m */; };
+		DAE387851B14815D009229C8 /* SearchCrimeSceneItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE387761B14815D009229C8 /* SearchCrimeSceneItem.m */; };
+		DAE387861B14815D009229C8 /* SearchCrimeScenePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE387791B14815D009229C8 /* SearchCrimeScenePresenter.m */; };
+		DAE387871B14815D009229C8 /* SearchCrimeSceneView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE3877E1B14815D009229C8 /* SearchCrimeSceneView.m */; };
+		DAE387881B14815D009229C8 /* SearchCrimeSceneWireFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE387811B14815D009229C8 /* SearchCrimeSceneWireFrame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +139,21 @@
 		DAACE02C1B0BDFC10059B44A /* ParseLondonDataStoreDataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseLondonDataStoreDataView.m; sourceTree = "<group>"; };
 		DAACE02E1B0BDFC10059B44A /* ParseLondonDataStoreDataWireFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseLondonDataStoreDataWireFrame.h; sourceTree = "<group>"; };
 		DAACE02F1B0BDFC10059B44A /* ParseLondonDataStoreDataWireFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseLondonDataStoreDataWireFrame.m; sourceTree = "<group>"; };
+		DAE3876D1B14815D009229C8 /* SearchCrimeSceneAPIDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchCrimeSceneAPIDataManager.h; sourceTree = "<group>"; };
+		DAE3876E1B14815D009229C8 /* SearchCrimeSceneAPIDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchCrimeSceneAPIDataManager.m; sourceTree = "<group>"; };
+		DAE387701B14815D009229C8 /* SearchCrimeSceneLocalDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchCrimeSceneLocalDataManager.h; sourceTree = "<group>"; };
+		DAE387711B14815D009229C8 /* SearchCrimeSceneLocalDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchCrimeSceneLocalDataManager.m; sourceTree = "<group>"; };
+		DAE387731B14815D009229C8 /* SearchCrimeSceneInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchCrimeSceneInteractor.h; sourceTree = "<group>"; };
+		DAE387741B14815D009229C8 /* SearchCrimeSceneInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchCrimeSceneInteractor.m; sourceTree = "<group>"; };
+		DAE387751B14815D009229C8 /* SearchCrimeSceneItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchCrimeSceneItem.h; sourceTree = "<group>"; };
+		DAE387761B14815D009229C8 /* SearchCrimeSceneItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchCrimeSceneItem.m; sourceTree = "<group>"; };
+		DAE387781B14815D009229C8 /* SearchCrimeScenePresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchCrimeScenePresenter.h; sourceTree = "<group>"; };
+		DAE387791B14815D009229C8 /* SearchCrimeScenePresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchCrimeScenePresenter.m; sourceTree = "<group>"; };
+		DAE3877B1B14815D009229C8 /* SearchCrimeSceneProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchCrimeSceneProtocols.h; sourceTree = "<group>"; };
+		DAE3877D1B14815D009229C8 /* SearchCrimeSceneView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchCrimeSceneView.h; sourceTree = "<group>"; };
+		DAE3877E1B14815D009229C8 /* SearchCrimeSceneView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchCrimeSceneView.m; sourceTree = "<group>"; };
+		DAE387801B14815D009229C8 /* SearchCrimeSceneWireFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchCrimeSceneWireFrame.h; sourceTree = "<group>"; };
+		DAE387811B14815D009229C8 /* SearchCrimeSceneWireFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchCrimeSceneWireFrame.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -406,6 +428,7 @@
 		DA9E21EA1B062C70001507A3 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				DAE3876A1B14815D009229C8 /* SearchCrimeScene */,
 				DA93FD921B0DD68D00D7375A /* MainView */,
 				DAACE0181B0BDFC10059B44A /* ParseLondonDataStoreData */,
 				DA9E21EB1B062E85001507A3 /* ExtractGiantBombData */,
@@ -603,6 +626,92 @@
 			path = WireFrame;
 			sourceTree = "<group>";
 		};
+		DAE3876A1B14815D009229C8 /* SearchCrimeScene */ = {
+			isa = PBXGroup;
+			children = (
+				DAE3876B1B14815D009229C8 /* DataManager */,
+				DAE387721B14815D009229C8 /* Interactor */,
+				DAE387771B14815D009229C8 /* Presenter */,
+				DAE3877A1B14815D009229C8 /* Protocols */,
+				DAE3877C1B14815D009229C8 /* View */,
+				DAE3877F1B14815D009229C8 /* WireFrame */,
+			);
+			path = SearchCrimeScene;
+			sourceTree = "<group>";
+		};
+		DAE3876B1B14815D009229C8 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				DAE3876C1B14815D009229C8 /* API */,
+				DAE3876F1B14815D009229C8 /* Local */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		DAE3876C1B14815D009229C8 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				DAE3876D1B14815D009229C8 /* SearchCrimeSceneAPIDataManager.h */,
+				DAE3876E1B14815D009229C8 /* SearchCrimeSceneAPIDataManager.m */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		DAE3876F1B14815D009229C8 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				DAE387701B14815D009229C8 /* SearchCrimeSceneLocalDataManager.h */,
+				DAE387711B14815D009229C8 /* SearchCrimeSceneLocalDataManager.m */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		DAE387721B14815D009229C8 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				DAE387731B14815D009229C8 /* SearchCrimeSceneInteractor.h */,
+				DAE387741B14815D009229C8 /* SearchCrimeSceneInteractor.m */,
+				DAE387751B14815D009229C8 /* SearchCrimeSceneItem.h */,
+				DAE387761B14815D009229C8 /* SearchCrimeSceneItem.m */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		DAE387771B14815D009229C8 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				DAE387781B14815D009229C8 /* SearchCrimeScenePresenter.h */,
+				DAE387791B14815D009229C8 /* SearchCrimeScenePresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		DAE3877A1B14815D009229C8 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DAE3877B1B14815D009229C8 /* SearchCrimeSceneProtocols.h */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		DAE3877C1B14815D009229C8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DAE3877D1B14815D009229C8 /* SearchCrimeSceneView.h */,
+				DAE3877E1B14815D009229C8 /* SearchCrimeSceneView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DAE3877F1B14815D009229C8 /* WireFrame */ = {
+			isa = PBXGroup;
+			children = (
+				DAE387801B14815D009229C8 /* SearchCrimeSceneWireFrame.h */,
+				DAE387811B14815D009229C8 /* SearchCrimeSceneWireFrame.m */,
+			);
+			path = WireFrame;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -743,8 +852,10 @@
 				DA93FDAE1B0DD68D00D7375A /* MainViewPresenter.m in Sources */,
 				DA93FDAA1B0DD68D00D7375A /* MainViewAPIDataManager.m in Sources */,
 				DA9E22041B062E85001507A3 /* ExtractGiantBombDataLocalDataManager.m in Sources */,
+				DAE387851B14815D009229C8 /* SearchCrimeSceneItem.m in Sources */,
 				DAACE0341B0BDFC10059B44A /* ParseLondonDataStoreDataPresenter.m in Sources */,
 				DA739AEF1B0E3AF600392983 /* TranslateSchoolNamesToCoordsLocalDataManager.m in Sources */,
+				DAE387881B14815D009229C8 /* SearchCrimeSceneWireFrame.m in Sources */,
 				DA739AF01B0E3AF600392983 /* TranslateSchoolNamesToCoordsInteractor.m in Sources */,
 				DAACE0321B0BDFC10059B44A /* ParseLondonDataStoreDataInteractor.m in Sources */,
 				DA739AF21B0E3AF600392983 /* TranslateSchoolNamesToCoordsPresenter.m in Sources */,
@@ -763,10 +874,15 @@
 				DA93FDAB1B0DD68D00D7375A /* MainViewLocalDataManager.m in Sources */,
 				DA9E22031B062E85001507A3 /* ExtractGiantBombDataAPIDataManager.m in Sources */,
 				DA4AB8BB1B062A1A00D684CE /* AppDelegate.m in Sources */,
+				DAE387861B14815D009229C8 /* SearchCrimeScenePresenter.m in Sources */,
 				DA739AF41B0E3AF600392983 /* TranslateSchoolNamesToCoordsWireFrame.m in Sources */,
 				DA739AF31B0E3AF600392983 /* TranslateSchoolNamesToCoordsView.m in Sources */,
 				DA9E22091B062E85001507A3 /* ExtractGiantBombDataWireFrame.m in Sources */,
+				DAE387841B14815D009229C8 /* SearchCrimeSceneInteractor.m in Sources */,
+				DAE387821B14815D009229C8 /* SearchCrimeSceneAPIDataManager.m in Sources */,
 				DA9E22061B062E85001507A3 /* ExtractGiantBombDataItem.m in Sources */,
+				DAE387871B14815D009229C8 /* SearchCrimeSceneView.m in Sources */,
+				DAE387831B14815D009229C8 /* SearchCrimeSceneLocalDataManager.m in Sources */,
 				DA93FDAD1B0DD68D00D7375A /* MainViewItem.m in Sources */,
 				DAACE0311B0BDFC10059B44A /* ParseLondonDataStoreDataLocalDataManager.m in Sources */,
 			);

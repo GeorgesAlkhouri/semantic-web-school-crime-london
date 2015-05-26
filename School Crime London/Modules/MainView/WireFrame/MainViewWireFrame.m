@@ -8,6 +8,7 @@
 #import "ExtractGiantBombDataWireFrame.h"
 #import "ParseLondonDataStoreDataWireFrame.h"
 #import "TranslateSchoolNamesToCoordsWireFrame.h"
+#import "SearchCrimeSceneWireFrame.h"
 
 @interface MainViewWireFrame ()
 
@@ -17,6 +18,7 @@
     ParseLondonDataStoreDataWireFrame *parseLondonDataStoreDataWireFrame;
 @property(nonatomic) TranslateSchoolNamesToCoordsWireFrame
     *translateSchoolNamesToCoordsWireFrame;
+@property(nonatomic) SearchCrimeSceneWireFrame *searchCrimeSceneWireFrame;
 
 @property(nonatomic, weak) id<MainViewPresenterProtocol> presenter;
 
@@ -66,6 +68,11 @@
             [TranslateSchoolNamesToCoordsWireFrame
                 presentExtractGiantBombDataModuleFrom:nil
                                          withDelegate:presenter]];
+
+    [(MainViewWireFrame *)wireFrame
+        setSearchCrimeSceneWireFrame:[SearchCrimeSceneWireFrame
+                                         presentSearchCrimeSceneModuleFrom:
+                                             nil withDelegate:presenter]];
 
     [(MainViewWireFrame *)wireFrame setPresenter:presenter];
 

@@ -17,6 +17,7 @@
 @protocol ExtractGiantBombDataConnectionProtocol;
 @protocol TranslateSchoolNamesToCoordsConnectionProtocol;
 @protocol ParseLondonDataStoreDataConnectionProtocol;
+@protocol SearchCrimeSceneConnectionProtocol;
 
 @class MainViewWireFrame;
 
@@ -24,6 +25,13 @@
 
 - (void)showInformationText:(NSString *)text;
 - (void)showError:(NSString *)errorText;
+
+@end
+
+@protocol MainViewSearchCrimeSceneDelegateProtocol <MainViewDelegateProtocol>
+
+@property(nonatomic, strong)
+    id<SearchCrimeSceneConnectionProtocol> searchCrimeSceneConnection;
 
 @end
 
@@ -76,7 +84,9 @@
 @protocol MainViewPresenterProtocol <
     MainViewExtractGiantBombDataDelegateProtocol,
     MainViewTranslateSchoolNamesToCoordsDelegateProtocol,
-    MainViewParseLondonDataStoreDataDelegateProtocol>
+    MainViewParseLondonDataStoreDataDelegateProtocol,
+    MainViewSearchCrimeSceneDelegateProtocol>
+
 @required
 @property(nonatomic, weak) id<MainViewViewProtocol> view;
 @property(nonatomic, strong) id<MainViewInteractorInputProtocol> interactor;

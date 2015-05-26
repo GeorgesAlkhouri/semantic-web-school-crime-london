@@ -8,6 +8,7 @@
 #import "ExtractGiantBombDataProtocols.h"
 #import "TranslateSchoolNamesToCoordsProtocols.h"
 #import "ParseLondonDataStoreDataProtocols.h"
+#import "SearchCrimeSceneProtocols.h"
 
 @class MainViewWireFrame;
 
@@ -24,5 +25,7 @@
     translateSchoolNamesToCoordsConnection;
 @property(nonatomic, strong) id<ParseLondonDataStoreDataConnectionProtocol>
     parseLondonDataStoreDataConnection;
+@property(nonatomic, strong)
+    id<SearchCrimeSceneConnectionProtocol> searchCrimeSceneConnection;
 
 @end
