@@ -12,11 +12,11 @@
 - (void)startDataExtractionWithGiantBombAPIKey:(NSString *)APIKey {
 
     [_APIDataManager getReleaseDatesForGames:@[
-        @"Battlefield Hardline",
-        @"Call of Duty Advanced Warfare",
-        @"Counter Strike",
-        @"Manhunt",
-        @"Manhunt 2"
+        @"Battlefield Hardline"
+        //        @"Call of Duty Advanced Warfare",
+        //        @"Counter Strike",
+        //        @"Manhunt",
+        //        @"Manhunt 2"
     ] APIKey:APIKey completion:^(NSArray *results) {
 
         [self processResults:results];
@@ -44,13 +44,13 @@
                 return;
             }
 
-            ExtractGiantBombDataItem *game = [ExtractGiantBombDataItem new];
-
-            game.gameName = responseObject[@"results"][0][@"name"];
-            game.releaseDate =
-                responseObject[@"results"][0][@"original_release_date"];
-            game.rating = responseObject[@"results"][0][
-                @"original_game_rating"][0][@"name"];
+            NSDictionary *game = @{
+                @"GameName" : responseObject[@"results"][0][@"name"],
+                @"ReleaseDate" :
+                    responseObject[@"results"][0][@"original_release_date"],
+                @"OriginalGameRating" : responseObject[@"results"][0][
+                    @"original_game_rating"][0][@"name"]
+            };
 
             [games addObject:game];
         } @catch (NSException *exception) {

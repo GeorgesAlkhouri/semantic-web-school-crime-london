@@ -73,6 +73,10 @@
 /**
  * Add here your methods for communication PRESENTER -> INTERACTOR
  */
+
+- (void)requestCrimeScenesWithSchoolData:(NSArray *)schoolData
+                                gameData:(NSArray *)gameData;
+
 @end
 
 @protocol SearchCrimeSceneDataManagerInputProtocol
@@ -86,6 +90,11 @@
 /**
  * Add here your methods for communication INTERACTOR -> APIDATAMANAGER
  */
+
+- (void)requestPoliceDataStoreWithParameters:
+            (NSArray *)parameter completion:
+                (void (^)(NSArray *results, NSError *error))completion;
+
 @end
 
 @protocol SearchCrimeSceneLocalDataManagerInputProtocol <

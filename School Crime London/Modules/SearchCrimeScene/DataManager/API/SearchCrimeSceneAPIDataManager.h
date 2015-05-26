@@ -9,4 +9,5 @@
 
 @interface SearchCrimeSceneAPIDataManager : NSObject <SearchCrimeSceneAPIDataManagerInputProtocol>
 
+
 @end

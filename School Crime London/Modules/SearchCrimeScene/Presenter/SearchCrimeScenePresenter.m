@@ -11,6 +11,9 @@
 - (void)requestPoliceDataForGames:(NSArray *)games
                        schoolData:(NSArray *)schoolData {
 
-    [self.mainViewDelegate showInformationText:@"Requesting UK Police."];
+    [self.mainViewDelegate
+        showInformationText:@"Requesting UK police data store."];
+    [self.interactor requestCrimeScenesWithSchoolData:schoolData
+                                             gameData:games];
 }
 @end

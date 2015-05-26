@@ -76,6 +76,19 @@
             return;
         }
 
+        if (![responseObject[@"status"] isEqualToString:@"OK"]) {
+
+            NSError *error =
+                [NSError errorWithDomain:NSStringFromClass([self class])
+                                    code:-1
+                                userInfo:@{
+                                    NSLocalizedDescriptionKey :
+                                        responseObject[@"error_message"]
+                                }];
+            completion(error, nil);
+            return;
+        }
+
         @try {
             NSDictionary *schoolData = @{
                 @"Name" : responseObject[@"results"][0][
