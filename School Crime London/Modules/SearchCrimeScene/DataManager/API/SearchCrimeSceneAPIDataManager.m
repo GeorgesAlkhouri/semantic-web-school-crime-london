@@ -4,6 +4,7 @@
 //
 
 #import "SearchCrimeSceneAPIDataManager.h"
+#import "AFHTTPRequestOperation+Additions.h"
 #import <AFNetworking.h>
 
 @implementation SearchCrimeSceneAPIDataManager
@@ -16,22 +17,27 @@
 
     for (NSDictionary *paramter in parameters) {
 
-        for (NSString *requestDates in paramter[@"requestDates"]) {
+        for (NSString *requestDate in paramter[@"requestDates"]) {
 
             NSURLRequest *request = [[AFHTTPRequestSerializer serializer]
                 requestWithMethod:@"GET"
                         URLString:
                             @"http://data.police.uk/api/crimes-at-location"
                        parameters:@{
-                           @"lat" : paramter[@"lat"],
-                           @"lng" : paramter[@"lng"],
-                           @"date" : requestDates
+                           @"lat" : paramter[@"Lat"],
+                           @"lng" : paramter[@"Lng"],
+                           @"date" : requestDate
                        } error:nil];
 
             AFHTTPRequestOperation *operation =
                 [[AFHTTPRequestOperation alloc] initWithRequest:request];
             operation.responseSerializer =
                 [AFJSONResponseSerializer serializer];
+
+            NSMutableDictionary *temp = [NSMutableDictionary new];
+            [temp addEntriesFromDictionary:paramter];
+            [temp setObject:requestDate forKey:@"RequestDate"];
+            operation.originalData = temp;
 
             [operations addObject:operation];
         }
@@ -42,10 +48,33 @@
                    progressBlock:nil
                  completionBlock:^(NSArray *operations) {
 
+                     NSMutableArray *results = [NSMutableArray new];
+
                      for (AFHTTPRequestOperation *operation in operations) {
 
+                         if (operation.error) {
+
+                             if (completion)
+                                 completion(nil, operation.error);
+
+                             return;
+                         }
+
                          id responseObject = operation.responseObject;
+
+                         if (responseObject) {
+
+                             NSDictionary *result = @{
+                                 @"Result" : responseObject,
+                                 @"OriginalData" : operation.originalData
+                             };
+
+                             [results addObject:result];
+                         }
                      }
+
+                     if (completion)
+                         completion([results copy], nil);
 
                  }];
 

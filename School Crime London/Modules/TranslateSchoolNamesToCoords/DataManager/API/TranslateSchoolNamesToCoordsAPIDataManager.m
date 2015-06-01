@@ -5,10 +5,11 @@
 
 #import "TranslateSchoolNamesToCoordsAPIDataManager.h"
 #import <AFNetworking.h>
+#import "AFHTTPRequestOperation+Additions.h"
 
 @implementation TranslateSchoolNamesToCoordsAPIDataManager
 
-- (void)requestCoordsWithLocationNames:(NSArray *)locationNames
+- (void)requestCoordsWithLocationNames:(NSArray *)requestData
                                 APIKey:(NSString *)APIKey
                             completion:(void (^)(NSError *error,
                                                  NSArray *results))completion {
@@ -18,15 +19,16 @@
 
     NSMutableArray *requestOperations = [NSMutableArray new];
 
-    for (NSString *locationName in locationNames) {
+    for (NSDictionary *rD in requestData) {
 
         NSURLRequest *request;
-        request =
-            [self buildRequestWithLocationName:locationName APIKey:APIKey];
+        request = [self buildRequestWithLocationName:rD[@"SchoolAdress"]
+                                              APIKey:APIKey];
 
         AFHTTPRequestOperation *operation =
             [[AFHTTPRequestOperation alloc] initWithRequest:request];
         operation.responseSerializer = [AFJSONResponseSerializer serializer];
+        operation.originalData = rD[@"OriginalData"];
 
         [requestOperations addObject:operation];
     }
@@ -91,13 +93,17 @@
 
         @try {
             NSDictionary *schoolData = @{
-                @"Name" : responseObject[@"results"][0][
-                    @"address_components"][0][@"long_name"],
+                @"SchoolName" : operation.originalData[@"Name"],
                 @"Adress" : responseObject[@"results"][0][@"formatted_address"],
-                @"lat" : responseObject[@"results"][0][@"geometry"][
+                @"Lat" : responseObject[@"results"][0][@"geometry"][
                     @"location"][@"lat"],
-                @"lng" : responseObject[@"results"][0][@"geometry"][
-                    @"location"][@"lng"]
+                @"Lng" : responseObject[@"results"][0][@"geometry"][
+                    @"location"][@"lng"],
+                @"BuildingName" : operation.originalData[@"BuildingName"],
+                @"BuildingNumber" : operation.originalData[@"BuildingNumber"],
+                @"Postcode" : operation.originalData[@"Postcode"],
+                @"Street" : operation.originalData[@"Street"],
+                @"SchoolType" : operation.originalData[@"Type"]
             };
 
             [results addObject:schoolData];

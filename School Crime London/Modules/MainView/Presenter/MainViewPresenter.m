@@ -13,6 +13,7 @@
 
 @property(nonatomic) NSArray *schoolData;
 @property(nonatomic) NSArray *gameData;
+@property(nonatomic) NSArray *crimeData;
 
 @end
 
@@ -62,6 +63,11 @@
 
     [self.extractGiantBombDataConnection
         extractDataWithAPIKey:self.giantBombAPIKey];
+}
+
+- (void)requestCrimeSceneFinishedWithResults:(NSArray *)results {
+
+    self.crimeData = results;
 }
 
 @end

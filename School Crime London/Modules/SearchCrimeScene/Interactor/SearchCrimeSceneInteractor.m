@@ -37,7 +37,7 @@
 
             [parameter addEntriesFromDictionary:game];
             [parameter setObject:requestDates forKey:@"requestDates"];
-            
+
             [parameters addObject:[parameter copy]];
         }
     }
@@ -45,8 +45,8 @@
     [self.APIDataManager
         requestPoliceDataStoreWithParameters:[parameters copy]
                                   completion:^(NSArray *results,
-                                               NSError *error){
-
+                                               NSError *error) {
+                                      [self processResults:results error:error];
                                   }];
 }
 
@@ -69,6 +69,57 @@
     }
 
     return [strings copy];
+}
+
+- (void)processResults:(NSArray *)results error:(NSError *)error {
+
+    if (error) {
+
+        [self.presenter requestFailedWithError:error];
+        return;
+    }
+    NSMutableArray *crimes = [NSMutableArray new];
+
+    @try {
+        for (NSDictionary *result in results) {
+
+            if ([result[@"Result"] count] > 0) {
+                NSArray *crimeResult = result[@"Result"];
+
+                for (NSDictionary *crime in crimeResult) {
+
+                    [crimes addObject:crime];
+                }
+            }
+        }
+    } @catch (NSException *exception) {
+
+        [self.presenter
+            requestFailedWithError:
+                [NSError errorWithDomain:NSStringFromClass([self class])
+                                    code:-2
+                                userInfo:@{
+                                    NSLocalizedDescriptionKey :
+                                        @"Parsing error with UK Police data."
+                                }]];
+
+        return;
+    }
+
+    if (crimes.count == 0) {
+
+        [self.presenter
+            requestFailedWithError:
+                [NSError errorWithDomain:NSStringFromClass([self class])
+                                    code:-1
+                                userInfo:@{
+                                    NSLocalizedDescriptionKey :
+                                        @"Empty result from UK Police."
+                                }]];
+        return;
+    }
+
+    [self.presenter requestSucceededWithResults:crimes];
 }
 
 @end

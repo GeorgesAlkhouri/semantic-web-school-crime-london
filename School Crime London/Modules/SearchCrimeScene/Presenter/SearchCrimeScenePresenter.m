@@ -16,4 +16,15 @@
     [self.interactor requestCrimeScenesWithSchoolData:schoolData
                                              gameData:games];
 }
+
+- (void)requestFailedWithError:(NSError *)error {
+
+    [self.mainViewDelegate showError:error.localizedDescription];
+}
+
+- (void)requestSucceededWithResults:(NSArray *)result {
+
+    [self.mainViewDelegate requestCrimeSceneFinishedWithResults:result];
+}
+
 @end

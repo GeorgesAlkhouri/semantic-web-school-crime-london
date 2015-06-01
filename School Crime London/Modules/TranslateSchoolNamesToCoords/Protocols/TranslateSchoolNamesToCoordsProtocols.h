@@ -99,7 +99,7 @@ presentExtractGiantBombDataModuleFrom:
  * Add here your methods for communication INTERACTOR -> APIDATAMANAGER
  */
 
-- (void)requestCoordsWithLocationNames:(NSArray *)locationNames
+- (void)requestCoordsWithLocationNames:(NSArray *)requestData
                                 APIKey:(NSString *)APIKey
                             completion:(void (^)(NSError *error,
                                                  NSArray *results))completion;

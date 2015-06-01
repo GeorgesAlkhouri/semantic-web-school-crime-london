@@ -60,6 +60,10 @@
 /**
  * Add here your methods for communication INTERACTOR -> PRESENTER
  */
+
+- (void)requestSucceededWithResults:(NSArray *)result;
+- (void)requestFailedWithError:(NSError *)error;
+
 @end
 
 @protocol SearchCrimeSceneInteractorInputProtocol

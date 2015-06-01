@@ -47,7 +47,11 @@
                     ? [@"+" stringByAppendingString:schoolSet[@"Postcode"]]
                     : @"",
                 @"+London"];
-        [schoolAdresses addObject:schoolAdress];
+        NSDictionary *requestData =
+            @{ @"SchoolAdress" : schoolAdress,
+               @"OriginalData" : schoolSet };
+
+        [schoolAdresses addObject:requestData];
     }
     return schoolAdresses;
 }

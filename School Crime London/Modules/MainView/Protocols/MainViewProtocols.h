@@ -33,6 +33,8 @@
 @property(nonatomic, strong)
     id<SearchCrimeSceneConnectionProtocol> searchCrimeSceneConnection;
 
+- (void)requestCrimeSceneFinishedWithResults:(NSArray *)results;
+
 @end
 
 @protocol
