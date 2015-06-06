@@ -37,6 +37,13 @@
 		DA9E22091B062E85001507A3 /* ExtractGiantBombDataWireFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9E22021B062E85001507A3 /* ExtractGiantBombDataWireFrame.m */; };
 		DA9E220E1B069592001507A3 /* NSDate+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9E220D1B069592001507A3 /* NSDate+Additions.m */; };
 		DA9F45EF1B1C967000DB96C8 /* AFHTTPRequestOperation+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9F45EE1B1C967000DB96C8 /* AFHTTPRequestOperation+Additions.m */; };
+		DA9F46081B1CBC5900DB96C8 /* BuildRdfAPIDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9F45F41B1CBC5900DB96C8 /* BuildRdfAPIDataManager.m */; };
+		DA9F46091B1CBC5900DB96C8 /* BuildRdfLocalDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9F45F71B1CBC5900DB96C8 /* BuildRdfLocalDataManager.m */; };
+		DA9F460A1B1CBC5900DB96C8 /* BuildRdfInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9F45FA1B1CBC5900DB96C8 /* BuildRdfInteractor.m */; };
+		DA9F460B1B1CBC5900DB96C8 /* BuildRdfItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9F45FC1B1CBC5900DB96C8 /* BuildRdfItem.m */; };
+		DA9F460C1B1CBC5900DB96C8 /* BuildRdfPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9F45FF1B1CBC5900DB96C8 /* BuildRdfPresenter.m */; };
+		DA9F460D1B1CBC5900DB96C8 /* BuildRdfView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9F46041B1CBC5900DB96C8 /* BuildRdfView.m */; };
+		DA9F460E1B1CBC5900DB96C8 /* BuildRdfWireFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9F46071B1CBC5900DB96C8 /* BuildRdfWireFrame.m */; };
 		DAACE0301B0BDFC10059B44A /* ParseLondonDataStoreDataAPIDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DAACE01C1B0BDFC10059B44A /* ParseLondonDataStoreDataAPIDataManager.m */; };
 		DAACE0311B0BDFC10059B44A /* ParseLondonDataStoreDataLocalDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DAACE01F1B0BDFC10059B44A /* ParseLondonDataStoreDataLocalDataManager.m */; };
 		DAACE0321B0BDFC10059B44A /* ParseLondonDataStoreDataInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = DAACE0221B0BDFC10059B44A /* ParseLondonDataStoreDataInteractor.m */; };
@@ -127,6 +134,21 @@
 		DA9E220D1B069592001507A3 /* NSDate+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Additions.m"; sourceTree = "<group>"; };
 		DA9F45ED1B1C967000DB96C8 /* AFHTTPRequestOperation+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFHTTPRequestOperation+Additions.h"; sourceTree = "<group>"; };
 		DA9F45EE1B1C967000DB96C8 /* AFHTTPRequestOperation+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AFHTTPRequestOperation+Additions.m"; sourceTree = "<group>"; };
+		DA9F45F31B1CBC5900DB96C8 /* BuildRdfAPIDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuildRdfAPIDataManager.h; sourceTree = "<group>"; };
+		DA9F45F41B1CBC5900DB96C8 /* BuildRdfAPIDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuildRdfAPIDataManager.m; sourceTree = "<group>"; };
+		DA9F45F61B1CBC5900DB96C8 /* BuildRdfLocalDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuildRdfLocalDataManager.h; sourceTree = "<group>"; };
+		DA9F45F71B1CBC5900DB96C8 /* BuildRdfLocalDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuildRdfLocalDataManager.m; sourceTree = "<group>"; };
+		DA9F45F91B1CBC5900DB96C8 /* BuildRdfInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuildRdfInteractor.h; sourceTree = "<group>"; };
+		DA9F45FA1B1CBC5900DB96C8 /* BuildRdfInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuildRdfInteractor.m; sourceTree = "<group>"; };
+		DA9F45FB1B1CBC5900DB96C8 /* BuildRdfItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuildRdfItem.h; sourceTree = "<group>"; };
+		DA9F45FC1B1CBC5900DB96C8 /* BuildRdfItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuildRdfItem.m; sourceTree = "<group>"; };
+		DA9F45FE1B1CBC5900DB96C8 /* BuildRdfPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuildRdfPresenter.h; sourceTree = "<group>"; };
+		DA9F45FF1B1CBC5900DB96C8 /* BuildRdfPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuildRdfPresenter.m; sourceTree = "<group>"; };
+		DA9F46011B1CBC5900DB96C8 /* BuildRdfProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuildRdfProtocols.h; sourceTree = "<group>"; };
+		DA9F46031B1CBC5900DB96C8 /* BuildRdfView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuildRdfView.h; sourceTree = "<group>"; };
+		DA9F46041B1CBC5900DB96C8 /* BuildRdfView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuildRdfView.m; sourceTree = "<group>"; };
+		DA9F46061B1CBC5900DB96C8 /* BuildRdfWireFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuildRdfWireFrame.h; sourceTree = "<group>"; };
+		DA9F46071B1CBC5900DB96C8 /* BuildRdfWireFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuildRdfWireFrame.m; sourceTree = "<group>"; };
 		DAACE01B1B0BDFC10059B44A /* ParseLondonDataStoreDataAPIDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseLondonDataStoreDataAPIDataManager.h; sourceTree = "<group>"; };
 		DAACE01C1B0BDFC10059B44A /* ParseLondonDataStoreDataAPIDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseLondonDataStoreDataAPIDataManager.m; sourceTree = "<group>"; };
 		DAACE01E1B0BDFC10059B44A /* ParseLondonDataStoreDataLocalDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseLondonDataStoreDataLocalDataManager.h; sourceTree = "<group>"; };
@@ -431,6 +453,7 @@
 		DA9E21EA1B062C70001507A3 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				DA9F45F01B1CBC5900DB96C8 /* BuildRdf */,
 				DAE3876A1B14815D009229C8 /* SearchCrimeScene */,
 				DA93FD921B0DD68D00D7375A /* MainView */,
 				DAACE0181B0BDFC10059B44A /* ParseLondonDataStoreData */,
@@ -543,6 +566,92 @@
 				DA9F45EE1B1C967000DB96C8 /* AFHTTPRequestOperation+Additions.m */,
 			);
 			path = Categories;
+			sourceTree = "<group>";
+		};
+		DA9F45F01B1CBC5900DB96C8 /* BuildRdf */ = {
+			isa = PBXGroup;
+			children = (
+				DA9F45F11B1CBC5900DB96C8 /* DataManager */,
+				DA9F45F81B1CBC5900DB96C8 /* Interactor */,
+				DA9F45FD1B1CBC5900DB96C8 /* Presenter */,
+				DA9F46001B1CBC5900DB96C8 /* Protocols */,
+				DA9F46021B1CBC5900DB96C8 /* View */,
+				DA9F46051B1CBC5900DB96C8 /* WireFrame */,
+			);
+			path = BuildRdf;
+			sourceTree = "<group>";
+		};
+		DA9F45F11B1CBC5900DB96C8 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				DA9F45F21B1CBC5900DB96C8 /* API */,
+				DA9F45F51B1CBC5900DB96C8 /* Local */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		DA9F45F21B1CBC5900DB96C8 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				DA9F45F31B1CBC5900DB96C8 /* BuildRdfAPIDataManager.h */,
+				DA9F45F41B1CBC5900DB96C8 /* BuildRdfAPIDataManager.m */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		DA9F45F51B1CBC5900DB96C8 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				DA9F45F61B1CBC5900DB96C8 /* BuildRdfLocalDataManager.h */,
+				DA9F45F71B1CBC5900DB96C8 /* BuildRdfLocalDataManager.m */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		DA9F45F81B1CBC5900DB96C8 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				DA9F45F91B1CBC5900DB96C8 /* BuildRdfInteractor.h */,
+				DA9F45FA1B1CBC5900DB96C8 /* BuildRdfInteractor.m */,
+				DA9F45FB1B1CBC5900DB96C8 /* BuildRdfItem.h */,
+				DA9F45FC1B1CBC5900DB96C8 /* BuildRdfItem.m */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		DA9F45FD1B1CBC5900DB96C8 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				DA9F45FE1B1CBC5900DB96C8 /* BuildRdfPresenter.h */,
+				DA9F45FF1B1CBC5900DB96C8 /* BuildRdfPresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		DA9F46001B1CBC5900DB96C8 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DA9F46011B1CBC5900DB96C8 /* BuildRdfProtocols.h */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		DA9F46021B1CBC5900DB96C8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DA9F46031B1CBC5900DB96C8 /* BuildRdfView.h */,
+				DA9F46041B1CBC5900DB96C8 /* BuildRdfView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DA9F46051B1CBC5900DB96C8 /* WireFrame */ = {
+			isa = PBXGroup;
+			children = (
+				DA9F46061B1CBC5900DB96C8 /* BuildRdfWireFrame.h */,
+				DA9F46071B1CBC5900DB96C8 /* BuildRdfWireFrame.m */,
+			);
+			path = WireFrame;
 			sourceTree = "<group>";
 		};
 		DAACE0181B0BDFC10059B44A /* ParseLondonDataStoreData */ = {
@@ -854,11 +963,14 @@
 			files = (
 				DAACE0331B0BDFC10059B44A /* ParseLondonDataStoreDataItem.m in Sources */,
 				DA9E220E1B069592001507A3 /* NSDate+Additions.m in Sources */,
+				DA9F460C1B1CBC5900DB96C8 /* BuildRdfPresenter.m in Sources */,
 				DA93FDAE1B0DD68D00D7375A /* MainViewPresenter.m in Sources */,
 				DA93FDAA1B0DD68D00D7375A /* MainViewAPIDataManager.m in Sources */,
 				DA9E22041B062E85001507A3 /* ExtractGiantBombDataLocalDataManager.m in Sources */,
+				DA9F460E1B1CBC5900DB96C8 /* BuildRdfWireFrame.m in Sources */,
 				DAE387851B14815D009229C8 /* SearchCrimeSceneItem.m in Sources */,
 				DAACE0341B0BDFC10059B44A /* ParseLondonDataStoreDataPresenter.m in Sources */,
+				DA9F460B1B1CBC5900DB96C8 /* BuildRdfItem.m in Sources */,
 				DA739AEF1B0E3AF600392983 /* TranslateSchoolNamesToCoordsLocalDataManager.m in Sources */,
 				DAE387881B14815D009229C8 /* SearchCrimeSceneWireFrame.m in Sources */,
 				DA739AF01B0E3AF600392983 /* TranslateSchoolNamesToCoordsInteractor.m in Sources */,
@@ -874,6 +986,7 @@
 				DA9E22081B062E85001507A3 /* ExtractGiantBombDataView.m in Sources */,
 				DA739AEE1B0E3AF600392983 /* TranslateSchoolNamesToCoordsAPIDataManager.m in Sources */,
 				DAACE0351B0BDFC10059B44A /* ParseLondonDataStoreDataView.m in Sources */,
+				DA9F46091B1CBC5900DB96C8 /* BuildRdfLocalDataManager.m in Sources */,
 				DAACE0361B0BDFC10059B44A /* ParseLondonDataStoreDataWireFrame.m in Sources */,
 				DA93FDB01B0DD68D00D7375A /* MainViewWireFrame.m in Sources */,
 				DA93FDAB1B0DD68D00D7375A /* MainViewLocalDataManager.m in Sources */,
@@ -887,9 +1000,12 @@
 				DAE387821B14815D009229C8 /* SearchCrimeSceneAPIDataManager.m in Sources */,
 				DA9E22061B062E85001507A3 /* ExtractGiantBombDataItem.m in Sources */,
 				DAE387871B14815D009229C8 /* SearchCrimeSceneView.m in Sources */,
+				DA9F460D1B1CBC5900DB96C8 /* BuildRdfView.m in Sources */,
 				DAE387831B14815D009229C8 /* SearchCrimeSceneLocalDataManager.m in Sources */,
 				DA9F45EF1B1C967000DB96C8 /* AFHTTPRequestOperation+Additions.m in Sources */,
 				DA93FDAD1B0DD68D00D7375A /* MainViewItem.m in Sources */,
+				DA9F46081B1CBC5900DB96C8 /* BuildRdfAPIDataManager.m in Sources */,
+				DA9F460A1B1CBC5900DB96C8 /* BuildRdfInteractor.m in Sources */,
 				DAACE0311B0BDFC10059B44A /* ParseLondonDataStoreDataLocalDataManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
