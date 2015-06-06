@@ -24,7 +24,9 @@
                        @"format" : @"json",
                        @"query" : gameName,
                        @"resources" : @"game",
-                       @"limit" : @"1"
+                       @"limit" : @"1",
+                       @"field_list" :
+                           @"original_game_rating,original_release_date,name"
                    } error:nil];
 
         AFHTTPRequestOperation *operation =

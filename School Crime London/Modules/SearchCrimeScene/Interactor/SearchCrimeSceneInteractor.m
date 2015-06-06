@@ -31,6 +31,9 @@
 
         NSArray *requestDates = [self formattedDateStringsFromDate:releaseDate];
 
+        if (requestDates.count == 0)
+            continue;
+
         for (NSDictionary *school in schoolData) {
 
             NSMutableDictionary *parameter = [school mutableCopy];
@@ -50,6 +53,8 @@
                                   }];
 }
 
+#pragma mark - Private
+
 - (NSArray *)formattedDateStringsFromDate:(NSDate *)date {
 
     NSDateComponents *components = [[NSCalendar currentCalendar]
@@ -60,15 +65,46 @@
     NSDateFormatter *formatter = [NSDateFormatter new];
     formatter.dateFormat = @"YYYY-MM";
 
+    NSDate *minDate = [formatter dateFromString:@"2010-12"];
+    NSDate *maxDate = [self createMaxDate];
+
     NSMutableArray *strings = [NSMutableArray new];
 
     for (NSInteger i = 0; i < 6; i++) {
 
-        [strings addObject:[formatter stringFromDate:[components date]]];
-        components.month += 1;
+        if ([self isDate:[components date]
+                betweenDate:minDate
+                    andDate:maxDate]) {
+
+            [strings addObject:[formatter stringFromDate:[components date]]];
+            components.month += 1;
+        }
     }
 
     return [strings copy];
+}
+
+- (NSDate *)createMaxDate {
+
+    NSDateComponents *components = [[NSCalendar currentCalendar]
+        components:NSCalendarUnitMonth | NSCalendarUnitYear
+          fromDate:[NSDate date]];
+    [components setCalendar:[NSCalendar currentCalendar]];
+    components.month -= 3;
+
+    return [components date];
+}
+
+- (BOOL)isDate:(NSDate *)date
+   betweenDate:(NSDate *)beginDate
+       andDate:(NSDate *)endDate {
+    if ([date compare:beginDate] == NSOrderedAscending)
+        return NO;
+
+    if ([date compare:endDate] == NSOrderedDescending)
+        return NO;
+
+    return YES;
 }
 
 - (void)processResults:(NSArray *)results error:(NSError *)error {

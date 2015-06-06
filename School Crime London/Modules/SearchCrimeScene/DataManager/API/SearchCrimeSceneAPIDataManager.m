@@ -43,40 +43,46 @@
         }
     }
 
-    NSArray *op = [AFURLConnectionOperation
-        batchOfRequestOperations:[operations copy]
-                   progressBlock:nil
-                 completionBlock:^(NSArray *operations) {
+    NSArray *op =
+        [AFURLConnectionOperation batchOfRequestOperations:[operations copy]
+            progressBlock:^(NSUInteger numberOfFinishedOperations,
+                            NSUInteger totalNumberOfOperations) {
 
-                     NSMutableArray *results = [NSMutableArray new];
+                NSLog(@"%f", (double)numberOfFinishedOperations /
+                                 totalNumberOfOperations);
 
-                     for (AFHTTPRequestOperation *operation in operations) {
+            }
+            completionBlock:^(NSArray *operations) {
 
-                         if (operation.error) {
+                NSMutableArray *results = [NSMutableArray new];
 
-                             if (completion)
-                                 completion(nil, operation.error);
+                for (AFHTTPRequestOperation *operation in operations) {
 
-                             return;
-                         }
+                    if (operation.error) {
 
-                         id responseObject = operation.responseObject;
+                        if (completion)
+                            completion(nil, operation.error);
 
-                         if (responseObject) {
+                        return;
+                    }
 
-                             NSDictionary *result = @{
-                                 @"Result" : responseObject,
-                                 @"OriginalData" : operation.originalData
-                             };
+                    id responseObject = operation.responseObject;
 
-                             [results addObject:result];
-                         }
-                     }
+                    if (responseObject) {
 
-                     if (completion)
-                         completion([results copy], nil);
+                        NSDictionary *result = @{
+                            @"Result" : responseObject,
+                            @"OriginalData" : operation.originalData
+                        };
 
-                 }];
+                        [results addObject:result];
+                    }
+                }
+
+                if (completion)
+                    completion([results copy], nil);
+
+            }];
 
     [[NSOperationQueue mainQueue] addOperations:op waitUntilFinished:NO];
 }
