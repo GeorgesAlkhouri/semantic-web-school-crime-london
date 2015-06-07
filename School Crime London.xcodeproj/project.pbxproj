@@ -44,6 +44,7 @@
 		DA9F460C1B1CBC5900DB96C8 /* BuildRdfPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9F45FF1B1CBC5900DB96C8 /* BuildRdfPresenter.m */; };
 		DA9F460D1B1CBC5900DB96C8 /* BuildRdfView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9F46041B1CBC5900DB96C8 /* BuildRdfView.m */; };
 		DA9F460E1B1CBC5900DB96C8 /* BuildRdfWireFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9F46071B1CBC5900DB96C8 /* BuildRdfWireFrame.m */; };
+		DAAAF22F1B23B83300CC2545 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAAF22E1B23B83300CC2545 /* NSString+Additions.m */; };
 		DAACE0301B0BDFC10059B44A /* ParseLondonDataStoreDataAPIDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DAACE01C1B0BDFC10059B44A /* ParseLondonDataStoreDataAPIDataManager.m */; };
 		DAACE0311B0BDFC10059B44A /* ParseLondonDataStoreDataLocalDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DAACE01F1B0BDFC10059B44A /* ParseLondonDataStoreDataLocalDataManager.m */; };
 		DAACE0321B0BDFC10059B44A /* ParseLondonDataStoreDataInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = DAACE0221B0BDFC10059B44A /* ParseLondonDataStoreDataInteractor.m */; };
@@ -149,6 +150,8 @@
 		DA9F46041B1CBC5900DB96C8 /* BuildRdfView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuildRdfView.m; sourceTree = "<group>"; };
 		DA9F46061B1CBC5900DB96C8 /* BuildRdfWireFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuildRdfWireFrame.h; sourceTree = "<group>"; };
 		DA9F46071B1CBC5900DB96C8 /* BuildRdfWireFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuildRdfWireFrame.m; sourceTree = "<group>"; };
+		DAAAF22D1B23B83300CC2545 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
+		DAAAF22E1B23B83300CC2545 /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
 		DAACE01B1B0BDFC10059B44A /* ParseLondonDataStoreDataAPIDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseLondonDataStoreDataAPIDataManager.h; sourceTree = "<group>"; };
 		DAACE01C1B0BDFC10059B44A /* ParseLondonDataStoreDataAPIDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseLondonDataStoreDataAPIDataManager.m; sourceTree = "<group>"; };
 		DAACE01E1B0BDFC10059B44A /* ParseLondonDataStoreDataLocalDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseLondonDataStoreDataLocalDataManager.h; sourceTree = "<group>"; };
@@ -564,6 +567,8 @@
 				DA9E220D1B069592001507A3 /* NSDate+Additions.m */,
 				DA9F45ED1B1C967000DB96C8 /* AFHTTPRequestOperation+Additions.h */,
 				DA9F45EE1B1C967000DB96C8 /* AFHTTPRequestOperation+Additions.m */,
+				DAAAF22D1B23B83300CC2545 /* NSString+Additions.h */,
+				DAAAF22E1B23B83300CC2545 /* NSString+Additions.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -1000,6 +1005,7 @@
 				DAE387821B14815D009229C8 /* SearchCrimeSceneAPIDataManager.m in Sources */,
 				DA9E22061B062E85001507A3 /* ExtractGiantBombDataItem.m in Sources */,
 				DAE387871B14815D009229C8 /* SearchCrimeSceneView.m in Sources */,
+				DAAAF22F1B23B83300CC2545 /* NSString+Additions.m in Sources */,
 				DA9F460D1B1CBC5900DB96C8 /* BuildRdfView.m in Sources */,
 				DAE387831B14815D009229C8 /* SearchCrimeSceneLocalDataManager.m in Sources */,
 				DA9F45EF1B1C967000DB96C8 /* AFHTTPRequestOperation+Additions.m in Sources */,

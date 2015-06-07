@@ -9,6 +9,8 @@
 @interface MainViewPresenter ()
 
 @property(nonatomic) NSString *giantBombAPIKey;
+@property(nonatomic) NSString *importIOUserKey;
+
 @property(nonatomic) NSString *geofencingAPIKey;
 
 @property(nonatomic) NSArray *schoolData;
@@ -39,14 +41,26 @@
     _geofencingAPIKey = APIKey;
 }
 
+- (void)setImportIOUserKey:(NSString *)UserKey {
+
+    _importIOUserKey = UserKey;
+}
+
 - (void)actionButtonPressed {
 
-    NSArray *schoolData =
-        [self.parseLondonDataStoreDataConnection parseLondonDataStoreData:nil];
+    [self.extractGiantBombDataConnection
+        extractDataWithAPIKey:@"30a515a1-56e4-4acd-b38c-4d4d49adcb79:1yWjjdf3+"
+        @"DQBchLyM616jyR0T5fBzrgeXX9OFEMXGJGw2n8Q3YHRqQ/"
+        @"MhrJhENQ+wXwluDkZ8lWT04CpxzXFwQ=="
+                      userKey:@"30a515a1-56e4-4acd-b38c-4d4d49adcb79"];
 
-    [self.translateSchoolNamesToCoordsConnection
-        startTranslatingWithAPIKey:self.geofencingAPIKey
-                        schoolData:schoolData];
+    //    NSArray *schoolData =
+    //        [self.parseLondonDataStoreDataConnection
+    //        parseLondonDataStoreData:nil];
+    //
+    //    [self.translateSchoolNamesToCoordsConnection
+    //        startTranslatingWithAPIKey:self.geofencingAPIKey
+    //                        schoolData:schoolData];
 }
 
 - (void)extractionDidFinishWithResults:(NSArray *)results {
@@ -62,7 +76,8 @@
     self.schoolData = results;
 
     [self.extractGiantBombDataConnection
-        extractDataWithAPIKey:self.giantBombAPIKey];
+        extractDataWithAPIKey:self.giantBombAPIKey
+                      userKey:self.importIOUserKey];
 }
 
 - (void)requestCrimeSceneFinishedWithResults:(NSArray *)results {

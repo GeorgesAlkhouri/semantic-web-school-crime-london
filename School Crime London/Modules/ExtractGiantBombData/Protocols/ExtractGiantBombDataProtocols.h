@@ -19,7 +19,7 @@
 @protocol ExtractGiantBombDataConnectionProtocol <NSObject>
 @property(nonatomic, weak)
     id<MainViewExtractGiantBombDataDelegateProtocol> mainViewDelegate;
-- (void)extractDataWithAPIKey:(NSString *)APIKey;
+- (void)extractDataWithAPIKey:(NSString *)APIKey userKey:(NSString *)userKey;
 @end
 
 @protocol ExtractGiantBombDataViewProtocol
@@ -81,7 +81,8 @@
  * Add here your methods for communication PRESENTER -> INTERACTOR
  */
 
-- (void)startDataExtractionWithGiantBombAPIKey:(NSString *)APIKey;
+- (void)startDataExtractionWithAPIKey:(NSString *)APIKey
+                              userKey:(NSString *)userKey;
 
 @end
 
@@ -97,9 +98,15 @@
  * Add here your methods for communication INTERACTOR -> APIDATAMANAGER
  */
 
-- (void)getReleaseDatesForGames:(NSArray *)gameNames
-                         APIKey:(NSString *)APIKey
-                     completion:(void (^)(NSArray *results))completion;
+- (void)extractPegiMetaDataWithAPIKey:(NSString *)APIKey
+                              userKey:(NSString *)userKey
+                           completion:
+                               (void (^)(NSError *error, id result))completion;
+- (void)extractPegiDataWithMaxPageCount:(NSNumber *)pageCount
+                                 APIKey:(NSString *)APIKey
+                                userKey:(NSString *)userKey
+                             completion:(void (^)(NSError *error,
+                                                  NSArray *results))completion;
 
 @end
 

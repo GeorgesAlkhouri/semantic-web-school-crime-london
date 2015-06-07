@@ -12,11 +12,11 @@
 
 @implementation ExtractGiantBombDataPresenter
 
-- (void)extractDataWithAPIKey:(NSString *)APIKey {
+- (void)extractDataWithAPIKey:(NSString *)APIKey userKey:(NSString *)userKey {
 
     [self.mainViewDelegate
         showInformationText:@"Request Game Information from Giant Bomb."];
-    [self.interactor startDataExtractionWithGiantBombAPIKey:APIKey];
+    [self.interactor startDataExtractionWithAPIKey:APIKey userKey:userKey];
 }
 
 - (void)extractionFinishedWithResults:(NSArray *)results {

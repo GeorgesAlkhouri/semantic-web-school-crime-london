@@ -99,6 +99,7 @@
 
 - (void)actionButtonPressed;
 - (void)setGiantBombAPIKey:(NSString *)APIKey;
+- (void)setImportIOUserKey:(NSString *)UserKey;
 - (void)setGeofencingAPIKey:(NSString *)APIKey;
 
 @end
