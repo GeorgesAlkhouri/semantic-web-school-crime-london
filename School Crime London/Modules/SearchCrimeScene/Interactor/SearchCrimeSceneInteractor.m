@@ -23,7 +23,7 @@
     NSMutableArray *parameters = [NSMutableArray new];
 
     NSDateFormatter *formatter = [NSDateFormatter new];
-    formatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+    formatter.dateFormat = @"yyyy-MM-dd";
 
     for (NSDictionary *game in gameData) {
 

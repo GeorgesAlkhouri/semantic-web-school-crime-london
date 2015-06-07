@@ -17,6 +17,12 @@
                               userKey:userKey
                            completion:^(NSError *error, id result) {
 
+                               if (error) {
+
+                                   [self.presenter errorOccurred:error];
+                                   return;
+                               }
+
                                NSNumber *maxPageCount = [self
                                    extractMaxPageCount:result[@"results"][0][
                                                            @"pegi_meta"]];

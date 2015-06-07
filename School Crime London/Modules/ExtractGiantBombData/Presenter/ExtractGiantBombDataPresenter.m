@@ -15,7 +15,7 @@
 - (void)extractDataWithAPIKey:(NSString *)APIKey userKey:(NSString *)userKey {
 
     [self.mainViewDelegate
-        showInformationText:@"Request Game Information from Giant Bomb."];
+        showInformationText:@"Request Game Information from PEGI"];
     [self.interactor startDataExtractionWithAPIKey:APIKey userKey:userKey];
 }
 
@@ -26,15 +26,12 @@
 
 - (void)errorOccurred:(NSError *)error {
 
-    if (error.code == -1) {
-
-        [self.mainViewDelegate showError:@"Invalid Giant Bomb API-Key"];
-    } else if (error.code == -2) {
+    if (error.code == -2) {
 
         [self.mainViewDelegate showError:@"Giant Bomb data parsing error"];
     } else {
 
-        [self.mainViewDelegate showError:@"Unknown error occurred"];
+        [self.mainViewDelegate showError:error.localizedDescription];
     }
 }
 
