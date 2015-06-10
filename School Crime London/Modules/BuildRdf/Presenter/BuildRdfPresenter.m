@@ -8,4 +8,14 @@
 
 @implementation BuildRdfPresenter
 
+- (void)buildRdfWithSchoolData:(NSArray *)schoolData
+                      gameData:(NSArray *)gameData
+                     crimeData:(NSArray *)crimeData {
+
+    [self.mainViewDelegate showInformationText:@"Building RDF from Data..."];
+    [self.interactor buildRdfWithSchoolData:schoolData
+                                   gameData:gameData
+                                  crimeData:crimeData];
+}
+
 @end

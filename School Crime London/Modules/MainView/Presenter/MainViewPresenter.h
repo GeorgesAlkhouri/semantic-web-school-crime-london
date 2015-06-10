@@ -9,6 +9,7 @@
 #import "TranslateSchoolNamesToCoordsProtocols.h"
 #import "ParseLondonDataStoreDataProtocols.h"
 #import "SearchCrimeSceneProtocols.h"
+#import "BuildRdfProtocols.h"
 
 @class MainViewWireFrame;
 
@@ -27,5 +28,6 @@
     parseLondonDataStoreDataConnection;
 @property(nonatomic, strong)
     id<SearchCrimeSceneConnectionProtocol> searchCrimeSceneConnection;
+@property(nonatomic, strong) id<BuildRdfConnectionProtocol> buildRdfConnection;
 
 @end

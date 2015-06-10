@@ -18,6 +18,7 @@
 @protocol TranslateSchoolNamesToCoordsConnectionProtocol;
 @protocol ParseLondonDataStoreDataConnectionProtocol;
 @protocol SearchCrimeSceneConnectionProtocol;
+@protocol BuildRdfConnectionProtocol;
 
 @class MainViewWireFrame;
 
@@ -25,6 +26,14 @@
 
 - (void)showInformationText:(NSString *)text;
 - (void)showError:(NSString *)errorText;
+
+@end
+
+@protocol MainViewBuildRdfDelegateProtocol <MainViewDelegateProtocol>
+
+@property(nonatomic, strong) id<BuildRdfConnectionProtocol> buildRdfConnection;
+
+- (void)didBuildRdfWithRdfResult:(NSString *)rdf;
 
 @end
 
@@ -87,7 +96,7 @@
     MainViewExtractGiantBombDataDelegateProtocol,
     MainViewTranslateSchoolNamesToCoordsDelegateProtocol,
     MainViewParseLondonDataStoreDataDelegateProtocol,
-    MainViewSearchCrimeSceneDelegateProtocol>
+    MainViewSearchCrimeSceneDelegateProtocol, MainViewBuildRdfDelegateProtocol>
 
 @required
 @property(nonatomic, weak) id<MainViewViewProtocol> view;

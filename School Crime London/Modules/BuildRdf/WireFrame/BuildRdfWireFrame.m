@@ -4,10 +4,13 @@
 //
 
 #import "BuildRdfWireFrame.h"
+#import "MainViewView.h"
 
 @implementation BuildRdfWireFrame
 
-+ (void)presentBuildRdfModuleFrom:(NSViewController *)fromViewController {
++ (instancetype)presentBuildRdfModuleFrom:(id)fromView
+                             withDelegate:(id<MainViewBuildRdfDelegateProtocol>)
+                                              delegate {
     // Generating module components
     id<BuildRdfViewProtocol> view = [[BuildRdfView alloc] init];
     id<BuildRdfPresenterProtocol, BuildRdfInteractorOutputProtocol> presenter =
@@ -24,11 +27,17 @@
     presenter.view = view;
     presenter.wireFrame = wireFrame;
     presenter.interactor = interactor;
+
+    delegate.buildRdfConnection = presenter;
+    presenter.mainViewDelegate = delegate;
+
     interactor.presenter = presenter;
     interactor.APIDataManager = APIDataManager;
     interactor.localDataManager = localDataManager;
 
     // TOODO - New view controller presentation (present, push, pop, .. )
+
+    return (BuildRdfWireFrame *)wireFrame;
 }
 
 @end

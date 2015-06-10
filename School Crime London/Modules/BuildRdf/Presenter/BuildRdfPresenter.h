@@ -5,13 +5,18 @@
 
 #import <Foundation/Foundation.h>
 #import "BuildRdfProtocols.h"
+#import "MainViewProtocols.h"
 
 @class BuildRdfWireFrame;
 
-@interface BuildRdfPresenter : NSObject <BuildRdfPresenterProtocol, BuildRdfInteractorOutputProtocol>
+@interface BuildRdfPresenter
+    : NSObject <BuildRdfPresenterProtocol, BuildRdfInteractorOutputProtocol>
 
-@property (nonatomic, weak) id <BuildRdfViewProtocol> view;
-@property (nonatomic, strong) id <BuildRdfInteractorInputProtocol> interactor;
-@property (nonatomic, strong) id <BuildRdfWireFrameProtocol> wireFrame;
+@property(nonatomic, weak) id<BuildRdfViewProtocol> view;
+@property(nonatomic, strong) id<BuildRdfInteractorInputProtocol> interactor;
+@property(nonatomic, strong) id<BuildRdfWireFrameProtocol> wireFrame;
+
+@property(nonatomic, weak)
+    id<MainViewBuildRdfDelegateProtocol> mainViewDelegate;
 
 @end

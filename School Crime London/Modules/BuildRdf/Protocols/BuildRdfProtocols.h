@@ -12,13 +12,24 @@
 @protocol BuildRdfPresenterProtocol;
 @protocol BuildRdfLocalDataManagerInputProtocol;
 @protocol BuildRdfAPIDataManagerInputProtocol;
+@protocol MainViewBuildRdfDelegateProtocol;
 
+@protocol BuildRdfConnectionProtocol <NSObject>
+
+@property(nonatomic, weak)
+    id<MainViewBuildRdfDelegateProtocol> mainViewDelegate;
+
+- (void)buildRdfWithSchoolData:(NSArray *)schoolData
+                      gameData:(NSArray *)gameData
+                     crimeData:(NSArray *)crimeData;
+
+@end
 
 @class BuildRdfWireFrame;
 
 @protocol BuildRdfViewProtocol
 @required
-@property (nonatomic, strong) id <BuildRdfPresenterProtocol> presenter;
+@property(nonatomic, strong) id<BuildRdfPresenterProtocol> presenter;
 /**
  * Add here your methods for communication PRESENTER -> VIEWCONTROLLER
  */
@@ -26,17 +37,19 @@
 
 @protocol BuildRdfWireFrameProtocol
 @required
-+ (void)presentBuildRdfModuleFrom:(id)fromView;
++ (instancetype)presentBuildRdfModuleFrom:(id)fromView
+                             withDelegate:
+                                 (id<MainViewBuildRdfDelegateProtocol>)delegate;
 /**
  * Add here your methods for communication PRESENTER -> WIREFRAME
  */
 @end
 
-@protocol BuildRdfPresenterProtocol
+@protocol BuildRdfPresenterProtocol <BuildRdfConnectionProtocol>
 @required
-@property (nonatomic, weak) id <BuildRdfViewProtocol> view;
-@property (nonatomic, strong) id <BuildRdfInteractorInputProtocol> interactor;
-@property (nonatomic, strong) id <BuildRdfWireFrameProtocol> wireFrame;
+@property(nonatomic, weak) id<BuildRdfViewProtocol> view;
+@property(nonatomic, strong) id<BuildRdfInteractorInputProtocol> interactor;
+@property(nonatomic, strong) id<BuildRdfWireFrameProtocol> wireFrame;
 /**
  * Add here your methods for communication VIEWCONTROLLER -> PRESENTER
  */
@@ -50,14 +63,20 @@
 
 @protocol BuildRdfInteractorInputProtocol
 @required
-@property (nonatomic, weak) id <BuildRdfInteractorOutputProtocol> presenter;
-@property (nonatomic, strong) id <BuildRdfAPIDataManagerInputProtocol> APIDataManager;
-@property (nonatomic, strong) id <BuildRdfLocalDataManagerInputProtocol> localDataManager;
+@property(nonatomic, weak) id<BuildRdfInteractorOutputProtocol> presenter;
+@property(nonatomic, strong)
+    id<BuildRdfAPIDataManagerInputProtocol> APIDataManager;
+@property(nonatomic, strong)
+    id<BuildRdfLocalDataManagerInputProtocol> localDataManager;
 /**
  * Add here your methods for communication PRESENTER -> INTERACTOR
  */
-@end
 
+- (void)buildRdfWithSchoolData:(NSArray *)schoolData
+                      gameData:(NSArray *)gameData
+                     crimeData:(NSArray *)crimeData;
+
+@end
 
 @protocol BuildRdfDataManagerInputProtocol
 /**
@@ -71,10 +90,9 @@
  */
 @end
 
-@protocol BuildRdfLocalDataManagerInputProtocol <BuildRdfDataManagerInputProtocol>
+@protocol
+    BuildRdfLocalDataManagerInputProtocol <BuildRdfDataManagerInputProtocol>
 /**
  * Add here your methods for communication INTERACTOR -> LOCLDATAMANAGER
  */
 @end
-
-

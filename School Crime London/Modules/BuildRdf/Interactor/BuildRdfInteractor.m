@@ -7,4 +7,9 @@
 
 @implementation BuildRdfInteractor
 
+- (void)buildRdfWithSchoolData:(NSArray *)schoolData
+                      gameData:(NSArray *)gameData
+                     crimeData:(NSArray *)crimeData {
+}
+
 @end
