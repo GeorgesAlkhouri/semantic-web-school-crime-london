@@ -78,43 +78,11 @@
             return;
         }
 
-        if (![responseObject[@"status"] isEqualToString:@"OK"]) {
+        NSMutableDictionary *result = [NSMutableDictionary new];
+        [result setObject:operation.originalData forKey:@"Original-Data"];
+        [result setObject:responseObject forKey:@"Result"];
 
-            NSError *error =
-                [NSError errorWithDomain:NSStringFromClass([self class])
-                                    code:-1
-                                userInfo:@{
-                                    NSLocalizedDescriptionKey :
-                                        responseObject[@"error_message"]
-                                }];
-            completion(error, nil);
-            return;
-        }
-
-        @try {
-            NSDictionary *schoolData = @{
-                @"SchoolName" : operation.originalData[@"Name"],
-                @"Adress" : responseObject[@"results"][0][@"formatted_address"],
-                @"Lat" : responseObject[@"results"][0][@"geometry"][
-                    @"location"][@"lat"],
-                @"Lng" : responseObject[@"results"][0][@"geometry"][
-                    @"location"][@"lng"],
-                @"BuildingName" : operation.originalData[@"BuildingName"],
-                @"BuildingNumber" : operation.originalData[@"BuildingNumber"],
-                @"Postcode" : operation.originalData[@"Postcode"],
-                @"Street" : operation.originalData[@"Street"],
-                @"SchoolType" : operation.originalData[@"Type"]
-            };
-
-            [results addObject:schoolData];
-        } @catch (NSException *exception) {
-
-            completion([NSError errorWithDomain:NSStringFromClass([self class])
-                                           code:-2
-                                       userInfo:nil],
-                       nil);
-            return;
-        }
+        [results addObject:[result copy]];
     }
 
     completion(nil, [results copy]);

@@ -69,7 +69,60 @@
         return;
     }
 
-    [self.presenter translationDidFinishedWithResults:results];
+    NSMutableArray *parsedResults = [NSMutableArray new];
+
+    for (NSDictionary *result in results) {
+
+        id responseObject = result[@"Result"];
+
+        if (![responseObject[@"status"] isEqualToString:@"OK"]) {
+
+            NSError *error =
+                [NSError errorWithDomain:NSStringFromClass([self class])
+                                    code:-1
+                                userInfo:@{
+                                    NSLocalizedDescriptionKey :
+                                        responseObject[@"error_message"]
+                                }];
+
+            [self.presenter translationDidFinishedWithError:error];
+            return;
+        }
+
+        @try {
+
+            NSDictionary *schoolData = @{
+                @"School-Name" : result[@"Original-Data"][@"Name"],
+                @"School-Adress" :
+                    responseObject[@"results"][0][@"formatted_address"],
+                @"School-Lat" : responseObject[@"results"][0][@"geometry"][
+                    @"location"][@"lat"],
+                @"School-Lng" : responseObject[@"results"][0][@"geometry"][
+                    @"location"][@"lng"],
+                @"School-Building-Name" :
+                    result[@"Original-Data"][@"BuildingName"],
+                @"School-Building-Number" :
+                    result[@"Original-Data"][@"BuildingNumber"],
+                @"School-Postcode" : result[@"Original-Data"][@"Postcode"],
+                @"School-Street" : result[@"Original-Data"][@"Street"],
+                @"School-Type" : result[@"Original-Data"][@"Type"],
+                @"School-ID" : responseObject[@"results"][0][@"place_id"]
+            };
+
+            [parsedResults addObject:schoolData];
+
+        } @catch (NSException *exception) {
+
+            [self.presenter
+                translationDidFinishedWithError:
+                    [NSError errorWithDomain:NSStringFromClass([self class])
+                                        code:-2
+                                    userInfo:nil]];
+            return;
+        }
+    }
+
+    [self.presenter translationDidFinishedWithResults:parsedResults];
 }
 
 @end
