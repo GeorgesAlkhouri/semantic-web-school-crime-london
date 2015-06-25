@@ -59,7 +59,7 @@
                                    @"_query?_user=%@&_apikey=%@",
                                    [userKey urlencode], [APIKey urlencode]];
 
-    for (NSInteger i = 1; i < 10 /*pageCount.integerValue + 1*/; i++) {
+    for (NSInteger i = 1; i < pageCount.integerValue + 1; i++) {
 
         NSURLRequest *request = [[AFJSONRequestSerializer serializer]
             requestWithMethod:@"POST"

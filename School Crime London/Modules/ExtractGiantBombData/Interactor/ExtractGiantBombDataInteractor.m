@@ -107,19 +107,16 @@
 
             NSLog(@"Parse error occurred");
         }
+    }
 
-        @finally {
+    if (games.count == 0) {
+        [self.presenter
+            errorOccurred:[NSError
+                              errorWithDomain:NSStringFromClass([self class])
+                                         code:-2
+                                     userInfo:nil]];
 
-            if (games.count == 0) {
-                [self.presenter
-                    errorOccurred:[NSError errorWithDomain:NSStringFromClass(
-                                                               [self class])
-                                                      code:-2
-                                                  userInfo:nil]];
-
-                return;
-            }
-        }
+        return;
     }
 
     [self.presenter extractionFinishedWithResults:
