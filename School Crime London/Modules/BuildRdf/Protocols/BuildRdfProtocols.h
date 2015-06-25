@@ -59,6 +59,9 @@
 /**
  * Add here your methods for communication INTERACTOR -> PRESENTER
  */
+
+- (void)didBuildRDFs:(NSDictionary *)rdfs;
+
 @end
 
 @protocol BuildRdfInteractorInputProtocol

@@ -12,4 +12,6 @@
 
 - (NSString *)urlencode;
 
++ (NSString *)SHA512StringFromString:(NSString *)string;
+
 @end

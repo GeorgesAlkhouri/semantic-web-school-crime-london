@@ -18,4 +18,9 @@
                                   crimeData:crimeData];
 }
 
+- (void)didBuildRDFs:(NSDictionary *)rdfs {
+
+    [self.mainViewDelegate didBuildRdfWithRdfResults:rdfs];
+}
+
 @end

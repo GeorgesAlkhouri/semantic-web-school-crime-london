@@ -7,6 +7,7 @@
 //
 
 #import "NSString+Additions.h"
+#include <CommonCrypto/CommonDigest.h>
 
 @implementation NSString (Additions)
 
@@ -28,6 +29,26 @@
         }
     }
     return output;
+}
+
++ (NSString *)SHA512StringFromString:(NSString *)string {
+
+    const char *s = [string cStringUsingEncoding:NSASCIIStringEncoding];
+
+    NSData *keyData = [NSData dataWithBytes:s length:strlen(s)];
+
+    uint8_t digest[CC_SHA512_DIGEST_LENGTH] = {0};
+
+    CC_SHA512(keyData.bytes, (int)keyData.length, digest);
+
+    NSData *out = [NSData dataWithBytes:digest length:CC_SHA512_DIGEST_LENGTH];
+
+    return [[[[out description] stringByReplacingOccurrencesOfString:@"<"
+                                                          withString:@""]
+        stringByReplacingOccurrencesOfString:@">"
+                                  withString:@""]
+        stringByReplacingOccurrencesOfString:@" "
+                                  withString:@""];
 }
 
 @end
