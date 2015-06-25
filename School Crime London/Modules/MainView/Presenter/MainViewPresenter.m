@@ -48,19 +48,12 @@
 
 - (void)actionButtonPressed {
 
-    [self.extractGiantBombDataConnection
-        extractDataWithAPIKey:@"30a515a1-56e4-4acd-b38c-4d4d49adcb79:1yWjjdf3+"
-        @"DQBchLyM616jyR0T5fBzrgeXX9OFEMXGJGw2n8Q3YHRqQ/"
-        @"MhrJhENQ+wXwluDkZ8lWT04CpxzXFwQ=="
-                      userKey:@"30a515a1-56e4-4acd-b38c-4d4d49adcb79"];
+    NSArray *schoolData =
+        [self.parseLondonDataStoreDataConnection parseLondonDataStoreData:nil];
 
-    //    NSArray *schoolData =
-    //        [self.parseLondonDataStoreDataConnection
-    //        parseLondonDataStoreData:nil];
-    //
-    //    [self.translateSchoolNamesToCoordsConnection
-    //        startTranslatingWithAPIKey:self.geofencingAPIKey
-    //                        schoolData:schoolData];
+    [self.translateSchoolNamesToCoordsConnection
+        startTranslatingWithAPIKey:self.geofencingAPIKey
+                        schoolData:schoolData];
 }
 
 - (void)extractionDidFinishWithResults:(NSArray *)results {
@@ -75,14 +68,64 @@
 
     self.schoolData = results;
 
+    //    [self.extractGiantBombDataConnection
+    //        extractDataWithAPIKey:self.giantBombAPIKey
+    //                      userKey:self.importIOUserKey];
+
     [self.extractGiantBombDataConnection
-        extractDataWithAPIKey:self.giantBombAPIKey
-                      userKey:self.importIOUserKey];
+        extractDataWithAPIKey:@"30a515a1-56e4-4acd-b38c-4d4d49adcb79:1yWjjdf3+"
+        @"DQBchLyM616jyR0T5fBzrgeXX9OFEMXGJGw2n8Q3YHRqQ/"
+        @"MhrJhENQ+wXwluDkZ8lWT04CpxzXFwQ=="
+                      userKey:@"30a515a1-56e4-4acd-b38c-4d4d49adcb79"];
 }
 
 - (void)requestCrimeSceneFinishedWithResults:(NSArray *)results {
 
     self.crimeData = results;
+
+    [self.buildRdfConnection buildRdfWithSchoolData:self.schoolData
+                                           gameData:self.gameData
+                                          crimeData:self.crimeData];
+}
+
+- (void)didBuildRdfWithRdfResults:(NSDictionary *)rdfs {
+
+    NSDateFormatter *formatter = [NSDateFormatter new];
+    formatter.dateFormat = @"dd-MM-YY-HH-mm-ss";
+
+    NSString *formattedDate = [formatter stringFromDate:[NSDate date]];
+
+    NSSavePanel *panel = [NSSavePanel savePanel];
+    panel.nameFieldStringValue =
+        [NSString stringWithFormat:@"SchoolRDF-%@.ttl", formattedDate];
+
+    [panel beginWithCompletionHandler:^(NSInteger result) {
+
+        if (result == NSFileHandlingPanelOKButton) {
+
+            [self writeDictionaryToFilesWithURL:
+                      [[panel URL] URLByDeletingLastPathComponent]
+                                           rdfs:rdfs
+                                      withStamp:formattedDate];
+        }
+
+    }];
+}
+
+- (void)writeDictionaryToFilesWithURL:(NSURL *)url
+                                 rdfs:(NSDictionary *)rdfs
+                            withStamp:(NSString *)stamp {
+
+    [rdfs enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSString *ontology,
+                                              BOOL *stop) {
+
+        [ontology writeToURL:[url URLByAppendingPathComponent:
+                                      [NSString stringWithFormat:@"%@-%@.ttl",
+                                                                 key, stamp]]
+                  atomically:YES
+                    encoding:NSUTF8StringEncoding
+                       error:nil];
+    }];
 }
 
 @end

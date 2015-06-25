@@ -9,6 +9,7 @@
 #import "ParseLondonDataStoreDataWireFrame.h"
 #import "TranslateSchoolNamesToCoordsWireFrame.h"
 #import "SearchCrimeSceneWireFrame.h"
+#import "BuildRdfWireFrame.h"
 
 @interface MainViewWireFrame ()
 
@@ -19,6 +20,7 @@
 @property(nonatomic) TranslateSchoolNamesToCoordsWireFrame
     *translateSchoolNamesToCoordsWireFrame;
 @property(nonatomic) SearchCrimeSceneWireFrame *searchCrimeSceneWireFrame;
+@property(nonatomic) BuildRdfWireFrame *buildRdfWireFrame;
 
 @property(nonatomic, weak) id<MainViewPresenterProtocol> presenter;
 
@@ -73,6 +75,11 @@
         setSearchCrimeSceneWireFrame:[SearchCrimeSceneWireFrame
                                          presentSearchCrimeSceneModuleFrom:
                                              nil withDelegate:presenter]];
+
+    [(MainViewWireFrame *)wireFrame
+        setBuildRdfWireFrame:[BuildRdfWireFrame
+                                 presentBuildRdfModuleFrom:nil
+                                              withDelegate:presenter]];
 
     [(MainViewWireFrame *)wireFrame setPresenter:presenter];
 
