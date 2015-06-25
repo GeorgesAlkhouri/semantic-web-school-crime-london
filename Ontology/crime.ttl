@@ -4,32 +4,13 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix location: <http://www.semanticweb.org/georgesalkhouri/school-crime-london/location#> .
+@prefix place: <http://www.semanticweb.org/georgesalkhouri/school-crime-london/place#> .
 @base <http://www.semanticweb.org/georgesalkhouri/school-crime-london/crime> .
 
 <http://www.semanticweb.org/georgesalkhouri/school-crime-london/crime> rdf:type owl:Ontology ;
                                                                        
-                                                                       owl:imports <http://www.semanticweb.org/georgesalkhouri/school-crime-london/location> .
-
-
-#################################################################
-#
-#    Object Properties
-#
-#################################################################
-
-
-###  http://www.semanticweb.org/georgesalkhouri/school-crime-london/crime#isLocatedAt
-
-:isLocatedAt rdf:type owl:ObjectProperty ;
-             
-             rdfs:domain :Crime ;
-             
-             rdfs:range location:Location .
-
-
-
-
+                                                                       owl:imports <http://www.semanticweb.org/georgesalkhouri/school-crime-london/place> .
+                                                                       
 
 #################################################################
 #
@@ -38,13 +19,13 @@
 #################################################################
 
 
-###  http://www.semanticweb.org/georgesalkhouri/school-crime-london/crime#description
+###  http://www.semanticweb.org/georgesalkhouri/school-crime-london/crime#classifiedAs
 
-:description rdf:type owl:DatatypeProperty ;
-             
-             rdfs:domain :CrimeCategory ;
-             
-             rdfs:range rdfs:Literal .
+:classifiedAs rdf:type owl:DatatypeProperty ;
+              
+              rdfs:domain :Crime ;
+              
+              rdfs:range rdfs:Literal .
 
 
 
@@ -69,52 +50,9 @@
 
 ###  http://www.semanticweb.org/georgesalkhouri/school-crime-london/crime#Crime
 
-:Crime rdf:type owl:Class .
-
-
-
-###  http://www.semanticweb.org/georgesalkhouri/school-crime-london/crime#CrimeCategory
-
-:CrimeCategory rdf:type owl:Class .
-
-
-
-
-
-#################################################################
-#
-#    Individuals
-#
-#################################################################
-
-
-###  http://www.semanticweb.org/georgesalkhouri/school-crime-london/crime#AntiSocialBehaviour
-
-:AntiSocialBehaviour rdf:type owl:NamedIndividual .
-
-
-
-###  http://www.semanticweb.org/georgesalkhouri/school-crime-london/crime#OtherCrime
-
-:OtherCrime rdf:type owl:NamedIndividual .
-
-
-
-###  http://www.semanticweb.org/georgesalkhouri/school-crime-london/crime#PossessionOfWeapons
-
-:PossessionOfWeapons rdf:type owl:NamedIndividual .
-
-
-
-###  http://www.semanticweb.org/georgesalkhouri/school-crime-london/crime#PublicOrder
-
-:PublicOrder rdf:type owl:NamedIndividual .
-
-
-
-###  http://www.semanticweb.org/georgesalkhouri/school-crime-london/crime#ViolentCrime
-
-:ViolentCrime rdf:type owl:NamedIndividual .
+:Crime rdf:type owl:Class ;
+       
+       rdfs:subClassOf place:Place .
 
 
 

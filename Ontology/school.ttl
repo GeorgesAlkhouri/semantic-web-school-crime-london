@@ -5,13 +5,15 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix crime: <http://www.semanticweb.org/georgesalkhouri/school-crime-london/crime#> .
+@prefix place: <http://www.semanticweb.org/georgesalkhouri/school-crime-london/place#> .
+@prefix point: <http://www.semanticweb.org/georgesalkhouri/school-crime-london/point#> .
 @prefix location: <http://www.semanticweb.org/georgesalkhouri/school-crime-london/location#> .
 @base <http://www.semanticweb.org/georgesalkhouri/school-crime-london/school> .
 
 <http://www.semanticweb.org/georgesalkhouri/school-crime-london/school> rdf:type owl:Ontology ;
                                                                         
                                                                         owl:imports <http://www.semanticweb.org/georgesalkhouri/school-crime-london/crime> ,
-                                                                                    <http://www.semanticweb.org/georgesalkhouri/school-crime-london/location> .
+                                                                                    <http://www.semanticweb.org/georgesalkhouri/school-crime-london/place> .
 
 
 #################################################################
@@ -19,16 +21,6 @@
 #    Object Properties
 #
 #################################################################
-
-
-###  http://www.semanticweb.org/georgesalkhouri/school-crime-london/school#isLocatedAt
-
-:isLocatedAt rdf:type owl:ObjectProperty ;
-             
-             rdfs:range location:Location ;
-             
-             rdfs:domain :School .
-
 
 
 ###  http://www.semanticweb.org/georgesalkhouri/school-crime-london/school#nearOf
@@ -45,44 +37,22 @@
 
 #################################################################
 #
-#    Data properties
-#
-#################################################################
-
-
-###  http://www.semanticweb.org/georgesalkhouri/school-crime-london/school#name
-
-:name rdf:type owl:DatatypeProperty ;
-      
-      rdfs:domain :School ;
-      
-      rdfs:range rdfs:Literal .
-
-
-
-###  http://www.semanticweb.org/georgesalkhouri/school-crime-london/school#schoolType
-
-:schoolType rdf:type owl:DatatypeProperty ;
-            
-            rdfs:domain :School ;
-            
-            rdfs:range rdfs:Literal .
-
-
-
-
-
-#################################################################
-#
 #    Classes
 #
 #################################################################
 
 
+###  http://www.semanticweb.org/georgesalkhouri/school-crime-london/crime#Crime
+
+crime:Crime owl:disjointWith :School .
+
+
+
 ###  http://www.semanticweb.org/georgesalkhouri/school-crime-london/school#School
 
-:School rdf:type owl:Class .
-
+:School rdf:type owl:Class ;
+        
+        rdfs:subClassOf place:Place .
 
 
 
