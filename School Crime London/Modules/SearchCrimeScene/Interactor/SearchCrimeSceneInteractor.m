@@ -107,6 +107,25 @@
     return YES;
 }
 
+//{
+//    category = "anti-social-behaviour";
+//    context = "";
+//    id = 23553943;
+//    location =     {
+//        latitude = "51.557557";
+//        longitude = "-0.138952";
+//        street =         {
+//            id = 968107;
+//            name = "On or near Dartmouth Park Hill";
+//        };
+//    };
+//    "location_subtype" = "";
+//    "location_type" = Force;
+//    month = "2013-04";
+//    "outcome_status" = "<null>";
+//    "persistent_id" = "";
+//}
+
 - (void)processResults:(NSArray *)results error:(NSError *)error {
 
     if (error) {
@@ -124,7 +143,43 @@
 
                 for (NSDictionary *crime in crimeResult) {
 
-                    [crimes addObject:crime];
+                    NSMutableDictionary *crimeResultWithSchoolData =
+                        [NSMutableDictionary
+                            dictionaryWithDictionary:result[@"OriginalData"]];
+
+                    [crimeResultWithSchoolData setObject:crime[@"category"]
+                                                  forKey:@"Crime-Category"];
+                    [crimeResultWithSchoolData setObject:crime[@"context"]
+                                                  forKey:@"Crime-Context"];
+                    [crimeResultWithSchoolData setObject:[crime[@"id"] stringValue]
+                                                  forKey:@"Crime-ID"];
+                    [crimeResultWithSchoolData setObject:@{
+                        @"Latitude" : crime[@"location"][@"latitude"],
+                        @"Longitude" : crime[@"location"][@"longitude"],
+                        @"Street" : @{
+                            @"Street-ID" : crime[@"location"][@"street"][@"id"],
+                            @"Steet-Name" :
+                                crime[@"location"][@"street"][@"name"]
+                        }
+
+                    } forKey:@"Crime-Location"];
+
+                    [crimeResultWithSchoolData
+                        setObject:crime[@"location_subtype"]
+                           forKey:@"Crime-Location-Subtype"];
+                    [crimeResultWithSchoolData
+                        setObject:crime[@"location_type"]
+                           forKey:@"Crime-Location-Type"];
+                    [crimeResultWithSchoolData setObject:crime[@"month"]
+                                                  forKey:@"Crime-Month"];
+                    [crimeResultWithSchoolData
+                        setObject:crime[@"outcome_status"]
+                           forKey:@"Crime-Outcome-Status"];
+                    [crimeResultWithSchoolData
+                        setObject:crime[@"persistent_id"]
+                           forKey:@"Crime-Persistent-ID"];
+
+                    [crimes addObject:crimeResultWithSchoolData];
                 }
             }
         }

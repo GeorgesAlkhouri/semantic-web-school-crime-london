@@ -24,8 +24,8 @@
                         URLString:
                             @"http://data.police.uk/api/crimes-at-location"
                        parameters:@{
-                           @"lat" : paramter[@"Lat"],
-                           @"lng" : paramter[@"Lng"],
+                           @"lat" : paramter[@"School-Lat"],
+                           @"lng" : paramter[@"School-Lng"],
                            @"date" : requestDate
                        } error:nil];
 
