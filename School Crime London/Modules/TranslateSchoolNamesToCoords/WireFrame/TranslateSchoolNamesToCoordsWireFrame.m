@@ -8,7 +8,7 @@
 @implementation TranslateSchoolNamesToCoordsWireFrame
 
 + (instancetype)
-presentExtractGiantBombDataModuleFrom:
+presentExtractGameDataModuleFrom:
     (id)fromView withDelegate:
         (id<MainViewTranslateSchoolNamesToCoordsDelegateProtocol>)delegate {
 

@@ -5,7 +5,7 @@
 
 #import "MainViewWireFrame.h"
 
-#import "ExtractGiantBombDataWireFrame.h"
+#import "ExtractGameDataWireFrame.h"
 #import "ParseLondonDataStoreDataWireFrame.h"
 #import "TranslateSchoolNamesToCoordsWireFrame.h"
 #import "SearchCrimeSceneWireFrame.h"
@@ -14,7 +14,7 @@
 @interface MainViewWireFrame ()
 
 @property(nonatomic)
-    ExtractGiantBombDataWireFrame *extractGiantBombDataWireFrame;
+    ExtractGameDataWireFrame *extractGameDataWireFrame;
 @property(nonatomic)
     ParseLondonDataStoreDataWireFrame *parseLondonDataStoreDataWireFrame;
 @property(nonatomic) TranslateSchoolNamesToCoordsWireFrame
@@ -55,9 +55,9 @@
     // Building dependencies
 
     [(MainViewWireFrame *)wireFrame
-        setExtractGiantBombDataWireFrame:
-            [ExtractGiantBombDataWireFrame
-                presentExtractGiantBombDataModuleFrom:nil
+        setExtractGameDataWireFrame:
+            [ExtractGameDataWireFrame
+                presentExtractGameDataModuleFrom:nil
                                          withDelegate:presenter]];
     [(MainViewWireFrame *)wireFrame
         setParseLondonDataStoreDataWireFrame:
@@ -68,7 +68,7 @@
     [(MainViewWireFrame *)wireFrame
         setTranslateSchoolNamesToCoordsWireFrame:
             [TranslateSchoolNamesToCoordsWireFrame
-                presentExtractGiantBombDataModuleFrom:nil
+                presentExtractGameDataModuleFrom:nil
                                          withDelegate:presenter]];
 
     [(MainViewWireFrame *)wireFrame

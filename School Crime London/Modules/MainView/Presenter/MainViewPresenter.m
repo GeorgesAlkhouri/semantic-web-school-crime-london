@@ -8,7 +8,7 @@
 
 @interface MainViewPresenter ()
 
-@property(nonatomic) NSString *giantBombAPIKey;
+@property(nonatomic) NSString *importIOAPIKey;
 @property(nonatomic) NSString *importIOUserKey;
 
 @property(nonatomic) NSString *geofencingAPIKey;
@@ -31,9 +31,9 @@
     [self.view setInfoLabelText:errorText];
 }
 
-- (void)setGiantBombAPIKey:(NSString *)APIKey {
+- (void)setImportIOAPIKey:(NSString *)APIKey {
 
-    _giantBombAPIKey = APIKey;
+    _importIOAPIKey = APIKey;
 }
 
 - (void)setGeofencingAPIKey:(NSString *)APIKey {
@@ -72,7 +72,7 @@
     //        extractDataWithAPIKey:self.giantBombAPIKey
     //                      userKey:self.importIOUserKey];
 
-    [self.extractGiantBombDataConnection
+    [self.extractGameDataConnection
         extractDataWithAPIKey:@"30a515a1-56e4-4acd-b38c-4d4d49adcb79:1yWjjdf3+"
         @"DQBchLyM616jyR0T5fBzrgeXX9OFEMXGJGw2n8Q3YHRqQ/"
         @"MhrJhENQ+wXwluDkZ8lWT04CpxzXFwQ=="

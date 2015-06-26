@@ -7,7 +7,7 @@
 
 @interface MainViewView ()
 
-@property(weak) IBOutlet NSTextField *giantBombAPIKey;
+@property(weak) IBOutlet NSTextField *importAPIKey;
 @property(weak) IBOutlet NSTextField *importUserKey;
 @property(weak) IBOutlet NSTextField *geofencingAPIKey;
 @property(weak) IBOutlet NSTextField *infoLabel;
@@ -24,7 +24,7 @@
 
 - (IBAction)actionButtonPressed:(NSButton *)sender {
 
-    [self.presenter setGiantBombAPIKey:[self.giantBombAPIKey stringValue]];
+    [self.presenter setImportIOAPIKey:[self.importAPIKey stringValue]];
     [self.presenter setImportIOUserKey:[self.importUserKey stringValue]];
     [self.presenter setGeofencingAPIKey:[self.geofencingAPIKey stringValue]];
 

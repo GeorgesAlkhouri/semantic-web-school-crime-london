@@ -38,7 +38,7 @@
 @protocol TranslateSchoolNamesToCoordsWireFrameProtocol
 @required
 + (instancetype)
-presentExtractGiantBombDataModuleFrom:
+presentExtractGameDataModuleFrom:
     (id)fromView withDelegate:
         (id<MainViewTranslateSchoolNamesToCoordsDelegateProtocol>)delegate;
 /**

@@ -5,7 +5,7 @@
 
 #import <Foundation/Foundation.h>
 #import "MainViewProtocols.h"
-#import "ExtractGiantBombDataProtocols.h"
+#import "ExtractGameDataProtocols.h"
 #import "TranslateSchoolNamesToCoordsProtocols.h"
 #import "ParseLondonDataStoreDataProtocols.h"
 #import "SearchCrimeSceneProtocols.h"
@@ -21,7 +21,7 @@
 @property(nonatomic, strong) id<MainViewWireFrameProtocol> wireFrame;
 
 @property(nonatomic, strong)
-    id<ExtractGiantBombDataConnectionProtocol> extractGiantBombDataConnection;
+    id<ExtractGameDataConnectionProtocol> extractGameDataConnection;
 @property(nonatomic, strong) id<TranslateSchoolNamesToCoordsConnectionProtocol>
     translateSchoolNamesToCoordsConnection;
 @property(nonatomic, strong) id<ParseLondonDataStoreDataConnectionProtocol>

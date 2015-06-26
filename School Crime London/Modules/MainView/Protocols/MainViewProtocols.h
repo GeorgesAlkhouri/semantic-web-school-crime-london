@@ -12,9 +12,9 @@
 @protocol MainViewPresenterProtocol;
 @protocol MainViewLocalDataManagerInputProtocol;
 @protocol MainViewAPIDataManagerInputProtocol;
-@protocol MainViewExtractGiantBombDataDelegateProtocol;
+@protocol MainViewExtractGameDataDelegateProtocol;
 
-@protocol ExtractGiantBombDataConnectionProtocol;
+@protocol ExtractGameDataConnectionProtocol;
 @protocol TranslateSchoolNamesToCoordsConnectionProtocol;
 @protocol ParseLondonDataStoreDataConnectionProtocol;
 @protocol SearchCrimeSceneConnectionProtocol;
@@ -47,10 +47,10 @@
 @end
 
 @protocol
-    MainViewExtractGiantBombDataDelegateProtocol <MainViewDelegateProtocol>
+    MainViewExtractGameDataDelegateProtocol <MainViewDelegateProtocol>
 
 @property(nonatomic, strong)
-    id<ExtractGiantBombDataConnectionProtocol> extractGiantBombDataConnection;
+    id<ExtractGameDataConnectionProtocol> extractGameDataConnection;
 
 - (void)extractionDidFinishWithResults:(NSArray *)results;
 
@@ -93,7 +93,7 @@
 @end
 
 @protocol MainViewPresenterProtocol <
-    MainViewExtractGiantBombDataDelegateProtocol,
+    MainViewExtractGameDataDelegateProtocol,
     MainViewTranslateSchoolNamesToCoordsDelegateProtocol,
     MainViewParseLondonDataStoreDataDelegateProtocol,
     MainViewSearchCrimeSceneDelegateProtocol, MainViewBuildRdfDelegateProtocol>
@@ -107,7 +107,7 @@
  */
 
 - (void)actionButtonPressed;
-- (void)setGiantBombAPIKey:(NSString *)APIKey;
+- (void)setImportIOAPIKey:(NSString *)APIKey;
 - (void)setImportIOUserKey:(NSString *)UserKey;
 - (void)setGeofencingAPIKey:(NSString *)APIKey;
 

@@ -3,11 +3,11 @@
 // Copyright (c) 2015 Georges Alkhouri. All rights reserved.
 //
 
-#import "ExtractGiantBombDataInteractor.h"
-#import "ExtractGiantBombDataItem.h"
+#import "ExtractGameDataInteractor.h"
+#import "ExtractGameDataItem.h"
 #import "NSDate+Additions.h"
 
-@implementation ExtractGiantBombDataInteractor
+@implementation ExtractGameDataInteractor
 
 - (void)startDataExtractionWithAPIKey:(NSString *)APIKey
                               userKey:(NSString *)userKey {

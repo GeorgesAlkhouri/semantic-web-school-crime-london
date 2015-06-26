@@ -3,9 +3,9 @@
 // Copyright (c) 2015 Georges Alkhouri. All rights reserved.
 //
 
-#import "ExtractGiantBombDataView.h"
+#import "ExtractGameDataView.h"
 
-@implementation ExtractGiantBombDataView
+@implementation ExtractGameDataView
 
 #pragma mark - ViewController Lifecycle
 

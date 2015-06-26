@@ -33,13 +33,13 @@
 		DA93FDAE1B0DD68D00D7375A /* MainViewPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = DA93FDA11B0DD68D00D7375A /* MainViewPresenter.m */; };
 		DA93FDAF1B0DD68D00D7375A /* MainViewView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA93FDA61B0DD68D00D7375A /* MainViewView.m */; };
 		DA93FDB01B0DD68D00D7375A /* MainViewWireFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = DA93FDA91B0DD68D00D7375A /* MainViewWireFrame.m */; };
-		DA9E22031B062E85001507A3 /* ExtractGiantBombDataAPIDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9E21EF1B062E85001507A3 /* ExtractGiantBombDataAPIDataManager.m */; };
-		DA9E22041B062E85001507A3 /* ExtractGiantBombDataLocalDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9E21F21B062E85001507A3 /* ExtractGiantBombDataLocalDataManager.m */; };
-		DA9E22051B062E85001507A3 /* ExtractGiantBombDataInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9E21F51B062E85001507A3 /* ExtractGiantBombDataInteractor.m */; };
-		DA9E22061B062E85001507A3 /* ExtractGiantBombDataItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9E21F71B062E85001507A3 /* ExtractGiantBombDataItem.m */; };
-		DA9E22071B062E85001507A3 /* ExtractGiantBombDataPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9E21FA1B062E85001507A3 /* ExtractGiantBombDataPresenter.m */; };
-		DA9E22081B062E85001507A3 /* ExtractGiantBombDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9E21FF1B062E85001507A3 /* ExtractGiantBombDataView.m */; };
-		DA9E22091B062E85001507A3 /* ExtractGiantBombDataWireFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9E22021B062E85001507A3 /* ExtractGiantBombDataWireFrame.m */; };
+		DA9E22031B062E85001507A3 /* ExtractGameDataAPIDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9E21EF1B062E85001507A3 /* ExtractGameDataAPIDataManager.m */; };
+		DA9E22041B062E85001507A3 /* ExtractGameDataLocalDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9E21F21B062E85001507A3 /* ExtractGameDataLocalDataManager.m */; };
+		DA9E22051B062E85001507A3 /* ExtractGameDataInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9E21F51B062E85001507A3 /* ExtractGameDataInteractor.m */; };
+		DA9E22061B062E85001507A3 /* ExtractGameDataItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9E21F71B062E85001507A3 /* ExtractGameDataItem.m */; };
+		DA9E22071B062E85001507A3 /* ExtractGameDataPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9E21FA1B062E85001507A3 /* ExtractGameDataPresenter.m */; };
+		DA9E22081B062E85001507A3 /* ExtractGameDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9E21FF1B062E85001507A3 /* ExtractGameDataView.m */; };
+		DA9E22091B062E85001507A3 /* ExtractGameDataWireFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9E22021B062E85001507A3 /* ExtractGameDataWireFrame.m */; };
 		DA9E220E1B069592001507A3 /* NSDate+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9E220D1B069592001507A3 /* NSDate+Additions.m */; };
 		DA9F45EF1B1C967000DB96C8 /* AFHTTPRequestOperation+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9F45EE1B1C967000DB96C8 /* AFHTTPRequestOperation+Additions.m */; };
 		DA9F46081B1CBC5900DB96C8 /* BuildRdfAPIDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9F45F41B1CBC5900DB96C8 /* BuildRdfAPIDataManager.m */; };
@@ -126,21 +126,21 @@
 		DA93FDA61B0DD68D00D7375A /* MainViewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewView.m; sourceTree = "<group>"; };
 		DA93FDA81B0DD68D00D7375A /* MainViewWireFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewWireFrame.h; sourceTree = "<group>"; };
 		DA93FDA91B0DD68D00D7375A /* MainViewWireFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewWireFrame.m; sourceTree = "<group>"; };
-		DA9E21EE1B062E85001507A3 /* ExtractGiantBombDataAPIDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtractGiantBombDataAPIDataManager.h; sourceTree = "<group>"; };
-		DA9E21EF1B062E85001507A3 /* ExtractGiantBombDataAPIDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtractGiantBombDataAPIDataManager.m; sourceTree = "<group>"; };
-		DA9E21F11B062E85001507A3 /* ExtractGiantBombDataLocalDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtractGiantBombDataLocalDataManager.h; sourceTree = "<group>"; };
-		DA9E21F21B062E85001507A3 /* ExtractGiantBombDataLocalDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtractGiantBombDataLocalDataManager.m; sourceTree = "<group>"; };
-		DA9E21F41B062E85001507A3 /* ExtractGiantBombDataInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtractGiantBombDataInteractor.h; sourceTree = "<group>"; };
-		DA9E21F51B062E85001507A3 /* ExtractGiantBombDataInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtractGiantBombDataInteractor.m; sourceTree = "<group>"; };
-		DA9E21F61B062E85001507A3 /* ExtractGiantBombDataItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtractGiantBombDataItem.h; sourceTree = "<group>"; };
-		DA9E21F71B062E85001507A3 /* ExtractGiantBombDataItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtractGiantBombDataItem.m; sourceTree = "<group>"; };
-		DA9E21F91B062E85001507A3 /* ExtractGiantBombDataPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtractGiantBombDataPresenter.h; sourceTree = "<group>"; };
-		DA9E21FA1B062E85001507A3 /* ExtractGiantBombDataPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtractGiantBombDataPresenter.m; sourceTree = "<group>"; };
-		DA9E21FC1B062E85001507A3 /* ExtractGiantBombDataProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtractGiantBombDataProtocols.h; sourceTree = "<group>"; };
-		DA9E21FE1B062E85001507A3 /* ExtractGiantBombDataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtractGiantBombDataView.h; sourceTree = "<group>"; };
-		DA9E21FF1B062E85001507A3 /* ExtractGiantBombDataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtractGiantBombDataView.m; sourceTree = "<group>"; };
-		DA9E22011B062E85001507A3 /* ExtractGiantBombDataWireFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtractGiantBombDataWireFrame.h; sourceTree = "<group>"; };
-		DA9E22021B062E85001507A3 /* ExtractGiantBombDataWireFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtractGiantBombDataWireFrame.m; sourceTree = "<group>"; };
+		DA9E21EE1B062E85001507A3 /* ExtractGameDataAPIDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtractGameDataAPIDataManager.h; sourceTree = "<group>"; };
+		DA9E21EF1B062E85001507A3 /* ExtractGameDataAPIDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtractGameDataAPIDataManager.m; sourceTree = "<group>"; };
+		DA9E21F11B062E85001507A3 /* ExtractGameDataLocalDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtractGameDataLocalDataManager.h; sourceTree = "<group>"; };
+		DA9E21F21B062E85001507A3 /* ExtractGameDataLocalDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtractGameDataLocalDataManager.m; sourceTree = "<group>"; };
+		DA9E21F41B062E85001507A3 /* ExtractGameDataInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ExtractGameDataInteractor.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		DA9E21F51B062E85001507A3 /* ExtractGameDataInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtractGameDataInteractor.m; sourceTree = "<group>"; };
+		DA9E21F61B062E85001507A3 /* ExtractGameDataItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtractGameDataItem.h; sourceTree = "<group>"; };
+		DA9E21F71B062E85001507A3 /* ExtractGameDataItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtractGameDataItem.m; sourceTree = "<group>"; };
+		DA9E21F91B062E85001507A3 /* ExtractGameDataPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ExtractGameDataPresenter.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		DA9E21FA1B062E85001507A3 /* ExtractGameDataPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtractGameDataPresenter.m; sourceTree = "<group>"; };
+		DA9E21FC1B062E85001507A3 /* ExtractGameDataProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ExtractGameDataProtocols.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		DA9E21FE1B062E85001507A3 /* ExtractGameDataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtractGameDataView.h; sourceTree = "<group>"; };
+		DA9E21FF1B062E85001507A3 /* ExtractGameDataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtractGameDataView.m; sourceTree = "<group>"; };
+		DA9E22011B062E85001507A3 /* ExtractGameDataWireFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtractGameDataWireFrame.h; sourceTree = "<group>"; };
+		DA9E22021B062E85001507A3 /* ExtractGameDataWireFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ExtractGameDataWireFrame.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		DA9E220C1B069592001507A3 /* NSDate+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Additions.h"; sourceTree = "<group>"; };
 		DA9E220D1B069592001507A3 /* NSDate+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Additions.m"; sourceTree = "<group>"; };
 		DA9F45ED1B1C967000DB96C8 /* AFHTTPRequestOperation+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFHTTPRequestOperation+Additions.h"; sourceTree = "<group>"; };
@@ -483,13 +483,13 @@
 				DAE3876A1B14815D009229C8 /* SearchCrimeScene */,
 				DA93FD921B0DD68D00D7375A /* MainView */,
 				DAACE0181B0BDFC10059B44A /* ParseLondonDataStoreData */,
-				DA9E21EB1B062E85001507A3 /* ExtractGiantBombData */,
+				DA9E21EB1B062E85001507A3 /* ExtractGameData */,
 				DA739AD61B0E3AF600392983 /* TranslateSchoolNamesToCoords */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
 		};
-		DA9E21EB1B062E85001507A3 /* ExtractGiantBombData */ = {
+		DA9E21EB1B062E85001507A3 /* ExtractGameData */ = {
 			isa = PBXGroup;
 			children = (
 				DA9E21EC1B062E85001507A3 /* DataManager */,
@@ -499,7 +499,7 @@
 				DA9E21FD1B062E85001507A3 /* View */,
 				DA9E22001B062E85001507A3 /* WireFrame */,
 			);
-			path = ExtractGiantBombData;
+			path = ExtractGameData;
 			sourceTree = "<group>";
 		};
 		DA9E21EC1B062E85001507A3 /* DataManager */ = {
@@ -514,8 +514,8 @@
 		DA9E21ED1B062E85001507A3 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				DA9E21EE1B062E85001507A3 /* ExtractGiantBombDataAPIDataManager.h */,
-				DA9E21EF1B062E85001507A3 /* ExtractGiantBombDataAPIDataManager.m */,
+				DA9E21EE1B062E85001507A3 /* ExtractGameDataAPIDataManager.h */,
+				DA9E21EF1B062E85001507A3 /* ExtractGameDataAPIDataManager.m */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -523,8 +523,8 @@
 		DA9E21F01B062E85001507A3 /* Local */ = {
 			isa = PBXGroup;
 			children = (
-				DA9E21F11B062E85001507A3 /* ExtractGiantBombDataLocalDataManager.h */,
-				DA9E21F21B062E85001507A3 /* ExtractGiantBombDataLocalDataManager.m */,
+				DA9E21F11B062E85001507A3 /* ExtractGameDataLocalDataManager.h */,
+				DA9E21F21B062E85001507A3 /* ExtractGameDataLocalDataManager.m */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -532,10 +532,10 @@
 		DA9E21F31B062E85001507A3 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				DA9E21F41B062E85001507A3 /* ExtractGiantBombDataInteractor.h */,
-				DA9E21F51B062E85001507A3 /* ExtractGiantBombDataInteractor.m */,
-				DA9E21F61B062E85001507A3 /* ExtractGiantBombDataItem.h */,
-				DA9E21F71B062E85001507A3 /* ExtractGiantBombDataItem.m */,
+				DA9E21F41B062E85001507A3 /* ExtractGameDataInteractor.h */,
+				DA9E21F51B062E85001507A3 /* ExtractGameDataInteractor.m */,
+				DA9E21F61B062E85001507A3 /* ExtractGameDataItem.h */,
+				DA9E21F71B062E85001507A3 /* ExtractGameDataItem.m */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -543,8 +543,8 @@
 		DA9E21F81B062E85001507A3 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				DA9E21F91B062E85001507A3 /* ExtractGiantBombDataPresenter.h */,
-				DA9E21FA1B062E85001507A3 /* ExtractGiantBombDataPresenter.m */,
+				DA9E21F91B062E85001507A3 /* ExtractGameDataPresenter.h */,
+				DA9E21FA1B062E85001507A3 /* ExtractGameDataPresenter.m */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -552,7 +552,7 @@
 		DA9E21FB1B062E85001507A3 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				DA9E21FC1B062E85001507A3 /* ExtractGiantBombDataProtocols.h */,
+				DA9E21FC1B062E85001507A3 /* ExtractGameDataProtocols.h */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -560,8 +560,8 @@
 		DA9E21FD1B062E85001507A3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				DA9E21FE1B062E85001507A3 /* ExtractGiantBombDataView.h */,
-				DA9E21FF1B062E85001507A3 /* ExtractGiantBombDataView.m */,
+				DA9E21FE1B062E85001507A3 /* ExtractGameDataView.h */,
+				DA9E21FF1B062E85001507A3 /* ExtractGameDataView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -569,8 +569,8 @@
 		DA9E22001B062E85001507A3 /* WireFrame */ = {
 			isa = PBXGroup;
 			children = (
-				DA9E22011B062E85001507A3 /* ExtractGiantBombDataWireFrame.h */,
-				DA9E22021B062E85001507A3 /* ExtractGiantBombDataWireFrame.m */,
+				DA9E22011B062E85001507A3 /* ExtractGameDataWireFrame.h */,
+				DA9E22021B062E85001507A3 /* ExtractGameDataWireFrame.m */,
 			);
 			path = WireFrame;
 			sourceTree = "<group>";
@@ -999,7 +999,7 @@
 				DA9F460C1B1CBC5900DB96C8 /* BuildRdfPresenter.m in Sources */,
 				DA93FDAE1B0DD68D00D7375A /* MainViewPresenter.m in Sources */,
 				DA93FDAA1B0DD68D00D7375A /* MainViewAPIDataManager.m in Sources */,
-				DA9E22041B062E85001507A3 /* ExtractGiantBombDataLocalDataManager.m in Sources */,
+				DA9E22041B062E85001507A3 /* ExtractGameDataLocalDataManager.m in Sources */,
 				DA9F460E1B1CBC5900DB96C8 /* BuildRdfWireFrame.m in Sources */,
 				DAE387851B14815D009229C8 /* SearchCrimeSceneItem.m in Sources */,
 				DAACE0341B0BDFC10059B44A /* ParseLondonDataStoreDataPresenter.m in Sources */,
@@ -1010,28 +1010,28 @@
 				DAACE0321B0BDFC10059B44A /* ParseLondonDataStoreDataInteractor.m in Sources */,
 				DA739AF21B0E3AF600392983 /* TranslateSchoolNamesToCoordsPresenter.m in Sources */,
 				DA93FDAC1B0DD68D00D7375A /* MainViewInteractor.m in Sources */,
-				DA9E22071B062E85001507A3 /* ExtractGiantBombDataPresenter.m in Sources */,
+				DA9E22071B062E85001507A3 /* ExtractGameDataPresenter.m in Sources */,
 				DA739AF11B0E3AF600392983 /* TranslateSchoolNamesToCoordsItem.m in Sources */,
 				DA93FDAF1B0DD68D00D7375A /* MainViewView.m in Sources */,
 				DAACE0301B0BDFC10059B44A /* ParseLondonDataStoreDataAPIDataManager.m in Sources */,
-				DA9E22051B062E85001507A3 /* ExtractGiantBombDataInteractor.m in Sources */,
+				DA9E22051B062E85001507A3 /* ExtractGameDataInteractor.m in Sources */,
 				DA4AB8BD1B062A1A00D684CE /* main.m in Sources */,
-				DA9E22081B062E85001507A3 /* ExtractGiantBombDataView.m in Sources */,
+				DA9E22081B062E85001507A3 /* ExtractGameDataView.m in Sources */,
 				DA739AEE1B0E3AF600392983 /* TranslateSchoolNamesToCoordsAPIDataManager.m in Sources */,
 				DAACE0351B0BDFC10059B44A /* ParseLondonDataStoreDataView.m in Sources */,
 				DA9F46091B1CBC5900DB96C8 /* BuildRdfLocalDataManager.m in Sources */,
 				DAACE0361B0BDFC10059B44A /* ParseLondonDataStoreDataWireFrame.m in Sources */,
 				DA93FDB01B0DD68D00D7375A /* MainViewWireFrame.m in Sources */,
 				DA93FDAB1B0DD68D00D7375A /* MainViewLocalDataManager.m in Sources */,
-				DA9E22031B062E85001507A3 /* ExtractGiantBombDataAPIDataManager.m in Sources */,
+				DA9E22031B062E85001507A3 /* ExtractGameDataAPIDataManager.m in Sources */,
 				DA4AB8BB1B062A1A00D684CE /* AppDelegate.m in Sources */,
 				DAE387861B14815D009229C8 /* SearchCrimeScenePresenter.m in Sources */,
 				DA739AF41B0E3AF600392983 /* TranslateSchoolNamesToCoordsWireFrame.m in Sources */,
 				DA739AF31B0E3AF600392983 /* TranslateSchoolNamesToCoordsView.m in Sources */,
-				DA9E22091B062E85001507A3 /* ExtractGiantBombDataWireFrame.m in Sources */,
+				DA9E22091B062E85001507A3 /* ExtractGameDataWireFrame.m in Sources */,
 				DAE387841B14815D009229C8 /* SearchCrimeSceneInteractor.m in Sources */,
 				DAE387821B14815D009229C8 /* SearchCrimeSceneAPIDataManager.m in Sources */,
-				DA9E22061B062E85001507A3 /* ExtractGiantBombDataItem.m in Sources */,
+				DA9E22061B062E85001507A3 /* ExtractGameDataItem.m in Sources */,
 				DAE387871B14815D009229C8 /* SearchCrimeSceneView.m in Sources */,
 				DAAAF22F1B23B83300CC2545 /* NSString+Additions.m in Sources */,
 				DA9F460D1B1CBC5900DB96C8 /* BuildRdfView.m in Sources */,

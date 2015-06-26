@@ -3,11 +3,11 @@
 // Copyright (c) 2015 Georges Alkhouri. All rights reserved.
 //
 
-#import "ExtractGiantBombDataAPIDataManager.h"
+#import "ExtractGameDataAPIDataManager.h"
 #import <AFNetworking.h>
 #import "NSString+Additions.h"
 
-@implementation ExtractGiantBombDataAPIDataManager
+@implementation ExtractGameDataAPIDataManager
 
 - (void)extractPegiMetaDataWithAPIKey:(NSString *)APIKey
                               userKey:(NSString *)userKey

@@ -785,7 +785,7 @@
                     </view>
                     <connections>
                         <outlet property="geofencingAPIKey" destination="1Af-yr-QVW" id="7EB-Dy-3lx"/>
-                        <outlet property="giantBombAPIKey" destination="Dss-6A-DyK" id="bwo-I7-o87"/>
+                        <outlet property="importAPIKey" destination="Dss-6A-DyK" id="69j-LM-DMo"/>
                         <outlet property="importUserKey" destination="YBo-W5-eLS" id="H9Z-g2-fgJ"/>
                         <outlet property="infoLabel" destination="z8g-0B-Pqg" id="yWF-KO-iuz"/>
                     </connections>

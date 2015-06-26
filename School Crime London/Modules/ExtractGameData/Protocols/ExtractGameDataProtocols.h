@@ -6,60 +6,57 @@
 #import <Foundation/Foundation.h>
 #import <Cocoa/Cocoa.h>
 
-@protocol ExtractGiantBombDataInteractorOutputProtocol;
-@protocol ExtractGiantBombDataInteractorInputProtocol;
-@protocol ExtractGiantBombDataViewProtocol;
-@protocol ExtractGiantBombDataPresenterProtocol;
-@protocol ExtractGiantBombDataLocalDataManagerInputProtocol;
-@protocol ExtractGiantBombDataAPIDataManagerInputProtocol;
-@protocol ExtractGiantBombDataConnectionProtocol;
+@protocol ExtractGameDataInteractorOutputProtocol;
+@protocol ExtractGameDataInteractorInputProtocol;
+@protocol ExtractGameDataViewProtocol;
+@protocol ExtractGameDataPresenterProtocol;
+@protocol ExtractGameDataLocalDataManagerInputProtocol;
+@protocol ExtractGameDataAPIDataManagerInputProtocol;
+@protocol ExtractGameDataConnectionProtocol;
 
-@protocol MainViewExtractGiantBombDataDelegateProtocol;
+@protocol MainViewExtractGameDataDelegateProtocol;
 
-@protocol ExtractGiantBombDataConnectionProtocol <NSObject>
+@protocol ExtractGameDataConnectionProtocol <NSObject>
 @property(nonatomic, weak)
-    id<MainViewExtractGiantBombDataDelegateProtocol> mainViewDelegate;
+    id<MainViewExtractGameDataDelegateProtocol> mainViewDelegate;
 - (void)extractDataWithAPIKey:(NSString *)APIKey userKey:(NSString *)userKey;
 @end
 
-@protocol ExtractGiantBombDataViewProtocol
+@protocol ExtractGameDataViewProtocol
 @required
-@property(nonatomic, strong)
-    id<ExtractGiantBombDataPresenterProtocol> presenter;
+@property(nonatomic, strong) id<ExtractGameDataPresenterProtocol> presenter;
 /**
  * Add here your methods for communication PRESENTER -> VIEWCONTROLLER
  */
 @end
 
-@class ExtractGiantBombDataWireFrame;
+@class ExtractGameDataWireFrame;
 
-@protocol ExtractGiantBombDataWireFrameProtocol
+@protocol ExtractGameDataWireFrameProtocol
 @required
-@property(nonatomic, weak) id<ExtractGiantBombDataPresenterProtocol> presenter;
+@property(nonatomic, weak) id<ExtractGameDataPresenterProtocol> presenter;
 
-+ (instancetype)presentExtractGiantBombDataModuleFrom:
++ (instancetype)presentExtractGameDataModuleFrom:
                     (id)fromView withDelegate:
-                        (id<MainViewExtractGiantBombDataDelegateProtocol>)
-                            delegate;
+                        (id<MainViewExtractGameDataDelegateProtocol>)delegate;
 /**
  * Add here your methods for communication PRESENTER -> WIREFRAME
  */
 @end
 
-@protocol ExtractGiantBombDataPresenterProtocol <
-    ExtractGiantBombDataConnectionProtocol>
+@protocol ExtractGameDataPresenterProtocol <ExtractGameDataConnectionProtocol>
 @required
-@property(nonatomic, weak) id<ExtractGiantBombDataViewProtocol> view;
+@property(nonatomic, weak) id<ExtractGameDataViewProtocol> view;
 @property(nonatomic, strong)
-    id<ExtractGiantBombDataInteractorInputProtocol> interactor;
+    id<ExtractGameDataInteractorInputProtocol> interactor;
 @property(nonatomic, strong)
-    id<ExtractGiantBombDataWireFrameProtocol> wireFrame;
+    id<ExtractGameDataWireFrameProtocol> wireFrame;
 /**
  * Add here your methods for communication VIEWCONTROLLER -> PRESENTER
  */
 @end
 
-@protocol ExtractGiantBombDataInteractorOutputProtocol
+@protocol ExtractGameDataInteractorOutputProtocol
 /**
  * Add here your methods for communication INTERACTOR -> PRESENTER
  */
@@ -69,14 +66,14 @@
 
 @end
 
-@protocol ExtractGiantBombDataInteractorInputProtocol
+@protocol ExtractGameDataInteractorInputProtocol
 @required
 @property(nonatomic, weak)
-    id<ExtractGiantBombDataInteractorOutputProtocol> presenter;
+    id<ExtractGameDataInteractorOutputProtocol> presenter;
 @property(nonatomic, strong)
-    id<ExtractGiantBombDataAPIDataManagerInputProtocol> APIDataManager;
+    id<ExtractGameDataAPIDataManagerInputProtocol> APIDataManager;
 @property(nonatomic, strong)
-    id<ExtractGiantBombDataLocalDataManagerInputProtocol> localDataManager;
+    id<ExtractGameDataLocalDataManagerInputProtocol> localDataManager;
 /**
  * Add here your methods for communication PRESENTER -> INTERACTOR
  */
@@ -86,14 +83,14 @@
 
 @end
 
-@protocol ExtractGiantBombDataDataManagerInputProtocol
+@protocol ExtractGameDataDataManagerInputProtocol
 /**
  * Add here your methods for communication INTERACTOR -> DATAMANAGER
  */
 @end
 
-@protocol ExtractGiantBombDataAPIDataManagerInputProtocol <
-    ExtractGiantBombDataDataManagerInputProtocol>
+@protocol ExtractGameDataAPIDataManagerInputProtocol <
+    ExtractGameDataDataManagerInputProtocol>
 /**
  * Add here your methods for communication INTERACTOR -> APIDATAMANAGER
  */
@@ -110,8 +107,8 @@
 
 @end
 
-@protocol ExtractGiantBombDataLocalDataManagerInputProtocol <
-    ExtractGiantBombDataDataManagerInputProtocol>
+@protocol ExtractGameDataLocalDataManagerInputProtocol <
+    ExtractGameDataDataManagerInputProtocol>
 /**
  * Add here your methods for communication INTERACTOR -> LOCLDATAMANAGER
  */

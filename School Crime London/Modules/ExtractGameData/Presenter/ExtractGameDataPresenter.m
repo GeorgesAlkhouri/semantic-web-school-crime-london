@@ -3,14 +3,14 @@
 // Copyright (c) 2015 Georges Alkhouri. All rights reserved.
 //
 
-#import "ExtractGiantBombDataPresenter.h"
-#import "ExtractGiantBombDataWireframe.h"
+#import "ExtractGameDataPresenter.h"
+#import "ExtractGameDataWireframe.h"
 
-@interface ExtractGiantBombDataPresenter ()
+@interface ExtractGameDataPresenter ()
 
 @end
 
-@implementation ExtractGiantBombDataPresenter
+@implementation ExtractGameDataPresenter
 
 - (void)extractDataWithAPIKey:(NSString *)APIKey userKey:(NSString *)userKey {
 
@@ -28,7 +28,7 @@
 
     if (error.code == -2) {
 
-        [self.mainViewDelegate showError:@"Giant Bomb data parsing error"];
+        [self.mainViewDelegate showError:@"Game data parsing error"];
     } else {
 
         [self.mainViewDelegate showError:error.localizedDescription];

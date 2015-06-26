@@ -3,8 +3,8 @@
 // Copyright (c) 2015 Georges Alkhouri. All rights reserved.
 //
 
-#import "ExtractGiantBombDataItem.h"
+#import "ExtractGameDataLocalDataManager.h"
 
-@implementation ExtractGiantBombDataItem
+@implementation ExtractGameDataLocalDataManager
 
 @end

@@ -5,7 +5,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ExtractGiantBombDataItem : NSObject
+@interface ExtractGameDataItem : NSObject
 
 @property(nonatomic) NSString *gameName;
 @property(nonatomic) NSDate *releaseDate;
