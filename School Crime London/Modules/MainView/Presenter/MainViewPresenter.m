@@ -91,7 +91,7 @@
 - (void)didBuildRdfWithRdfResults:(NSDictionary *)rdfs {
 
     NSDateFormatter *formatter = [NSDateFormatter new];
-    formatter.dateFormat = @"dd-MM-YY-HH-mm-ss";
+    formatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ss";
 
     NSString *formattedDate = [formatter stringFromDate:[NSDate date]];
 

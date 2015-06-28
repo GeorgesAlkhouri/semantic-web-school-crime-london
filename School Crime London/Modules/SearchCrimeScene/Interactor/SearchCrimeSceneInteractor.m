@@ -23,7 +23,7 @@
     NSMutableArray *parameters = [NSMutableArray new];
 
     NSDateFormatter *formatter = [NSDateFormatter new];
-    formatter.dateFormat = @"yyyy-MM-dd";
+    formatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ss";
 
     for (NSDictionary *game in gameData) {
 
@@ -170,7 +170,19 @@
                     [crimeResultWithSchoolData
                         setObject:crime[@"location_type"]
                            forKey:@"Crime-Location-Type"];
-                    [crimeResultWithSchoolData setObject:crime[@"month"]
+
+                    NSDateFormatter *formatter = [NSDateFormatter new];
+                    formatter.dateFormat = @"yyyy-MM";
+
+                    NSDate *crimeMonth =
+                        [formatter dateFromString:crime[@"month"]];
+
+                    formatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ss";
+
+                    NSString *formattedCrimeMonth =
+                        [formatter stringFromDate:crimeMonth];
+
+                    [crimeResultWithSchoolData setObject:formattedCrimeMonth
                                                   forKey:@"Crime-Month"];
                     [crimeResultWithSchoolData
                         setObject:crime[@"outcome_status"]

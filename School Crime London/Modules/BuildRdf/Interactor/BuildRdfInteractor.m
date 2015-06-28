@@ -50,19 +50,16 @@
                      crimeData:(NSArray *)crimeData {
 
     NSDateFormatter *formatter = [NSDateFormatter new];
-    formatter.dateFormat = @"yyyy-MM-ddTHH:mm:ssZZZZZ";
+    formatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ss";
 
     NSMutableString *gameOntology =
         [[self loadOntologyWithName:@"game"] mutableCopy];
 
     for (NSDictionary *game in gameData) {
 
-        NSString *instanceName = [[game[@"GameName"]
-
-            stringByTrimmingCharactersInSet:
-                [NSCharacterSet whitespaceAndNewlineCharacterSet]]
-            stringByReplacingOccurrencesOfString:@" "
-                                      withString:@"-"];
+        NSString *instanceName =
+            [[NSString SHA512StringFromString:game[@"GameName"]]
+                stringByAppendingString:@"-Game"];
 
         NSString *rdf =
             [self createGameInstanceWithName:game[@"GameName"]
@@ -136,8 +133,6 @@
             [crimeID stringByAppendingString:@"-Crime"];
 
         if (![crimeIDs containsObject:crimeID]) {
-
-            // TODO: Map category to RDF Instance
 
             NSString *crimeRDF = [self
                 createCrimeInstanceWithInstanceName:crimeInstanceName

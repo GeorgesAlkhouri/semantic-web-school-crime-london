@@ -94,9 +94,18 @@
 
             for (NSDictionary *result in responseObject[@"results"]) {
 
+                NSDateFormatter *formatter = [NSDateFormatter new];
+                formatter.dateFormat = @"yyyy-MM-dd";
+                
+                NSDate * releaseDate = [formatter dateFromString:result[@"main"][1]];
+                
+                formatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ss";
+                
+                NSString * formattedReleaseDate = [formatter stringFromDate:releaseDate];
+            
                 NSDictionary *game = @{
                     @"GameName" : result[@"main"][0],
-                    @"ReleaseDate" : result[@"main"][1],
+                    @"ReleaseDate" : formattedReleaseDate,
                     @"OriginalGameRating" : @"Pegi: 18"
                 };
 
@@ -133,7 +142,7 @@
 
     NSString *name;                              // Preallocation of group name
     for (NSDictionary *group in groups) {        // Iterate through all groups
-        name = [group objectForKey:@"GameName"]; // Get the group name
+        name = [[group objectForKey:@"GameName"] lowercaseString]; // Get the group name
         if ([groupNamesEncountered indexOfObject:name] ==
             NSNotFound) { // Check if this group name hasn't been encountered
                           // before
