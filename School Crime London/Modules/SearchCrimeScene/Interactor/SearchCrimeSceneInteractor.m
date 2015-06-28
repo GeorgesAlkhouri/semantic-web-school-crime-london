@@ -63,7 +63,7 @@
     [components setCalendar:[NSCalendar currentCalendar]];
 
     NSDateFormatter *formatter = [NSDateFormatter new];
-    formatter.dateFormat = @"YYYY-MM";
+    formatter.dateFormat = @"yyyy-MM";
 
     NSDate *minDate = [formatter dateFromString:@"2010-12"];
     NSDate *maxDate = [self createMaxDate];
