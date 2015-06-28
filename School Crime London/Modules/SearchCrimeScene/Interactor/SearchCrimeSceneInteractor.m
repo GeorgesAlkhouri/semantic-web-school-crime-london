@@ -151,8 +151,9 @@
                                                   forKey:@"Crime-Category"];
                     [crimeResultWithSchoolData setObject:crime[@"context"]
                                                   forKey:@"Crime-Context"];
-                    [crimeResultWithSchoolData setObject:[crime[@"id"] stringValue]
-                                                  forKey:@"Crime-ID"];
+                    [crimeResultWithSchoolData
+                        setObject:[crime[@"id"] stringValue]
+                           forKey:@"Crime-ID"];
                     [crimeResultWithSchoolData setObject:@{
                         @"Latitude" : crime[@"location"][@"latitude"],
                         @"Longitude" : crime[@"location"][@"longitude"],
