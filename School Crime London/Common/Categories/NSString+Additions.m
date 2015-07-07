@@ -31,17 +31,17 @@
     return output;
 }
 
-+ (NSString *)SHA512StringFromString:(NSString *)string {
++ (NSString *)SHA256StringFromString:(NSString *)string {
 
-    const char *s = [string cStringUsingEncoding:NSASCIIStringEncoding];
+    const char *s = [string cStringUsingEncoding:NSUTF8StringEncoding];
 
     NSData *keyData = [NSData dataWithBytes:s length:strlen(s)];
+    
+    uint8_t digest[CC_SHA256_DIGEST_LENGTH] = {0};
 
-    uint8_t digest[CC_SHA512_DIGEST_LENGTH] = {0};
+    CC_SHA256(keyData.bytes, (int)keyData.length, digest);
 
-    CC_SHA512(keyData.bytes, (int)keyData.length, digest);
-
-    NSData *out = [NSData dataWithBytes:digest length:CC_SHA512_DIGEST_LENGTH];
+    NSData *out = [NSData dataWithBytes:digest length:CC_SHA256_DIGEST_LENGTH];
 
     return [[[[out description] stringByReplacingOccurrencesOfString:@"<"
                                                           withString:@""]
