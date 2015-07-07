@@ -8,11 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		830C837A2D2624C8060B469C /* libPods-School Crime London.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59AA2DBF5C463785F0512B22 /* libPods-School Crime London.a */; };
-		DA20880A1B32B2B70074B702 /* crime.ttl in Resources */ = {isa = PBXBuildFile; fileRef = DA2088041B32B2B70074B702 /* crime.ttl */; };
-		DA20880B1B32B2B70074B702 /* game.ttl in Resources */ = {isa = PBXBuildFile; fileRef = DA2088051B32B2B70074B702 /* game.ttl */; };
-		DA20880C1B32B2B70074B702 /* location.ttl in Resources */ = {isa = PBXBuildFile; fileRef = DA2088061B32B2B70074B702 /* location.ttl */; };
-		DA20880D1B32B2B70074B702 /* point.ttl in Resources */ = {isa = PBXBuildFile; fileRef = DA2088071B32B2B70074B702 /* point.ttl */; };
-		DA20880E1B32B2B70074B702 /* school.ttl in Resources */ = {isa = PBXBuildFile; fileRef = DA2088081B32B2B70074B702 /* school.ttl */; };
 		DA4AB8BB1B062A1A00D684CE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4AB8BA1B062A1A00D684CE /* AppDelegate.m */; };
 		DA4AB8BD1B062A1A00D684CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4AB8BC1B062A1A00D684CE /* main.m */; };
 		DA4AB8C21B062A1A00D684CE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA4AB8C11B062A1A00D684CE /* Images.xcassets */; };
@@ -80,11 +75,6 @@
 		59AA2DBF5C463785F0512B22 /* libPods-School Crime London.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-School Crime London.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E7D1F96A70815FA7E309B28 /* Pods-School Crime London.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-School Crime London.release.xcconfig"; path = "Pods/Target Support Files/Pods-School Crime London/Pods-School Crime London.release.xcconfig"; sourceTree = "<group>"; };
 		B28C36BB3475D30947F80F7D /* Pods-School Crime London.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-School Crime London.debug.xcconfig"; path = "Pods/Target Support Files/Pods-School Crime London/Pods-School Crime London.debug.xcconfig"; sourceTree = "<group>"; };
-		DA2088041B32B2B70074B702 /* crime.ttl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = crime.ttl; sourceTree = "<group>"; };
-		DA2088051B32B2B70074B702 /* game.ttl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = game.ttl; sourceTree = "<group>"; };
-		DA2088061B32B2B70074B702 /* location.ttl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = location.ttl; sourceTree = "<group>"; };
-		DA2088071B32B2B70074B702 /* point.ttl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = point.ttl; sourceTree = "<group>"; };
-		DA2088081B32B2B70074B702 /* school.ttl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = school.ttl; sourceTree = "<group>"; };
 		DA4AB8B41B062A1A00D684CE /* School Crime London.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "School Crime London.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA4AB8B81B062A1A00D684CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA4AB8B91B062A1A00D684CE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -230,18 +220,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		DA2088021B32B2B70074B702 /* Ontology */ = {
-			isa = PBXGroup;
-			children = (
-				DA2088041B32B2B70074B702 /* crime.ttl */,
-				DA2088051B32B2B70074B702 /* game.ttl */,
-				DA2088061B32B2B70074B702 /* location.ttl */,
-				DA2088071B32B2B70074B702 /* point.ttl */,
-				DA2088081B32B2B70074B702 /* school.ttl */,
-			);
-			path = Ontology;
-			sourceTree = SOURCE_ROOT;
-		};
 		DA4AB8AB1B062A1A00D684CE = {
 			isa = PBXGroup;
 			children = (
@@ -279,7 +257,6 @@
 		DA4AB8B71B062A1A00D684CE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				DA2088021B32B2B70074B702 /* Ontology */,
 				DA6DE4A01B0E9C3200D94B4D /* LBCSchool-processed.csv */,
 				DA4AB8B81B062A1A00D684CE /* Info.plist */,
 				DA4AB8BC1B062A1A00D684CE /* main.m */,
@@ -937,12 +914,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA4AB8C21B062A1A00D684CE /* Images.xcassets in Resources */,
-				DA20880C1B32B2B70074B702 /* location.ttl in Resources */,
 				DA4AB8C51B062A1A00D684CE /* Main.storyboard in Resources */,
-				DA20880B1B32B2B70074B702 /* game.ttl in Resources */,
-				DA20880A1B32B2B70074B702 /* crime.ttl in Resources */,
-				DA20880E1B32B2B70074B702 /* school.ttl in Resources */,
-				DA20880D1B32B2B70074B702 /* point.ttl in Resources */,
 				DA6DE4A11B0E9C3200D94B4D /* LBCSchool-processed.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
