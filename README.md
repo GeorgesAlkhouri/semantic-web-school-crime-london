@@ -1,3 +1,5 @@
+*Work in progress*
+
 # Semantic-Web School Crime London
 A semantic web project with multiple data sources and triple store usage.
 
