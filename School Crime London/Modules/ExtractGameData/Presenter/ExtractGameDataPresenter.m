@@ -12,6 +12,11 @@
 
 @implementation ExtractGameDataPresenter
 
+- (void)progressUpdated:(double)progress {
+
+    [self.mainViewDelegate showProgress:progress];
+}
+
 - (void)extractDataWithAPIKey:(NSString *)APIKey userKey:(NSString *)userKey {
 
     [self.mainViewDelegate

@@ -48,6 +48,10 @@
 - (void)extractPegiDataWithMaxPageCount:(NSNumber *)pageCount
                                  APIKey:(NSString *)APIKey
                                 userKey:(NSString *)userKey
+                          progressBlock:
+                              (void (^)(NSUInteger numberOfFinishedOperations,
+                                        NSUInteger totalNumberOfOperations))
+                                  progressBlock
                              completion:(void (^)(NSError *error,
                                                   NSArray *results))completion {
 
@@ -86,34 +90,30 @@
         [requestOperations addObject:operation];
     }
 
-    NSArray *operations =
-        [AFURLConnectionOperation batchOfRequestOperations:requestOperations
-            progressBlock:^(NSUInteger numberOfFinishedOperations,
-                            NSUInteger totalNumberOfOperations) {
-                NSLog(@"%f", (double)numberOfFinishedOperations /
-                                 totalNumberOfOperations);
-            }
-            completionBlock:^(NSArray *operations) {
+    NSArray *operations = [AFURLConnectionOperation
+        batchOfRequestOperations:requestOperations
+                   progressBlock:progressBlock
+                 completionBlock:^(NSArray *operations) {
 
-                NSMutableArray *results = [NSMutableArray new];
+                     NSMutableArray *results = [NSMutableArray new];
 
-                for (AFHTTPRequestOperation *operation in operations) {
+                     for (AFHTTPRequestOperation *operation in operations) {
 
-                    id responseObject = operation.responseObject;
+                         id responseObject = operation.responseObject;
 
-                    if (operation.error) {
+                         if (operation.error) {
 
-                        if (completion)
-                            completion(operation.error, nil);
-                        return;
-                    }
+                             if (completion)
+                                 completion(operation.error, nil);
+                             return;
+                         }
 
-                    [results addObject:responseObject];
-                }
+                         [results addObject:responseObject];
+                     }
 
-                if (completion)
-                    completion(nil, [results copy]);
-            }];
+                     if (completion)
+                         completion(nil, [results copy]);
+                 }];
 
     [[NSOperationQueue mainQueue] addOperations:operations
                               waitUntilFinished:NO];

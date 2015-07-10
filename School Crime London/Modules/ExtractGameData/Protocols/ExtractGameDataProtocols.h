@@ -49,8 +49,7 @@
 @property(nonatomic, weak) id<ExtractGameDataViewProtocol> view;
 @property(nonatomic, strong)
     id<ExtractGameDataInteractorInputProtocol> interactor;
-@property(nonatomic, strong)
-    id<ExtractGameDataWireFrameProtocol> wireFrame;
+@property(nonatomic, strong) id<ExtractGameDataWireFrameProtocol> wireFrame;
 /**
  * Add here your methods for communication VIEWCONTROLLER -> PRESENTER
  */
@@ -63,6 +62,11 @@
 
 - (void)extractionFinishedWithResults:(NSArray *)results;
 - (void)errorOccurred:(NSError *)error;
+
+/*
+ * Param: progress in percent
+ */
+- (void)progressUpdated:(double)progress;
 
 @end
 
@@ -99,9 +103,14 @@
                               userKey:(NSString *)userKey
                            completion:
                                (void (^)(NSError *error, id result))completion;
+
 - (void)extractPegiDataWithMaxPageCount:(NSNumber *)pageCount
                                  APIKey:(NSString *)APIKey
                                 userKey:(NSString *)userKey
+                          progressBlock:
+                              (void (^)(NSUInteger numberOfFinishedOperations,
+                                        NSUInteger totalNumberOfOperations))
+                                  progressBlock
                              completion:(void (^)(NSError *error,
                                                   NSArray *results))completion;
 

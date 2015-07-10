@@ -64,6 +64,11 @@
 - (void)requestSucceededWithResults:(NSArray *)result;
 - (void)requestFailedWithError:(NSError *)error;
 
+/*
+ * Param: progress in percent
+ */
+- (void)progressUpdated:(double)progress;
+
 @end
 
 @protocol SearchCrimeSceneInteractorInputProtocol
@@ -95,9 +100,14 @@
  * Add here your methods for communication INTERACTOR -> APIDATAMANAGER
  */
 
-- (void)requestPoliceDataStoreWithParameters:
-            (NSArray *)parameter completion:
-                (void (^)(NSArray *results, NSError *error))completion;
+- (void)
+requestPoliceDataStoreWithParameters:(NSArray *)parameter
+                       progressBlock:
+                           (void (^)(NSUInteger numberOfFinishedOperations,
+                                     NSUInteger totalNumberOfOperations))
+                               progressBlock
+                          completion:(void (^)(NSArray *results,
+                                               NSError *error))completion;
 
 @end
 

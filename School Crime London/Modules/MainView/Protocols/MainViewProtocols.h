@@ -27,6 +27,11 @@
 - (void)showInformationText:(NSString *)text;
 - (void)showError:(NSString *)errorText;
 
+/*
+ * Param: progress - progress in percent
+ */
+- (void)showProgress:(double)progress;
+
 @end
 
 @protocol MainViewBuildRdfDelegateProtocol <MainViewDelegateProtocol>
@@ -46,8 +51,7 @@
 
 @end
 
-@protocol
-    MainViewExtractGameDataDelegateProtocol <MainViewDelegateProtocol>
+@protocol MainViewExtractGameDataDelegateProtocol <MainViewDelegateProtocol>
 
 @property(nonatomic, strong)
     id<ExtractGameDataConnectionProtocol> extractGameDataConnection;
@@ -81,6 +85,7 @@
  */
 
 - (void)setInfoLabelText:(NSString *)text;
+- (void)setProgress:(double)progress;
 
 @end
 

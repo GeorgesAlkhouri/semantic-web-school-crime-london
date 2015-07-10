@@ -29,27 +29,31 @@
 
                                [self.APIDataManager
                                    extractPegiDataWithMaxPageCount:maxPageCount
-                                                            APIKey:APIKey
-                                                           userKey:userKey
-                                                        completion:^(NSError
-                                                                         *error,
-                                                                     NSArray *
-                                                                         results) {
+                                   APIKey:APIKey
+                                   userKey:userKey
+                                   progressBlock:
+                                       ^(NSUInteger numberOfFinishedOperations,
+                                         NSUInteger totalNumberOfOperations) {
 
-                                                            if (error) {
+                                           [self.presenter
+                                               progressUpdated:
+                                                   (double)
+                                                       numberOfFinishedOperations /
+                                                   totalNumberOfOperations];
+                                       }
+                                   completion:^(NSError *error,
+                                                NSArray *results) {
 
-                                                                [self.presenter
-                                                                    errorOccurred:
-                                                                        error];
+                                       if (error) {
 
-                                                            } else {
+                                           [self.presenter errorOccurred:error];
 
-                                                                [self
-                                                                    processResults:
-                                                                        results];
-                                                            }
+                                       } else {
 
-                                                        }];
+                                           [self processResults:results];
+                                       }
+
+                                   }];
 
                            }];
 }
@@ -96,13 +100,15 @@
 
                 NSDateFormatter *formatter = [NSDateFormatter new];
                 formatter.dateFormat = @"yyyy-MM-dd";
-                
-                NSDate * releaseDate = [formatter dateFromString:result[@"main"][1]];
-                
+
+                NSDate *releaseDate =
+                    [formatter dateFromString:result[@"main"][1]];
+
                 formatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ss";
-                
-                NSString * formattedReleaseDate = [formatter stringFromDate:releaseDate];
-            
+
+                NSString *formattedReleaseDate =
+                    [formatter stringFromDate:releaseDate];
+
                 NSDictionary *game = @{
                     @"GameName" : result[@"main"][0],
                     @"ReleaseDate" : formattedReleaseDate,
@@ -140,9 +146,10 @@
         [[NSMutableArray alloc] init]; // This is an array of group names seen
                                        // so far
 
-    NSString *name;                              // Preallocation of group name
-    for (NSDictionary *group in groups) {        // Iterate through all groups
-        name = [[group objectForKey:@"GameName"] lowercaseString]; // Get the group name
+    NSString *name;                       // Preallocation of group name
+    for (NSDictionary *group in groups) { // Iterate through all groups
+        name = [[group objectForKey:@"GameName"] lowercaseString]; // Get the
+                                                                   // group name
         if ([groupNamesEncountered indexOfObject:name] ==
             NSNotFound) { // Check if this group name hasn't been encountered
                           // before

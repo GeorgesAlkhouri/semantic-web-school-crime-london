@@ -45,12 +45,16 @@
         }
     }
 
-    [self.APIDataManager
-        requestPoliceDataStoreWithParameters:[parameters copy]
-                                  completion:^(NSArray *results,
-                                               NSError *error) {
-                                      [self processResults:results error:error];
-                                  }];
+    [self.APIDataManager requestPoliceDataStoreWithParameters:[parameters copy]
+        progressBlock:^(NSUInteger numberOfFinishedOperations,
+                        NSUInteger totalNumberOfOperations) {
+
+            [self.presenter progressUpdated:(double)numberOfFinishedOperations /
+                                            totalNumberOfOperations];
+        }
+        completion:^(NSArray *results, NSError *error) {
+            [self processResults:results error:error];
+        }];
 }
 
 #pragma mark - Private

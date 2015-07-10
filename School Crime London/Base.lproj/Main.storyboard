@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7706"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -656,6 +656,8 @@
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <value key="minSize" type="size" width="480" height="270"/>
+                        <value key="maxSize" type="size" width="480" height="270"/>
                     </window>
                     <connections>
                         <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
@@ -764,10 +766,19 @@
                                     <constraint firstItem="Dss-6A-DyK" firstAttribute="top" secondItem="AeP-Xd-kEb" secondAttribute="top" id="kGz-rp-REI"/>
                                 </constraints>
                             </customView>
+                            <progressIndicator maxValue="100" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="b0e-QQ-UvT">
+                                <rect key="frame" x="16" y="43" width="366" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Mti-PK-OOA"/>
+                                    <constraint firstAttribute="width" constant="366" id="zLK-q5-5U5"/>
+                                </constraints>
+                            </progressIndicator>
                         </subviews>
                         <constraints>
                             <constraint firstItem="1Af-yr-QVW" firstAttribute="leading" secondItem="h6F-5P-ywe" secondAttribute="trailing" constant="8" id="8l1-2n-USI"/>
+                            <constraint firstItem="z8g-0B-Pqg" firstAttribute="top" secondItem="b0e-QQ-UvT" secondAttribute="bottom" constant="7" id="9wU-tF-v9x"/>
                             <constraint firstItem="Z5x-Hg-0dy" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="22" id="A9g-fX-rxm"/>
+                            <constraint firstItem="b0e-QQ-UvT" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="16" id="I1W-fG-HJy"/>
                             <constraint firstItem="z8g-0B-Pqg" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="16" id="S11-vV-4QG"/>
                             <constraint firstAttribute="trailing" secondItem="Mgl-zH-x5K" secondAttribute="trailing" constant="20" id="UWw-77-dkp"/>
                             <constraint firstItem="1Af-yr-QVW" firstAttribute="leading" secondItem="h6F-5P-ywe" secondAttribute="trailing" constant="8" id="bx6-yy-0QG"/>
@@ -788,6 +799,7 @@
                         <outlet property="importAPIKey" destination="Dss-6A-DyK" id="69j-LM-DMo"/>
                         <outlet property="importUserKey" destination="YBo-W5-eLS" id="H9Z-g2-fgJ"/>
                         <outlet property="infoLabel" destination="z8g-0B-Pqg" id="yWF-KO-iuz"/>
+                        <outlet property="progressIndicator" destination="b0e-QQ-UvT" id="6cB-Eb-97b"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

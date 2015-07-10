@@ -67,6 +67,11 @@ presentExtractGameDataModuleFrom:
 - (void)translationDidFinishedWithResults:(NSArray *)results;
 - (void)translationDidFinishedWithError:(NSError *)error;
 
+/*
+ * Param: progress in percent
+ */
+- (void)progressUpdated:(double)progress;
+
 @end
 
 @protocol TranslateSchoolNamesToCoordsInteractorInputProtocol
@@ -99,10 +104,14 @@ presentExtractGameDataModuleFrom:
  * Add here your methods for communication INTERACTOR -> APIDATAMANAGER
  */
 
-- (void)requestCoordsWithLocationNames:(NSArray *)requestData
-                                APIKey:(NSString *)APIKey
-                            completion:(void (^)(NSError *error,
-                                                 NSArray *results))completion;
+- (void)
+requestCoordsWithLocationNames:(NSArray *)requestData
+                        APIKey:(NSString *)APIKey
+                 progressBlock:
+                     (void (^)(NSUInteger numberOfFinishedOperations,
+                               NSUInteger totalNumberOfOperations))progressBlock
+                    completion:
+                        (void (^)(NSError *error, NSArray *results))completion;
 
 @end
 

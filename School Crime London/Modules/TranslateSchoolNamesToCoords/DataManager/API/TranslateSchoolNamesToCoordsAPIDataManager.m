@@ -9,10 +9,14 @@
 
 @implementation TranslateSchoolNamesToCoordsAPIDataManager
 
-- (void)requestCoordsWithLocationNames:(NSArray *)requestData
-                                APIKey:(NSString *)APIKey
-                            completion:(void (^)(NSError *error,
-                                                 NSArray *results))completion {
+- (void)
+requestCoordsWithLocationNames:(NSArray *)requestData
+                        APIKey:(NSString *)APIKey
+                 progressBlock:
+                     (void (^)(NSUInteger numberOfFinishedOperations,
+                               NSUInteger totalNumberOfOperations))progressBlock
+                    completion:
+                        (void (^)(NSError *error, NSArray *results))completion {
 
     if (!completion)
         return;
@@ -35,7 +39,7 @@
 
     NSArray *operations = [AFURLConnectionOperation
         batchOfRequestOperations:requestOperations
-                   progressBlock:nil
+                   progressBlock:progressBlock
                  completionBlock:^(NSArray *operations) {
 
                      [self processResultWithCompletion:completion

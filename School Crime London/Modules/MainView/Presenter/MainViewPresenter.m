@@ -21,6 +21,8 @@
 
 @implementation MainViewPresenter
 
+#pragma mark - MainViewDelegateProtocol
+
 - (void)showInformationText:(NSString *)text {
 
     [self.view setInfoLabelText:text];
@@ -30,6 +32,13 @@
 
     [self.view setInfoLabelText:errorText];
 }
+
+- (void)showProgress:(double)progress {
+
+    [self.view setProgress:progress * 100];
+}
+
+#pragma mark - MainViewPresenterProtocol
 
 - (void)setImportIOAPIKey:(NSString *)APIKey {
 
@@ -48,6 +57,8 @@
 
 - (void)actionButtonPressed {
 
+    [self showProgress:0.0];
+
     NSArray *schoolData =
         [self.parseLondonDataStoreDataConnection parseLondonDataStoreData:nil];
 
@@ -56,7 +67,11 @@
                         schoolData:schoolData];
 }
 
+#pragma mark - Delegate Protocols
+
 - (void)extractionDidFinishWithResults:(NSArray *)results {
+
+    [self showProgress:0.0];
 
     self.gameData = results;
 
@@ -66,6 +81,8 @@
 
 - (void)translationDidFinishWithResults:(NSArray *)results {
 
+    [self showProgress:0.0];
+
     self.schoolData = results;
 
     [self.extractGameDataConnection extractDataWithAPIKey:self.importIOAPIKey
@@ -73,6 +90,8 @@
 }
 
 - (void)requestCrimeSceneFinishedWithResults:(NSArray *)results {
+
+    [self showProgress:0.0];
 
     self.crimeData = results;
 

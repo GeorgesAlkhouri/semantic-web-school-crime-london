@@ -17,6 +17,11 @@
                                              gameData:games];
 }
 
+- (void)progressUpdated:(double)progress {
+
+    [self.mainViewDelegate showProgress:progress];
+}
+
 - (void)requestFailedWithError:(NSError *)error {
 
     [self.mainViewDelegate showError:error.localizedDescription];

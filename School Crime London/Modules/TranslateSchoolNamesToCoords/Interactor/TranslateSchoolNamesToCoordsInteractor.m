@@ -20,14 +20,18 @@
     NSMutableArray *schoolAdresses;
     schoolAdresses = [self buildLocationNamesWithSchoolData:schoolData];
 
-    [self.APIDataManager
-        requestCoordsWithLocationNames:[schoolAdresses copy]
-                                APIKey:APIKey
-                            completion:^(NSError *error, NSArray *results) {
+    [self.APIDataManager requestCoordsWithLocationNames:[schoolAdresses copy]
+        APIKey:APIKey
+        progressBlock:^(NSUInteger numberOfFinishedOperations,
+                        NSUInteger totalNumberOfOperations) {
 
-                                [self processResultsWithError:error
-                                                      results:results];
-                            }];
+            [self.presenter progressUpdated:(double)numberOfFinishedOperations /
+                                            totalNumberOfOperations];
+        }
+        completion:^(NSError *error, NSArray *results) {
+
+            [self processResultsWithError:error results:results];
+        }];
 }
 
 - (NSMutableArray *)buildLocationNamesWithSchoolData:(NSArray *)schoolData {

@@ -32,4 +32,9 @@
     [self.mainViewDelegate translationDidFinishWithResults:results];
 }
 
+- (void)progressUpdated:(double)progress {
+    
+    [self.mainViewDelegate showProgress:progress];
+}
+
 @end

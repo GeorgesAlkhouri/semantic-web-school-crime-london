@@ -12,6 +12,8 @@
 @property(weak) IBOutlet NSTextField *geofencingAPIKey;
 @property(weak) IBOutlet NSTextField *infoLabel;
 
+@property(weak) IBOutlet NSProgressIndicator *progressIndicator;
+
 @end
 
 @implementation MainViewView
@@ -34,6 +36,11 @@
 - (void)setInfoLabelText:(NSString *)text {
 
     self.infoLabel.stringValue = text;
+}
+
+- (void)setProgress:(double)progress {
+
+    self.progressIndicator.doubleValue = progress;
 }
 
 @end

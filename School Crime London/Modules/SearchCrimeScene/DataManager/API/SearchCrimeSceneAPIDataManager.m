@@ -9,9 +9,14 @@
 
 @implementation SearchCrimeSceneAPIDataManager
 
-- (void)requestPoliceDataStoreWithParameters:
-            (NSArray *)parameters completion:
-                (void (^)(NSArray *results, NSError *error))completion {
+- (void)
+requestPoliceDataStoreWithParameters:(NSArray *)parameters
+                       progressBlock:
+                           (void (^)(NSUInteger numberOfFinishedOperations,
+                                     NSUInteger totalNumberOfOperations))
+                               progressBlock
+                          completion:(void (^)(NSArray *results,
+                                               NSError *error))completion {
 
     NSMutableArray *operations = [NSMutableArray new];
 
@@ -43,46 +48,40 @@
         }
     }
 
-    NSArray *op =
-        [AFURLConnectionOperation batchOfRequestOperations:[operations copy]
-            progressBlock:^(NSUInteger numberOfFinishedOperations,
-                            NSUInteger totalNumberOfOperations) {
+    NSArray *op = [AFURLConnectionOperation
+        batchOfRequestOperations:[operations copy]
+                   progressBlock:progressBlock
+                 completionBlock:^(NSArray *operations) {
 
-                NSLog(@"%f", (double)numberOfFinishedOperations /
-                                 totalNumberOfOperations);
+                     NSMutableArray *results = [NSMutableArray new];
 
-            }
-            completionBlock:^(NSArray *operations) {
+                     for (AFHTTPRequestOperation *operation in operations) {
 
-                NSMutableArray *results = [NSMutableArray new];
+                         if (operation.error) {
 
-                for (AFHTTPRequestOperation *operation in operations) {
+                             if (completion)
+                                 completion(nil, operation.error);
 
-                    if (operation.error) {
+                             return;
+                         }
 
-                        if (completion)
-                            completion(nil, operation.error);
+                         id responseObject = operation.responseObject;
 
-                        return;
-                    }
+                         if (responseObject) {
 
-                    id responseObject = operation.responseObject;
+                             NSDictionary *result = @{
+                                 @"Result" : responseObject,
+                                 @"OriginalData" : operation.originalData
+                             };
 
-                    if (responseObject) {
+                             [results addObject:result];
+                         }
+                     }
 
-                        NSDictionary *result = @{
-                            @"Result" : responseObject,
-                            @"OriginalData" : operation.originalData
-                        };
+                     if (completion)
+                         completion([results copy], nil);
 
-                        [results addObject:result];
-                    }
-                }
-
-                if (completion)
-                    completion([results copy], nil);
-
-            }];
+                 }];
 
     [[NSOperationQueue mainQueue] addOperations:op waitUntilFinished:NO];
 }
