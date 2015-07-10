@@ -10,17 +10,18 @@
 #import "TranslateSchoolNamesToCoordsWireFrame.h"
 #import "SearchCrimeSceneWireFrame.h"
 #import "BuildRdfWireFrame.h"
+#import "TripleStoreQueryWireFrame.h"
 
 @interface MainViewWireFrame ()
 
-@property(nonatomic)
-    ExtractGameDataWireFrame *extractGameDataWireFrame;
+@property(nonatomic) ExtractGameDataWireFrame *extractGameDataWireFrame;
 @property(nonatomic)
     ParseLondonDataStoreDataWireFrame *parseLondonDataStoreDataWireFrame;
 @property(nonatomic) TranslateSchoolNamesToCoordsWireFrame
     *translateSchoolNamesToCoordsWireFrame;
 @property(nonatomic) SearchCrimeSceneWireFrame *searchCrimeSceneWireFrame;
 @property(nonatomic) BuildRdfWireFrame *buildRdfWireFrame;
+@property(nonatomic) TripleStoreQueryWireFrame *tripleStoreQueryWireFrame;
 
 @property(nonatomic, weak) id<MainViewPresenterProtocol> presenter;
 
@@ -55,10 +56,9 @@
     // Building dependencies
 
     [(MainViewWireFrame *)wireFrame
-        setExtractGameDataWireFrame:
-            [ExtractGameDataWireFrame
-                presentExtractGameDataModuleFrom:nil
-                                         withDelegate:presenter]];
+        setExtractGameDataWireFrame:[ExtractGameDataWireFrame
+                                        presentExtractGameDataModuleFrom:
+                                            nil withDelegate:presenter]];
     [(MainViewWireFrame *)wireFrame
         setParseLondonDataStoreDataWireFrame:
             [ParseLondonDataStoreDataWireFrame
@@ -69,7 +69,7 @@
         setTranslateSchoolNamesToCoordsWireFrame:
             [TranslateSchoolNamesToCoordsWireFrame
                 presentExtractGameDataModuleFrom:nil
-                                         withDelegate:presenter]];
+                                    withDelegate:presenter]];
 
     [(MainViewWireFrame *)wireFrame
         setSearchCrimeSceneWireFrame:[SearchCrimeSceneWireFrame
@@ -80,6 +80,11 @@
         setBuildRdfWireFrame:[BuildRdfWireFrame
                                  presentBuildRdfModuleFrom:nil
                                               withDelegate:presenter]];
+
+    [(MainViewWireFrame *)wireFrame
+        setTripleStoreQueryWireFrame:[TripleStoreQueryWireFrame
+                                         presentTripleStoreQueryModuleFrom:
+                                             nil withDelegate:presenter]];
 
     [(MainViewWireFrame *)wireFrame setPresenter:presenter];
 

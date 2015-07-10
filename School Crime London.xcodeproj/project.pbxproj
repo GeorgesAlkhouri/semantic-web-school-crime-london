@@ -52,6 +52,13 @@
 		DAACE0341B0BDFC10059B44A /* ParseLondonDataStoreDataPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = DAACE0271B0BDFC10059B44A /* ParseLondonDataStoreDataPresenter.m */; };
 		DAACE0351B0BDFC10059B44A /* ParseLondonDataStoreDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAACE02C1B0BDFC10059B44A /* ParseLondonDataStoreDataView.m */; };
 		DAACE0361B0BDFC10059B44A /* ParseLondonDataStoreDataWireFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = DAACE02F1B0BDFC10059B44A /* ParseLondonDataStoreDataWireFrame.m */; };
+		DAB2885E1B50083500F99CF6 /* TripleStoreQueryAPIDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB2884A1B50083500F99CF6 /* TripleStoreQueryAPIDataManager.m */; };
+		DAB2885F1B50083500F99CF6 /* TripleStoreQueryLocalDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB2884D1B50083500F99CF6 /* TripleStoreQueryLocalDataManager.m */; };
+		DAB288601B50083500F99CF6 /* TripleStoreQueryInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB288501B50083500F99CF6 /* TripleStoreQueryInteractor.m */; };
+		DAB288611B50083500F99CF6 /* TripleStoreQueryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB288521B50083500F99CF6 /* TripleStoreQueryItem.m */; };
+		DAB288621B50083500F99CF6 /* TripleStoreQueryPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB288551B50083500F99CF6 /* TripleStoreQueryPresenter.m */; };
+		DAB288631B50083500F99CF6 /* TripleStoreQueryView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB2885A1B50083500F99CF6 /* TripleStoreQueryView.m */; };
+		DAB288641B50083500F99CF6 /* TripleStoreQueryWireFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB2885D1B50083500F99CF6 /* TripleStoreQueryWireFrame.m */; };
 		DAE387821B14815D009229C8 /* SearchCrimeSceneAPIDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE3876E1B14815D009229C8 /* SearchCrimeSceneAPIDataManager.m */; };
 		DAE387831B14815D009229C8 /* SearchCrimeSceneLocalDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE387711B14815D009229C8 /* SearchCrimeSceneLocalDataManager.m */; };
 		DAE387841B14815D009229C8 /* SearchCrimeSceneInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE387741B14815D009229C8 /* SearchCrimeSceneInteractor.m */; };
@@ -167,6 +174,21 @@
 		DAACE02C1B0BDFC10059B44A /* ParseLondonDataStoreDataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseLondonDataStoreDataView.m; sourceTree = "<group>"; };
 		DAACE02E1B0BDFC10059B44A /* ParseLondonDataStoreDataWireFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseLondonDataStoreDataWireFrame.h; sourceTree = "<group>"; };
 		DAACE02F1B0BDFC10059B44A /* ParseLondonDataStoreDataWireFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseLondonDataStoreDataWireFrame.m; sourceTree = "<group>"; };
+		DAB288491B50083500F99CF6 /* TripleStoreQueryAPIDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripleStoreQueryAPIDataManager.h; sourceTree = "<group>"; };
+		DAB2884A1B50083500F99CF6 /* TripleStoreQueryAPIDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripleStoreQueryAPIDataManager.m; sourceTree = "<group>"; };
+		DAB2884C1B50083500F99CF6 /* TripleStoreQueryLocalDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripleStoreQueryLocalDataManager.h; sourceTree = "<group>"; };
+		DAB2884D1B50083500F99CF6 /* TripleStoreQueryLocalDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripleStoreQueryLocalDataManager.m; sourceTree = "<group>"; };
+		DAB2884F1B50083500F99CF6 /* TripleStoreQueryInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripleStoreQueryInteractor.h; sourceTree = "<group>"; };
+		DAB288501B50083500F99CF6 /* TripleStoreQueryInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripleStoreQueryInteractor.m; sourceTree = "<group>"; };
+		DAB288511B50083500F99CF6 /* TripleStoreQueryItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripleStoreQueryItem.h; sourceTree = "<group>"; };
+		DAB288521B50083500F99CF6 /* TripleStoreQueryItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripleStoreQueryItem.m; sourceTree = "<group>"; };
+		DAB288541B50083500F99CF6 /* TripleStoreQueryPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripleStoreQueryPresenter.h; sourceTree = "<group>"; };
+		DAB288551B50083500F99CF6 /* TripleStoreQueryPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripleStoreQueryPresenter.m; sourceTree = "<group>"; };
+		DAB288571B50083500F99CF6 /* TripleStoreQueryProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripleStoreQueryProtocols.h; sourceTree = "<group>"; };
+		DAB288591B50083500F99CF6 /* TripleStoreQueryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripleStoreQueryView.h; sourceTree = "<group>"; };
+		DAB2885A1B50083500F99CF6 /* TripleStoreQueryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripleStoreQueryView.m; sourceTree = "<group>"; };
+		DAB2885C1B50083500F99CF6 /* TripleStoreQueryWireFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripleStoreQueryWireFrame.h; sourceTree = "<group>"; };
+		DAB2885D1B50083500F99CF6 /* TripleStoreQueryWireFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripleStoreQueryWireFrame.m; sourceTree = "<group>"; };
 		DAE3876D1B14815D009229C8 /* SearchCrimeSceneAPIDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchCrimeSceneAPIDataManager.h; sourceTree = "<group>"; };
 		DAE3876E1B14815D009229C8 /* SearchCrimeSceneAPIDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchCrimeSceneAPIDataManager.m; sourceTree = "<group>"; };
 		DAE387701B14815D009229C8 /* SearchCrimeSceneLocalDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchCrimeSceneLocalDataManager.h; sourceTree = "<group>"; };
@@ -456,6 +478,7 @@
 		DA9E21EA1B062C70001507A3 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				DAB288461B50083500F99CF6 /* TripleStoreQuery */,
 				DA9F45F01B1CBC5900DB96C8 /* BuildRdf */,
 				DAE3876A1B14815D009229C8 /* SearchCrimeScene */,
 				DA93FD921B0DD68D00D7375A /* MainView */,
@@ -745,6 +768,92 @@
 			path = WireFrame;
 			sourceTree = "<group>";
 		};
+		DAB288461B50083500F99CF6 /* TripleStoreQuery */ = {
+			isa = PBXGroup;
+			children = (
+				DAB288471B50083500F99CF6 /* DataManager */,
+				DAB2884E1B50083500F99CF6 /* Interactor */,
+				DAB288531B50083500F99CF6 /* Presenter */,
+				DAB288561B50083500F99CF6 /* Protocols */,
+				DAB288581B50083500F99CF6 /* View */,
+				DAB2885B1B50083500F99CF6 /* WireFrame */,
+			);
+			path = TripleStoreQuery;
+			sourceTree = "<group>";
+		};
+		DAB288471B50083500F99CF6 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				DAB288481B50083500F99CF6 /* API */,
+				DAB2884B1B50083500F99CF6 /* Local */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		DAB288481B50083500F99CF6 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				DAB288491B50083500F99CF6 /* TripleStoreQueryAPIDataManager.h */,
+				DAB2884A1B50083500F99CF6 /* TripleStoreQueryAPIDataManager.m */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		DAB2884B1B50083500F99CF6 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				DAB2884C1B50083500F99CF6 /* TripleStoreQueryLocalDataManager.h */,
+				DAB2884D1B50083500F99CF6 /* TripleStoreQueryLocalDataManager.m */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		DAB2884E1B50083500F99CF6 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				DAB2884F1B50083500F99CF6 /* TripleStoreQueryInteractor.h */,
+				DAB288501B50083500F99CF6 /* TripleStoreQueryInteractor.m */,
+				DAB288511B50083500F99CF6 /* TripleStoreQueryItem.h */,
+				DAB288521B50083500F99CF6 /* TripleStoreQueryItem.m */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		DAB288531B50083500F99CF6 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				DAB288541B50083500F99CF6 /* TripleStoreQueryPresenter.h */,
+				DAB288551B50083500F99CF6 /* TripleStoreQueryPresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		DAB288561B50083500F99CF6 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DAB288571B50083500F99CF6 /* TripleStoreQueryProtocols.h */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		DAB288581B50083500F99CF6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DAB288591B50083500F99CF6 /* TripleStoreQueryView.h */,
+				DAB2885A1B50083500F99CF6 /* TripleStoreQueryView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DAB2885B1B50083500F99CF6 /* WireFrame */ = {
+			isa = PBXGroup;
+			children = (
+				DAB2885C1B50083500F99CF6 /* TripleStoreQueryWireFrame.h */,
+				DAB2885D1B50083500F99CF6 /* TripleStoreQueryWireFrame.m */,
+			);
+			path = WireFrame;
+			sourceTree = "<group>";
+		};
 		DAE3876A1B14815D009229C8 /* SearchCrimeScene */ = {
 			isa = PBXGroup;
 			children = (
@@ -974,6 +1083,7 @@
 				DA9E22041B062E85001507A3 /* ExtractGameDataLocalDataManager.m in Sources */,
 				DA9F460E1B1CBC5900DB96C8 /* BuildRdfWireFrame.m in Sources */,
 				DAE387851B14815D009229C8 /* SearchCrimeSceneItem.m in Sources */,
+				DAB288631B50083500F99CF6 /* TripleStoreQueryView.m in Sources */,
 				DAACE0341B0BDFC10059B44A /* ParseLondonDataStoreDataPresenter.m in Sources */,
 				DA9F460B1B1CBC5900DB96C8 /* BuildRdfItem.m in Sources */,
 				DA739AEF1B0E3AF600392983 /* TranslateSchoolNamesToCoordsLocalDataManager.m in Sources */,
@@ -984,11 +1094,15 @@
 				DA93FDAC1B0DD68D00D7375A /* MainViewInteractor.m in Sources */,
 				DA9E22071B062E85001507A3 /* ExtractGameDataPresenter.m in Sources */,
 				DA739AF11B0E3AF600392983 /* TranslateSchoolNamesToCoordsItem.m in Sources */,
+				DAB288641B50083500F99CF6 /* TripleStoreQueryWireFrame.m in Sources */,
 				DA93FDAF1B0DD68D00D7375A /* MainViewView.m in Sources */,
 				DAACE0301B0BDFC10059B44A /* ParseLondonDataStoreDataAPIDataManager.m in Sources */,
 				DA9E22051B062E85001507A3 /* ExtractGameDataInteractor.m in Sources */,
+				DAB288621B50083500F99CF6 /* TripleStoreQueryPresenter.m in Sources */,
+				DAB288611B50083500F99CF6 /* TripleStoreQueryItem.m in Sources */,
 				DA4AB8BD1B062A1A00D684CE /* main.m in Sources */,
 				DA9E22081B062E85001507A3 /* ExtractGameDataView.m in Sources */,
+				DAB288601B50083500F99CF6 /* TripleStoreQueryInteractor.m in Sources */,
 				DA739AEE1B0E3AF600392983 /* TranslateSchoolNamesToCoordsAPIDataManager.m in Sources */,
 				DAACE0351B0BDFC10059B44A /* ParseLondonDataStoreDataView.m in Sources */,
 				DA9F46091B1CBC5900DB96C8 /* BuildRdfLocalDataManager.m in Sources */,
@@ -1002,12 +1116,14 @@
 				DA739AF31B0E3AF600392983 /* TranslateSchoolNamesToCoordsView.m in Sources */,
 				DA9E22091B062E85001507A3 /* ExtractGameDataWireFrame.m in Sources */,
 				DAE387841B14815D009229C8 /* SearchCrimeSceneInteractor.m in Sources */,
+				DAB2885F1B50083500F99CF6 /* TripleStoreQueryLocalDataManager.m in Sources */,
 				DAE387821B14815D009229C8 /* SearchCrimeSceneAPIDataManager.m in Sources */,
 				DA9E22061B062E85001507A3 /* ExtractGameDataItem.m in Sources */,
 				DAE387871B14815D009229C8 /* SearchCrimeSceneView.m in Sources */,
 				DAAAF22F1B23B83300CC2545 /* NSString+Additions.m in Sources */,
 				DA9F460D1B1CBC5900DB96C8 /* BuildRdfView.m in Sources */,
 				DAE387831B14815D009229C8 /* SearchCrimeSceneLocalDataManager.m in Sources */,
+				DAB2885E1B50083500F99CF6 /* TripleStoreQueryAPIDataManager.m in Sources */,
 				DA9F45EF1B1C967000DB96C8 /* AFHTTPRequestOperation+Additions.m in Sources */,
 				DA93FDAD1B0DD68D00D7375A /* MainViewItem.m in Sources */,
 				DA9F46081B1CBC5900DB96C8 /* BuildRdfAPIDataManager.m in Sources */,

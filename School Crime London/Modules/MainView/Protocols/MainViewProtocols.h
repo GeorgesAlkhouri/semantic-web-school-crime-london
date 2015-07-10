@@ -19,6 +19,7 @@
 @protocol ParseLondonDataStoreDataConnectionProtocol;
 @protocol SearchCrimeSceneConnectionProtocol;
 @protocol BuildRdfConnectionProtocol;
+@protocol TripleStoreQueryConnectionProtocol;
 
 @class MainViewWireFrame;
 
@@ -31,6 +32,15 @@
  * Param: progress - progress in percent
  */
 - (void)showProgress:(double)progress;
+
+@end
+
+@protocol MainViewTripleStoreQueryDelegateProtocol <MainViewDelegateProtocol>
+
+@property(nonatomic, strong)
+    id<TripleStoreQueryConnectionProtocol> tripleStoreQueryConnection;
+
+- (void)didReceiveResultFromQuery:(NSString *)csvString;
 
 @end
 
@@ -87,6 +97,8 @@
 - (void)setInfoLabelText:(NSString *)text;
 - (void)setProgress:(double)progress;
 
+- (void)enableSaveButton:(double)enable;
+
 @end
 
 @protocol MainViewWireFrameProtocol
@@ -101,7 +113,8 @@
     MainViewExtractGameDataDelegateProtocol,
     MainViewTranslateSchoolNamesToCoordsDelegateProtocol,
     MainViewParseLondonDataStoreDataDelegateProtocol,
-    MainViewSearchCrimeSceneDelegateProtocol, MainViewBuildRdfDelegateProtocol>
+    MainViewSearchCrimeSceneDelegateProtocol, MainViewBuildRdfDelegateProtocol,
+    MainViewTripleStoreQueryDelegateProtocol>
 
 @required
 @property(nonatomic, weak) id<MainViewViewProtocol> view;
@@ -112,7 +125,10 @@
  */
 
 - (void)actionButtonPressed;
+- (void)saveButtonPressed;
 - (void)setGeofencingAPIKey:(NSString *)APIKey;
+- (void)setStoreURL:(NSString *)storeURL;
+- (void)setDatasetName:(NSString *)datasetName;
 
 @end
 

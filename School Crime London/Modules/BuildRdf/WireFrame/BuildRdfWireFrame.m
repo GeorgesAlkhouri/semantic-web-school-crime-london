@@ -4,7 +4,6 @@
 //
 
 #import "BuildRdfWireFrame.h"
-#import "MainViewView.h"
 
 @implementation BuildRdfWireFrame
 

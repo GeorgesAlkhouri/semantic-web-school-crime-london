@@ -9,6 +9,10 @@
 @interface MainViewPresenter ()
 
 @property(nonatomic) NSString *geofencingAPIKey;
+@property(nonatomic) NSString *storeURL;
+@property(nonatomic) NSString *datasetName;
+
+@property(nonatomic) NSString *csv;
 
 @property(nonatomic) NSArray *schoolData;
 @property(nonatomic) NSArray *gameData;
@@ -45,6 +49,8 @@
 - (void)actionButtonPressed {
 
     [self showProgress:0.0];
+    self.csv = nil;
+    [self.view enableSaveButton:NO];
 
     NSArray *schoolData =
         [self.parseLondonDataStoreDataConnection parseLondonDataStoreData:nil];
@@ -52,6 +58,36 @@
     [self.translateSchoolNamesToCoordsConnection
         startTranslatingWithAPIKey:self.geofencingAPIKey
                         schoolData:schoolData];
+}
+
+- (void)saveButtonPressed {
+
+    if (self.csv) {
+
+        NSSavePanel *panel = [NSSavePanel savePanel];
+        panel.nameFieldStringValue = @"Results.csv";
+
+        [panel beginWithCompletionHandler:^(NSInteger result) {
+
+            if (result == NSFileHandlingPanelOKButton) {
+
+                [self.csv writeToURL:[panel URL]
+                          atomically:YES
+                            encoding:NSUTF8StringEncoding
+                               error:nil];
+            }
+        }];
+    }
+}
+
+- (void)setStoreURL:(NSString *)storeURL {
+
+    _storeURL = storeURL;
+}
+
+- (void)setDatasetName:(NSString *)datasetName {
+
+    _datasetName = datasetName;
 }
 
 #pragma mark - Delegate Protocols
@@ -87,6 +123,20 @@
 }
 
 - (void)didBuildRDFDumpWithDump:(NSString *)rdfDump {
+
+    [self.tripleStoreQueryConnection startQueryWithStoreURL:self.storeURL
+                                                datasetName:self.datasetName
+                                                    rdfDump:rdfDump
+                                                   gameData:self.gameData];
+}
+
+- (void)didReceiveResultFromQuery:(NSString *)csvString {
+
+    [self showInformationText:@"Finished. Save CSV"];
+
+    self.csv = csvString;
+
+    [self.view enableSaveButton:YES];
 }
 
 @end

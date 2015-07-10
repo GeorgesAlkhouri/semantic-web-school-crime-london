@@ -10,6 +10,7 @@
 #import "ParseLondonDataStoreDataProtocols.h"
 #import "SearchCrimeSceneProtocols.h"
 #import "BuildRdfProtocols.h"
+#import "TripleStoreQueryProtocols.h"
 
 @class MainViewWireFrame;
 
@@ -29,5 +30,7 @@
 @property(nonatomic, strong)
     id<SearchCrimeSceneConnectionProtocol> searchCrimeSceneConnection;
 @property(nonatomic, strong) id<BuildRdfConnectionProtocol> buildRdfConnection;
+@property(nonatomic, strong)
+    id<TripleStoreQueryConnectionProtocol> tripleStoreQueryConnection;
 
 @end

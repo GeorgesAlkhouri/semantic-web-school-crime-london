@@ -739,7 +739,7 @@
                                 <subviews>
                                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Dss-6A-DyK">
                                         <rect key="frame" x="0.0" y="0.0" width="153" height="22"/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Adress (http://localhost:3030)" drawsBackground="YES" id="Lqd-Cv-NA2">
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="http://localhost:3030" drawsBackground="YES" id="Lqd-Cv-NA2">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -755,7 +755,7 @@
                                     </textField>
                                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="YBo-W5-eLS">
                                         <rect key="frame" x="168" y="0.0" width="153" height="22"/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="dataset" drawsBackground="YES" id="eBa-Yb-zff">
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="dataset name" drawsBackground="YES" id="eBa-Yb-zff">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -785,12 +785,28 @@
                                     <constraint firstAttribute="width" constant="366" id="zLK-q5-5U5"/>
                                 </constraints>
                             </progressIndicator>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="S5b-gi-48j">
+                                <rect key="frame" x="286" y="13" width="102" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="gOs-G6-o9G"/>
+                                    <constraint firstAttribute="height" constant="21" id="uLI-AW-yaN"/>
+                                </constraints>
+                                <buttonCell key="cell" type="push" title="Save CSV" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fxh-Rj-06i">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="saveButtonPressed:" target="XfG-lQ-9wD" id="9zr-JJ-Duu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="1Af-yr-QVW" firstAttribute="leading" secondItem="h6F-5P-ywe" secondAttribute="trailing" constant="8" id="8l1-2n-USI"/>
                             <constraint firstItem="z8g-0B-Pqg" firstAttribute="top" secondItem="b0e-QQ-UvT" secondAttribute="bottom" constant="7" id="9wU-tF-v9x"/>
                             <constraint firstItem="Z5x-Hg-0dy" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="22" id="A9g-fX-rxm"/>
                             <constraint firstItem="b0e-QQ-UvT" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="16" id="I1W-fG-HJy"/>
+                            <constraint firstAttribute="bottom" secondItem="S5b-gi-48j" secondAttribute="bottom" constant="20" id="Li9-v8-bO1"/>
+                            <constraint firstItem="Mgl-zH-x5K" firstAttribute="leading" secondItem="S5b-gi-48j" secondAttribute="trailing" constant="8" id="ROm-bG-FMc"/>
                             <constraint firstItem="z8g-0B-Pqg" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="16" id="S11-vV-4QG"/>
                             <constraint firstAttribute="trailing" secondItem="Mgl-zH-x5K" secondAttribute="trailing" constant="20" id="UWw-77-dkp"/>
                             <constraint firstItem="1Af-yr-QVW" firstAttribute="leading" secondItem="h6F-5P-ywe" secondAttribute="trailing" constant="8" id="bx6-yy-0QG"/>
@@ -807,9 +823,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="datasetName" destination="YBo-W5-eLS" id="Ryq-2o-yGI"/>
                         <outlet property="geofencingAPIKey" destination="1Af-yr-QVW" id="7EB-Dy-3lx"/>
                         <outlet property="infoLabel" destination="z8g-0B-Pqg" id="yWF-KO-iuz"/>
                         <outlet property="progressIndicator" destination="b0e-QQ-UvT" id="6cB-Eb-97b"/>
+                        <outlet property="saveButton" destination="S5b-gi-48j" id="n86-Jd-JdX"/>
+                        <outlet property="storeAdress" destination="Dss-6A-DyK" id="3Jc-nO-cEG"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
