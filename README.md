@@ -7,7 +7,7 @@ The Semantic-Web School Crime London is a study project. The purpose of this pro
 
 ## What is happening?
 
-The application requests diffrent data sources (e.g. [Datastore Police UK](http://data.police.uk)) and creats a turtle dump with the received data. Followed by sending the dump file to a Triple Store (works best with [Fuseki Jena](http://jena.apache.org)) over HTTP.
+The application requests diffrent data sources (e.g. [Datastore Police UK](http://data.police.uk)) and creats a turtle dump with the received data. Followed by sending the dump file to a Triple Store (currently for [Fuseki Jena](http://jena.apache.org)) over HTTP.
 
 After this the application requests a SPARQL query and processes the results as a CSV file.
 
