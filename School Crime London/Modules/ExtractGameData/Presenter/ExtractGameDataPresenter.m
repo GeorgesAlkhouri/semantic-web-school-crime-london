@@ -17,11 +17,11 @@
     [self.mainViewDelegate showProgress:progress];
 }
 
-- (void)extractDataWithAPIKey:(NSString *)APIKey userKey:(NSString *)userKey {
+- (void)extractGameData {
 
     [self.mainViewDelegate
         showInformationText:@"Request Game Information from PEGI"];
-    [self.interactor startDataExtractionWithAPIKey:APIKey userKey:userKey];
+    [self.interactor startDataExtraction];
 }
 
 - (void)extractionFinishedWithResults:(NSArray *)results {

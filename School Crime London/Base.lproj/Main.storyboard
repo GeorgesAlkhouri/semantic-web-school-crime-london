@@ -680,7 +680,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="127" id="pPq-GF-xou"/>
                                 </constraints>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Import.io API Data" id="Ajv-u2-rds">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Triple Store" id="Ajv-u2-rds">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -739,15 +739,23 @@
                                 <subviews>
                                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Dss-6A-DyK">
                                         <rect key="frame" x="0.0" y="0.0" width="153" height="22"/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="API Key (Required)" drawsBackground="YES" id="Lqd-Cv-NA2">
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Adress (http://localhost:3030)" drawsBackground="YES" id="Lqd-Cv-NA2">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7gy-BD-WuF">
+                                        <rect key="frame" x="151" y="0.0" width="19" height="22"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="/" id="Z2g-eR-lRF">
+                                            <font key="font" metaFont="system" size="18"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
                                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="YBo-W5-eLS">
-                                        <rect key="frame" x="153" y="0.0" width="153" height="22"/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="User Key (Required)" drawsBackground="YES" id="eBa-Yb-zff">
+                                        <rect key="frame" x="168" y="0.0" width="153" height="22"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="dataset" drawsBackground="YES" id="eBa-Yb-zff">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -756,12 +764,16 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="YBo-W5-eLS" secondAttribute="bottom" id="2cg-t8-jbg"/>
-                                    <constraint firstItem="YBo-W5-eLS" firstAttribute="leading" secondItem="Dss-6A-DyK" secondAttribute="trailing" id="3RA-i4-Nqp"/>
+                                    <constraint firstItem="YBo-W5-eLS" firstAttribute="leading" secondItem="Dss-6A-DyK" secondAttribute="trailing" constant="15" id="3RA-i4-Nqp"/>
+                                    <constraint firstItem="7gy-BD-WuF" firstAttribute="leading" secondItem="Dss-6A-DyK" secondAttribute="trailing" id="6aW-AE-ekq"/>
                                     <constraint firstItem="Dss-6A-DyK" firstAttribute="width" secondItem="AeP-Xd-kEb" secondAttribute="width" multiplier="1/2" id="80H-G0-Ufw"/>
                                     <constraint firstItem="YBo-W5-eLS" firstAttribute="width" secondItem="AeP-Xd-kEb" secondAttribute="width" multiplier="1/2" id="G9E-mc-Bsb"/>
+                                    <constraint firstItem="7gy-BD-WuF" firstAttribute="top" secondItem="AeP-Xd-kEb" secondAttribute="top" id="GeN-YE-SBX"/>
+                                    <constraint firstAttribute="bottom" secondItem="7gy-BD-WuF" secondAttribute="bottom" id="IiQ-sG-E8l"/>
                                     <constraint firstAttribute="height" constant="22" id="Ljd-Gw-jbw"/>
                                     <constraint firstItem="Dss-6A-DyK" firstAttribute="leading" secondItem="AeP-Xd-kEb" secondAttribute="leading" id="Qwt-1C-av8"/>
                                     <constraint firstAttribute="bottom" secondItem="Dss-6A-DyK" secondAttribute="bottom" id="WGf-IM-VUc"/>
+                                    <constraint firstItem="YBo-W5-eLS" firstAttribute="leading" secondItem="7gy-BD-WuF" secondAttribute="trailing" id="aS0-Kk-q4C"/>
                                     <constraint firstItem="YBo-W5-eLS" firstAttribute="top" secondItem="AeP-Xd-kEb" secondAttribute="top" id="gej-EJ-MyO"/>
                                     <constraint firstItem="Dss-6A-DyK" firstAttribute="top" secondItem="AeP-Xd-kEb" secondAttribute="top" id="kGz-rp-REI"/>
                                 </constraints>
@@ -796,8 +808,6 @@
                     </view>
                     <connections>
                         <outlet property="geofencingAPIKey" destination="1Af-yr-QVW" id="7EB-Dy-3lx"/>
-                        <outlet property="importAPIKey" destination="Dss-6A-DyK" id="69j-LM-DMo"/>
-                        <outlet property="importUserKey" destination="YBo-W5-eLS" id="H9Z-g2-fgJ"/>
                         <outlet property="infoLabel" destination="z8g-0B-Pqg" id="yWF-KO-iuz"/>
                         <outlet property="progressIndicator" destination="b0e-QQ-UvT" id="6cB-Eb-97b"/>
                     </connections>

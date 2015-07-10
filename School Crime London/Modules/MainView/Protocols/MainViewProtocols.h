@@ -112,8 +112,6 @@
  */
 
 - (void)actionButtonPressed;
-- (void)setImportIOAPIKey:(NSString *)APIKey;
-- (void)setImportIOUserKey:(NSString *)UserKey;
 - (void)setGeofencingAPIKey:(NSString *)APIKey;
 
 @end

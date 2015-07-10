@@ -19,7 +19,7 @@
 @protocol ExtractGameDataConnectionProtocol <NSObject>
 @property(nonatomic, weak)
     id<MainViewExtractGameDataDelegateProtocol> mainViewDelegate;
-- (void)extractDataWithAPIKey:(NSString *)APIKey userKey:(NSString *)userKey;
+- (void)extractGameData;
 @end
 
 @protocol ExtractGameDataViewProtocol
@@ -82,8 +82,7 @@
  * Add here your methods for communication PRESENTER -> INTERACTOR
  */
 
-- (void)startDataExtractionWithAPIKey:(NSString *)APIKey
-                              userKey:(NSString *)userKey;
+- (void)startDataExtraction;
 
 @end
 
@@ -99,14 +98,10 @@
  * Add here your methods for communication INTERACTOR -> APIDATAMANAGER
  */
 
-- (void)extractPegiMetaDataWithAPIKey:(NSString *)APIKey
-                              userKey:(NSString *)userKey
-                           completion:
-                               (void (^)(NSError *error, id result))completion;
+- (void)extractPegiMetaDataWithCompletion:(void (^)(NSError *error,
+                                                    id result))completion;
 
 - (void)extractPegiDataWithMaxPageCount:(NSNumber *)pageCount
-                                 APIKey:(NSString *)APIKey
-                                userKey:(NSString *)userKey
                           progressBlock:
                               (void (^)(NSUInteger numberOfFinishedOperations,
                                         NSUInteger totalNumberOfOperations))

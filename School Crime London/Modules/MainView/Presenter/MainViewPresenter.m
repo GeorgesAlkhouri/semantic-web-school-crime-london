@@ -8,9 +8,6 @@
 
 @interface MainViewPresenter ()
 
-@property(nonatomic) NSString *importIOAPIKey;
-@property(nonatomic) NSString *importIOUserKey;
-
 @property(nonatomic) NSString *geofencingAPIKey;
 
 @property(nonatomic) NSArray *schoolData;
@@ -40,19 +37,9 @@
 
 #pragma mark - MainViewPresenterProtocol
 
-- (void)setImportIOAPIKey:(NSString *)APIKey {
-
-    _importIOAPIKey = APIKey;
-}
-
 - (void)setGeofencingAPIKey:(NSString *)APIKey {
 
     _geofencingAPIKey = APIKey;
-}
-
-- (void)setImportIOUserKey:(NSString *)UserKey {
-
-    _importIOUserKey = UserKey;
 }
 
 - (void)actionButtonPressed {
@@ -85,8 +72,7 @@
 
     self.schoolData = results;
 
-    [self.extractGameDataConnection extractDataWithAPIKey:self.importIOAPIKey
-                                                  userKey:self.importIOUserKey];
+    [self.extractGameDataConnection extractGameData];
 }
 
 - (void)requestCrimeSceneFinishedWithResults:(NSArray *)results {
