@@ -68,15 +68,8 @@
 
     self.schoolData = results;
 
-    //    [self.extractGiantBombDataConnection
-    //        extractDataWithAPIKey:self.giantBombAPIKey
-    //                      userKey:self.importIOUserKey];
-
-    [self.extractGameDataConnection
-        extractDataWithAPIKey:@"30a515a1-56e4-4acd-b38c-4d4d49adcb79:1yWjjdf3+"
-        @"DQBchLyM616jyR0T5fBzrgeXX9OFEMXGJGw2n8Q3YHRqQ/"
-        @"MhrJhENQ+wXwluDkZ8lWT04CpxzXFwQ=="
-                      userKey:@"30a515a1-56e4-4acd-b38c-4d4d49adcb79"];
+    [self.extractGameDataConnection extractDataWithAPIKey:self.importIOAPIKey
+                                                  userKey:self.importIOUserKey];
 }
 
 - (void)requestCrimeSceneFinishedWithResults:(NSArray *)results {
@@ -88,46 +81,7 @@
                                           crimeData:self.crimeData];
 }
 
-- (void)didBuildRdfWithRdfResults:(NSDictionary *)rdfs {
-
-    // TODO: capsulate following logic into own Modules
-
-    NSDateFormatter *formatter = [NSDateFormatter new];
-    formatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ss";
-
-    NSString *formattedDate = [formatter stringFromDate:[NSDate date]];
-
-    NSSavePanel *panel = [NSSavePanel savePanel];
-    panel.nameFieldStringValue =
-        [NSString stringWithFormat:@"SchoolRDF-%@.ttl", formattedDate];
-
-    [panel beginWithCompletionHandler:^(NSInteger result) {
-
-        if (result == NSFileHandlingPanelOKButton) {
-
-            [self writeDictionaryToFilesWithURL:
-                      [[panel URL] URLByDeletingLastPathComponent]
-                                           rdfs:rdfs
-                                      withStamp:formattedDate];
-        }
-
-    }];
-}
-
-- (void)writeDictionaryToFilesWithURL:(NSURL *)url
-                                 rdfs:(NSDictionary *)rdfs
-                            withStamp:(NSString *)stamp {
-
-    [rdfs enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSString *ontology,
-                                              BOOL *stop) {
-
-        [ontology writeToURL:[url URLByAppendingPathComponent:
-                                      [NSString stringWithFormat:@"%@-%@.ttl",
-                                                                 key, stamp]]
-                  atomically:YES
-                    encoding:NSUTF8StringEncoding
-                       error:nil];
-    }];
+- (void)didBuildRDFDumpWithDump:(NSString *)rdfDump {
 }
 
 @end

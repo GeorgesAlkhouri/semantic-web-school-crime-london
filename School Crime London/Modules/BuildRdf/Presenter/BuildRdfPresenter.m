@@ -18,9 +18,9 @@
                                   crimeData:crimeData];
 }
 
-- (void)didBuildRDFs:(NSDictionary *)rdfs {
+- (void)didBuildRDFDump:(NSString *)rdfDump {
 
-    [self.mainViewDelegate didBuildRdfWithRdfResults:rdfs];
+    [self.mainViewDelegate didBuildRDFDumpWithDump:rdfDump];
 }
 
 @end

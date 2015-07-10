@@ -52,13 +52,42 @@
     NSDateFormatter *formatter = [NSDateFormatter new];
     formatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ss";
 
-    NSMutableString *gameOntology =
-        [[self loadOntologyWithName:@"game"] mutableCopy];
+    NSMutableString *dump = [NSMutableString new];
+
+    [dump appendString:@"@prefix : "
+          @"<http://www.semanticweb.org/georgesalkhouri/"
+          @"school-crime-london#> ."];
+    [dump appendString:@"@prefix owl: <http://www.w3.org/2002/07/owl#> ."];
+    [dump appendString:
+              @"@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ."];
+    [dump
+        appendString:@"@prefix xml: <http://www.w3.org/XML/1998/namespace> ."];
+    [dump appendString:@"@prefix xsd: <http://www.w3.org/2001/XMLSchema#> ."];
+    [dump appendString:
+              @"@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> ."];
+    [dump appendString:@"@prefix school: "
+          @"<http://www.semanticweb.org/georgesalkhouri/"
+          @"school-crime-london/school#> ."];
+    [dump appendString:@"@prefix crime: "
+          @"<http://www.semanticweb.org/georgesalkhouri/"
+          @"school-crime-london/crime#> ."];
+    [dump appendString:@"@prefix game: "
+          @"<http://www.semanticweb.org/georgesalkhouri/"
+          @"school-crime-london/game#> ."];
+    [dump appendString:@"@prefix place: "
+          @"<http://www.semanticweb.org/georgesalkhouri/"
+          @"school-crime-london/place#> ."];
+    [dump appendString:@"@prefix point: "
+          @"<http://www.semanticweb.org/georgesalkhouri/"
+          @"school-crime-london/point#> ."];
+    [dump appendString:@"@prefix location: "
+          @"<http://www.semanticweb.org/georgesalkhouri/"
+          @"school-crime-london/location#> ."];
 
     for (NSDictionary *game in gameData) {
 
         NSString *instanceName =
-            [[NSString SHA512StringFromString:game[@"GameName"]]
+            [[NSString SHA256StringFromString:game[@"GameName"]]
                 stringByAppendingString:@"-Game"];
 
         NSString *rdf =
@@ -67,12 +96,9 @@
                                  releaseDate:game[@"ReleaseDate"]
                                       rating:game[@"OriginalGameRating"]];
 
-        [gameOntology appendString:@"\n\n"];
-        [gameOntology appendString:rdf];
+        [dump appendString:@"\n\n"];
+        [dump appendString:rdf];
     }
-
-    NSMutableString *schoolOntology =
-        [[self loadOntologyWithName:@"school"] mutableCopy];
 
     // To prevent duplicate data in ontology, creates IDs for every
     // instance which will be checked before instance is written into
@@ -94,7 +120,7 @@
         /*** Create Crime RDF ***/
 
         NSString *crimePointID = [NSString
-            SHA512StringFromString:
+            SHA256StringFromString:
                 [NSString
                     stringWithFormat:@"%@,%@",
                                      crime[@"Crime-Location"][@"Latitude"],
@@ -116,7 +142,7 @@
                                                       @"Longitude"]];
 
             [pointIDs addObject:crimePointID];
-            [schoolOntology appendString:pointRDF];
+            [dump appendString:pointRDF];
 
             NSString *locationRDF = [self
                 createLocationInstaceWithInstanceName:crimeLocationInstanceName
@@ -125,7 +151,7 @@
                                                  city:nil
                                     pointInstanceName:crimePointInstanceName];
 
-            [schoolOntology appendString:locationRDF];
+            [dump appendString:locationRDF];
         }
 
         NSString *crimeID = crime[@"Crime-ID"];
@@ -142,13 +168,13 @@
                                locationInstanceName:crimeLocationInstanceName];
 
             [crimeIDs addObject:crimeID];
-            [schoolOntology appendString:crimeRDF];
+            [dump appendString:crimeRDF];
         }
 
         /*** Create School RDF ***/
 
         NSString *schoolPointID = [NSString
-            SHA512StringFromString:
+            SHA256StringFromString:
                 [NSString stringWithFormat:@"%@,%@", crime[@"School-Lat"],
                                            crime[@"School-Lng"]]];
         NSString *schoolPointInstanceName =
@@ -166,7 +192,7 @@
                                               longitude:crime[@"School-Lng"]];
 
             [pointIDs addObject:schoolPointID];
-            [schoolOntology appendString:pointRDF];
+            [dump appendString:pointRDF];
 
             NSString *locationRDF = [self
                 createLocationInstaceWithInstanceName:schoolLocationInstanceName
@@ -175,7 +201,7 @@
                                                  city:nil
                                     pointInstanceName:schoolPointInstanceName];
 
-            [schoolOntology appendString:locationRDF];
+            [dump appendString:locationRDF];
         }
 
         NSString *schoolID = crime[@"School-ID"];
@@ -228,21 +254,11 @@
                                                      @"locationInstanceName"]
                               crimeInstanceNames:crimesAtSchoolDict[
                                                      @"crimesAtSchool"]];
-        [schoolOntology appendString:schoolRDF];
+        [dump appendString:schoolRDF];
 
     }];
 
-    NSString *crimeOntology = [self loadOntologyWithName:@"crime"];
-    NSString *locationOntology = [self loadOntologyWithName:@"location"];
-    NSString *pointOntology = [self loadOntologyWithName:@"point"];
-
-    [self.presenter didBuildRDFs:@{
-        @"CrimeOntology" : crimeOntology,
-        @"LocationOntology" : locationOntology,
-        @"PointOntology" : pointOntology,
-        @"SchoolOntology" : [schoolOntology copy],
-        @"GameOntology" : [gameOntology copy]
-    }];
+    [self.presenter didBuildRDFDump:[dump copy]];
 }
 
 //@"GameName" : result[@"main"][0],
@@ -254,11 +270,11 @@
                              releaseDate:(NSString *)date
                                   rating:(NSString *)rating {
 
-    return
-        [NSString stringWithFormat:@":%@ rdf:type :Game , owl:NamedIndividual "
-                                   @"; :released \"%@\"^^xsd:dateTime ; :name "
-                                   @"\"%@\"^^rdfs:Literal ; :rating \"%@\" .",
-                                   instanceName, date, name, rating];
+    return [NSString
+        stringWithFormat:@":%@ rdf:type game:Game , owl:NamedIndividual "
+                         @"; game:released \"%@\"^^xsd:dateTime ; game:name "
+                         @"\"%@\"^^rdfs:Literal ; game:rating \"%@\" .",
+                         instanceName, date, name, rating];
 }
 
 - (NSString *)createLocationInstaceWithInstanceName:(NSString *)instanceName
@@ -318,13 +334,13 @@ createCrimeInstanceWithInstanceName:(NSString *)instanceName
 
     NSMutableString *crime = [NSMutableString new];
 
-    [crime appendString:
-               [NSString
-                   stringWithFormat:
-                       @":%@ rdf:type crime:Crime " @", owl:NamedIndividual ; "
-                       @"crime:occurredOn "
-                       @"\"%@\"^^xsd:dateTime ; crime:classifiedAs crime:%@ ;",
-                       instanceName, occurrenceDate, categoryInstanceName]];
+    [crime
+        appendString:
+            [NSString stringWithFormat:
+                          @":%@ rdf:type crime:Crime "
+                          @", owl:NamedIndividual ; " @"crime:occurredOn "
+                          @"\"%@\"^^xsd:dateTime ; crime:classifiedAs \"%@\" ;",
+                          instanceName, occurrenceDate, categoryInstanceName]];
 
     if (name)
         [crime appendString:[NSString stringWithFormat:
@@ -344,15 +360,15 @@ createSchoolInstanceWithInstanceName:(NSString *)instanceName
                   crimeInstanceNames:(NSArray *)crimeInstanceNames {
 
     NSMutableString *school = [[NSString
-        stringWithFormat:@":%@ rdf:type :School , owl:NamedIndividual ; "
-                         @"place:name \"%@\"^^rdfs:Literal ;  "
-                         @"place:isLocatedAt :%@ ; ",
-                         instanceName, name, locationInstanceName] mutableCopy];
+        stringWithFormat:
+            @"school:%@ rdf:type school:School , owl:NamedIndividual ; "
+            @"place:name \"%@\"^^rdfs:Literal ;  " @"place:isLocatedAt :%@ ; ",
+            instanceName, name, locationInstanceName] mutableCopy];
 
     if (crimeInstanceNames.count == 0)
         return [school copy];
 
-    [school appendString:@":nearOf "];
+    [school appendString:@"school:nearOf "];
 
     for (NSInteger i = 0; i < crimeInstanceNames.count; i++) {
 
@@ -370,16 +386,6 @@ createSchoolInstanceWithInstanceName:(NSString *)instanceName
     }
 
     return [school copy];
-}
-
-- (NSString *)loadOntologyWithName:(NSString *)name {
-
-    NSString *path = [[NSBundle mainBundle] pathForResource:name ofType:@"ttl"];
-    NSString *ontology = [NSString stringWithContentsOfFile:path
-                                                   encoding:NSUTF8StringEncoding
-                                                      error:nil];
-
-    return ontology;
 }
 
 @end

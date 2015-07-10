@@ -33,7 +33,7 @@
 
 @property(nonatomic, strong) id<BuildRdfConnectionProtocol> buildRdfConnection;
 
-- (void)didBuildRdfWithRdfResults:(NSDictionary *)rdfs;
+- (void)didBuildRDFDumpWithDump:(NSString *)rdfDump;
 
 @end
 

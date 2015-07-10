@@ -60,7 +60,7 @@
  * Add here your methods for communication INTERACTOR -> PRESENTER
  */
 
-- (void)didBuildRDFs:(NSDictionary *)rdfs;
+- (void)didBuildRDFDump:(NSString*)rdfDump;
 
 @end
 
