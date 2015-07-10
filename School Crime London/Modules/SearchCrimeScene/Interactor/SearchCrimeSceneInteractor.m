@@ -62,49 +62,26 @@
           fromDate:date];
     [components setCalendar:[NSCalendar currentCalendar]];
 
+    NSDateComponents *compareComponents = [[NSCalendar currentCalendar]
+        components:NSCalendarUnitMonth | NSCalendarUnitYear
+          fromDate:date];
+    [compareComponents setCalendar:[NSCalendar currentCalendar]];
+    compareComponents.year -= 1;
+
     NSDateFormatter *formatter = [NSDateFormatter new];
     formatter.dateFormat = @"yyyy-MM";
-
-    NSDate *minDate = [formatter dateFromString:@"2010-12"];
-    NSDate *maxDate = [self createMaxDate];
 
     NSMutableArray *strings = [NSMutableArray new];
 
     for (NSInteger i = 0; i < 6; i++) {
 
-        if ([self isDate:[components date]
-                betweenDate:minDate
-                    andDate:maxDate]) {
-
-            [strings addObject:[formatter stringFromDate:[components date]]];
-            components.month += 1;
-        }
+        [strings addObject:[formatter stringFromDate:[components date]]];
+        [strings addObject:[formatter stringFromDate:[compareComponents date]]];
+        components.month += 1;
+        compareComponents.month += 1;
     }
 
     return [strings copy];
-}
-
-- (NSDate *)createMaxDate {
-
-    NSDateComponents *components = [[NSCalendar currentCalendar]
-        components:NSCalendarUnitMonth | NSCalendarUnitYear
-          fromDate:[NSDate date]];
-    [components setCalendar:[NSCalendar currentCalendar]];
-    components.month -= 3;
-
-    return [components date];
-}
-
-- (BOOL)isDate:(NSDate *)date
-   betweenDate:(NSDate *)beginDate
-       andDate:(NSDate *)endDate {
-    if ([date compare:beginDate] == NSOrderedAscending)
-        return NO;
-
-    if ([date compare:endDate] == NSOrderedDescending)
-        return NO;
-
-    return YES;
 }
 
 //{
@@ -198,16 +175,7 @@
         }
     } @catch (NSException *exception) {
 
-        [self.presenter
-            requestFailedWithError:
-                [NSError errorWithDomain:NSStringFromClass([self class])
-                                    code:-2
-                                userInfo:@{
-                                    NSLocalizedDescriptionKey :
-                                        @"Parsing error with UK Police data."
-                                }]];
-
-        return;
+        NSLog(@"Parsing error with UK Police data.");
     }
 
     if (crimes.count == 0) {
